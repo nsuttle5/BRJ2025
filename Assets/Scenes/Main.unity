@@ -759,10 +759,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 672186691}
-  - component: {fileID: 672186693}
   - component: {fileID: 672186692}
   - component: {fileID: 672186694}
   - component: {fileID: 672186695}
+  - component: {fileID: 672186693}
+  - component: {fileID: 672186696}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -833,6 +834,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  hasDoubleJump: 0
 --- !u!54 &672186694
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -915,6 +917,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &672186696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672186690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d6476d3416b564f808b501d88f54d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  invincibilityDuration: 1
 --- !u!1 &684047123
 GameObject:
   m_ObjectHideFlags: 0

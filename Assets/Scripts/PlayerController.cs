@@ -18,9 +18,13 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
+    [Header("Double Jump")]
+    public bool hasDoubleJump = false; // Enables double jump
+
     private float coyoteTimeCounter;
     private bool isFacingRight = true;
     private bool isJumping;
+    private bool canDoubleJump;
 
     private void Update()
     {
@@ -54,26 +58,36 @@ public class PlayerController : MonoBehaviour
         {
             coyoteTimeCounter = coyoteTime; // Reset coyote time when grounded
             isJumping = false;
+            canDoubleJump = true; // Reset double jump when grounded
         }
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Jump") && coyoteTimeCounter > 0f)
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
-            isJumping = true;
-            coyoteTimeCounter = 0f; // Prevent multiple jumps during coyote time
+            if (coyoteTimeCounter > 0f)
+            {
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
+                isJumping = true;
+                coyoteTimeCounter = 0f; // Prevent multiple jumps during coyote time
+            }
+            else if (hasDoubleJump && canDoubleJump)
+            {
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
+                canDoubleJump = false; // Disable double jump after use
+                isJumping = true; // Ensure double jump is recognized as a jump
+            }
         }
 
-        // Prevent sticking to walls by resetting vertical velocity when colliding horizontally
+        // Prevent sticking to walls by adjusting vertical velocity when colliding horizontally
         if (Physics.Raycast(transform.position, Vector3.right, 0.6f, groundLayer) ||
             Physics.Raycast(transform.position, Vector3.left, 0.6f, groundLayer))
         {
-            if (!isGrounded && rb.linearVelocity.y > 0)
+            if (!isGrounded)
             {
-                rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, Mathf.Min(rb.linearVelocity.y, 0), rb.linearVelocity.z);
             }
         }
     }
