@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
+  m_Name: DashCard
+  m_EditorClassIdentifier: 
+  cardImage: {fileID: 0}
+  cardPrefab: {fileID: 7673403016080962645, guid: 67f1f3b1ca2658f4e9427d1b6f64853e, type: 3}
