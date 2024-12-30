@@ -32,8 +32,8 @@ public class PlayerMovement : MonoBehaviour
     private void HandleMovement()
     {
         float moveInput = Input.GetAxis("Horizontal");
-        Vector3 velocity = rb.velocity;
-        rb.velocity = new Vector3(moveInput * moveSpeed, velocity.y, velocity.z);
+        Vector3 velocity = rb.linearVelocity;
+        rb.linearVelocity = new Vector3(moveInput * moveSpeed, velocity.y, velocity.z);
 
         // Flip the sprite direction
         if (moveInput > 0 && !isFacingRight)
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && coyoteTimeCounter > 0f)
         {
-            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
             isJumping = true;
             coyoteTimeCounter = 0f; // Prevent multiple jumps during coyote time
         }
@@ -71,24 +71,24 @@ public class PlayerMovement : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.right, 0.6f, groundLayer) ||
             Physics.Raycast(transform.position, Vector3.left, 0.6f, groundLayer))
         {
-            if (!isGrounded && rb.velocity.y > 0)
+            if (!isGrounded && rb.linearVelocity.y > 0)
             {
-                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
             }
         }
     }
 
     private void ApplyJumpModifiers()
     {
-        if (rb.velocity.y < 0)
+        if (rb.linearVelocity.y < 0)
         {
             // Apply fall multiplier for faster falling
-            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            rb.linearVelocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
+        else if (rb.linearVelocity.y > 0 && !Input.GetButton("Jump"))
         {
             // Apply low jump multiplier when jump button is released early
-            rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            rb.linearVelocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
 
