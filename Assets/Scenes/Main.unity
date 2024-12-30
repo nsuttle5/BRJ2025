@@ -227,6 +227,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &123917793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 123917794}
+  m_Layer: 0
+  m_Name: FiringPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &123917794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123917793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.427, y: 0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 672186691}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &183983267
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,8 +552,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60.000004
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 2.96
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -546,8 +577,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.026525937, y: 0, z: 0, w: 0.99964815}
-  m_LocalPosition: {x: -6.314538, y: -0.36736235, z: -5.642049}
+  m_LocalRotation: {x: 0.059393484, y: 0, z: 0, w: 0.9982347}
+  m_LocalPosition: {x: -6.314538, y: 0.8846965, z: -5.504842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -764,7 +795,8 @@ GameObject:
   - component: {fileID: 672186695}
   - component: {fileID: 672186693}
   - component: {fileID: 672186696}
-  m_Layer: 0
+  - component: {fileID: 672186697}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -785,6 +817,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1931838400}
+  - {fileID: 123917794}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &672186692
@@ -933,6 +966,22 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 0}
   invincibilityDuration: 1
+--- !u!114 &672186697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672186690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac94a3b5a1006845b598ca663725f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 91124237414150274, guid: 4e79fab790ba5494a90f15d11960b906, type: 3}
+  firePoint: {fileID: 123917794}
+  projectileSpeed: 7
+  projectileLifetime: 2
 --- !u!1 &684047123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,7 +1157,7 @@ MonoBehaviour:
   CameraDistance: 5.65
   DeadZoneDepth: 0
   Composition:
-    ScreenPosition: {x: 0, y: 0}
+    ScreenPosition: {x: 0, y: 0.15}
     DeadZone:
       Enabled: 0
       Size: {x: 0.2, y: 0.2}
@@ -1149,7 +1198,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60.000004
-    OrthographicSize: 5
+    OrthographicSize: 2.96
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1175,13 +1224,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041210672}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.026525937, y: 0, z: 0, w: 0.99964815}
-  m_LocalPosition: {x: -6.314538, y: -0.36736235, z: -5.642049}
+  m_LocalRotation: {x: 0.059393484, y: 0, z: 0, w: 0.9982347}
+  m_LocalPosition: {x: -6.314538, y: 0.8846965, z: -5.504842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 3.04, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.81, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
