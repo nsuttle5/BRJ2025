@@ -4,10 +4,9 @@ using UnityEngine;
 public class CardsManagerUI : MonoBehaviour
 {
     [SerializeField] private Transform[] cardSlots; 
-    [SerializeField] private bool[] availableCardSlot; //Bool to check if its free to use
     [SerializeField] private List<CardSO> cardList;
-    [SerializeField] private List<CardSO> tempCards; //Temporary storage for cards
 
+    private bool[] availableCardSlot; //Bool to check if its free to use
     private int selectedCardIndex = 0;
     private int currentNumberOfCards = 0;
 
@@ -15,7 +14,9 @@ public class CardsManagerUI : MonoBehaviour
 
     private void Awake()
     {
+        availableCardSlot = new bool[cardSlots.Length];
         cardList = new List<CardSO>();
+        for (int i = 0; i < availableCardSlot.Length; i++) availableCardSlot[i] = true;
     }
 
     private void Update()
@@ -37,6 +38,17 @@ public class CardsManagerUI : MonoBehaviour
         {
             if (i == selectedCardIndex) cardSlots[i].localScale = selectedSize;
             else cardSlots[i].localScale = Vector3.one;
+
+            if (cardSlots[i].childCount > 0)
+            {
+                float swapSpeed = 10f;
+                Transform card = cardSlots[i].GetChild(0);
+                if (card.localPosition != Vector3.zero || card.localRotation != Quaternion.identity)
+                {
+                    card.localPosition = Vector3.Lerp(card.localPosition, Vector3.zero, Time.deltaTime * swapSpeed);
+                    card.localRotation = Quaternion.Lerp(card.localRotation, Quaternion.identity, Time.deltaTime * swapSpeed);
+                }
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -96,8 +108,8 @@ public class CardsManagerUI : MonoBehaviour
                     {
                         Transform card = cardSlots[i + 1].GetChild(0);
                         card.SetParent(cardSlots[i]);
-                        card.localPosition = Vector3.zero;
-                        card.localRotation = Quaternion.identity;
+                        //card.localPosition = Vector3.zero;
+                        //card.localRotation = Quaternion.identity;
                         card.localScale = Vector3.one;
                         availableCardSlot[i] = false;
                         availableCardSlot[i + 1] = true;
