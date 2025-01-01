@@ -4,11 +4,13 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
     [Header("Player Settings")]
-    public int maxHealth = 5; // Maximum health the player can have
+    public int maxHealth = 4; // Maximum health the player can have
     public int currentHealth; // Player's current health
 
     [Header("UI Elements")]
-    public Slider healthBar; // Health bar slider to represent player's health
+    public Sprite emptyHeart; // Sprite for empty heart
+    public Sprite fullHeart;  // Sprite for full heart
+    public Image[] hearts;
 
     [Header("Damage Settings")]
     public float invincibilityDuration = 1f; // Time the player is invincible after taking damage
@@ -66,9 +68,16 @@ public class PlayerManager : MonoBehaviour
 
     private void UpdateHealthUI()
     {
-        if (healthBar != null)
+        for (int i = 0; i < hearts.Length; i++)
         {
-            healthBar.value = (float)currentHealth / maxHealth;
+            if (i < currentHealth)
+            {
+                hearts[i].sprite = fullHeart;
+            }
+            else
+            {
+                hearts[i].sprite = emptyHeart;
+            }
         }
     }
 
