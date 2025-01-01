@@ -82,8 +82,8 @@ public class PlayerController : MonoBehaviour
         }
 
         // Prevent sticking to walls by adjusting vertical velocity when colliding horizontally
-        if (Physics.Raycast(transform.position, Vector3.right, 0.6f, groundLayer) ||
-            Physics.Raycast(transform.position, Vector3.left, 0.6f, groundLayer))
+        if (Physics.Raycast(transform.position, Vector3.right, 0.5f, groundLayer) ||
+            Physics.Raycast(transform.position, Vector3.left, 0.5f, groundLayer))
         {
             if (!isGrounded)
             {
