@@ -12,20 +12,30 @@ public class PlayerManager : MonoBehaviour
 
     [Header("Damage Settings")]
     public float invincibilityDuration = 1f; // Time the player is invincible after taking damage
+    public float knockbackForce = 5f;       // Knockback force applied to the player
 
     private bool isInvincible = false; // Tracks if the player is invincible
+    private Rigidbody rb;             // Reference to the player's Rigidbody
 
     private void Start()
     {
         // Initialize health
         currentHealth = maxHealth;
         UpdateHealthUI();
+
+        // Get the Rigidbody component
+        rb = GetComponent<Rigidbody>();
+        if (rb == null)
+        {
+            Debug.LogError("PlayerManager: Rigidbody component missing!");
+        }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Vector3 knockbackDirection)
     {
         if (isInvincible) return;
 
+        // Apply damage
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthUI();
@@ -36,6 +46,13 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
+            // Apply knockback
+            if (rb != null)
+            {
+                rb.AddForce(knockbackDirection.normalized * knockbackForce, ForceMode.Impulse);
+            }
+
+            // Start invincibility period
             StartCoroutine(InvincibilityCoroutine());
         }
     }
