@@ -26,11 +26,48 @@ public class PlayerController : MonoBehaviour
     private bool isJumping;
     private bool canDoubleJump;
 
+    [Header("Fall Through Platform")]
+    public LayerMask fallThroughPlatformLayer;
+    private Collider playerCollider;
+
+    private void Start()
+    {
+        playerCollider = GetComponent<Collider>();
+    }
+
     private void Update()
     {
         HandleMovement();
         HandleJump();
         ApplyJumpModifiers();
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            DropThroughPlatform();
+        }
+    }
+
+    private void DropThroughPlatform()
+    {
+        Collider[] platforms = Physics.OverlapBox(
+            transform.position,
+            new Vector3(0.5f, 0.5f, 0.5f), // Adjust size to fit your player/platform dimensions
+            Quaternion.identity,
+            fallThroughPlatformLayer
+        );
+
+        foreach (Collider platform in platforms)
+        {
+            Physics.IgnoreCollision(playerCollider, platform, true);
+            StartCoroutine(ReenableCollision(platform));
+        }
+    }
+
+    private System.Collections.IEnumerator ReenableCollision(Collider platform)
+    {
+        // Re-enable collision after a short delay
+        yield return new WaitForSeconds(0.5f);
+        Physics.IgnoreCollision(playerCollider, platform, false);
     }
 
     private void HandleMovement()
