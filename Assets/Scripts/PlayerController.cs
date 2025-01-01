@@ -80,16 +80,6 @@ public class PlayerController : MonoBehaviour
                 isJumping = true; // Ensure double jump is recognized as a jump
             }
         }
-
-        // Prevent sticking to walls by adjusting vertical velocity when colliding horizontally
-        if (Physics.Raycast(transform.position, Vector3.right, 0.6f, groundLayer) ||
-            Physics.Raycast(transform.position, Vector3.left, 0.6f, groundLayer))
-        {
-            if (!isGrounded)
-            {
-                rb.linearVelocity = new Vector3(rb.linearVelocity.x, Mathf.Min(rb.linearVelocity.y, 0), rb.linearVelocity.z);
-            }
-        }
     }
 
     private void ApplyJumpModifiers()
