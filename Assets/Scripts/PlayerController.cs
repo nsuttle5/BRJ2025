@@ -5,13 +5,15 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
-    public float fallMultiplier = 2.5f; // Increases fall speed for realistic gravity
-    public float lowJumpMultiplier = 2f; // Increases gravity for short jumps
-    public float coyoteTime = 0.2f; // Duration player can still jump after leaving the ground
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
+    public float coyoteTime = 0.2f;
+    private float coyoteTimeCounter;
 
     [Header("Components")]
     public Rigidbody rb;
     public Transform spriteTransform;
+    private Collider playerCollider;
 
     [Header("Ground Detection")]
     public Transform groundCheck;
@@ -19,16 +21,24 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
 
     [Header("Double Jump")]
-    public bool hasDoubleJump = false; // Enables double jump
+    public bool hasDoubleJump = false;
 
-    private float coyoteTimeCounter;
+    [Header("Dash Settings")]
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 1f;
+    private bool isDashing;
+    private float dashTime;
+    private float dashCooldownTime;
+
     private bool isFacingRight = true;
     private bool isJumping;
     private bool canDoubleJump;
 
     [Header("Fall Through Platform")]
     public LayerMask fallThroughPlatformLayer;
-    private Collider playerCollider;
+
+    private bool isInvincible = false; // Tracks invincibility state
 
     private void Start()
     {
@@ -37,21 +47,75 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        HandleMovement();
-        HandleJump();
-        ApplyJumpModifiers();
-
-        if (Input.GetKeyDown(KeyCode.S))
+        if (isDashing)
         {
-            DropThroughPlatform();
+            Dash();
         }
+        else
+        {
+            HandleMovement();
+            HandleJump();
+            ApplyJumpModifiers();
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                DropThroughPlatform();
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= dashCooldownTime)
+            {
+                StartDash();
+            }
+        }
+    }
+
+    private void StartDash()
+    {
+        isDashing = true;
+        dashTime = Time.time + dashDuration;
+        dashCooldownTime = Time.time + dashCooldown;
+
+        // Start invincibility during dash
+        StartCoroutine(EnableInvincibility(dashDuration));
+    }
+
+    private void Dash()
+    {
+        float dashDirection = isFacingRight ? 1f : -1f;
+        Vector3 dashVelocity = new Vector3(dashDirection * dashSpeed, rb.linearVelocity.y, rb.linearVelocity.z);
+        rb.linearVelocity = dashVelocity;
+
+        if (Time.time >= dashTime)
+        {
+            isDashing = false;
+        }
+
+        // Check for collision with walls
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.right * dashDirection, out hit, 1f, groundLayer))
+        {
+            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, rb.linearVelocity.z);
+            isDashing = false;
+        }
+    }
+
+    private System.Collections.IEnumerator EnableInvincibility(float duration)
+    {
+        isInvincible = true;
+        Debug.Log("Player is now invincible.");
+
+        // Wait for the dash duration
+        yield return new WaitForSeconds(duration);
+
+        isInvincible = false;
+        Debug.Log("Player is no longer invincible.");
     }
 
     private void DropThroughPlatform()
     {
         Collider[] platforms = Physics.OverlapBox(
             transform.position,
-            new Vector3(0.5f, 0.5f, 0.5f), // Adjust size to fit your player/platform dimensions
+            new Vector3(0.5f, 0.5f, 0.5f),
             Quaternion.identity,
             fallThroughPlatformLayer
         );
@@ -65,7 +129,6 @@ public class PlayerController : MonoBehaviour
 
     private System.Collections.IEnumerator ReenableCollision(Collider platform)
     {
-        // Re-enable collision after a short delay
         yield return new WaitForSeconds(0.5f);
         Physics.IgnoreCollision(playerCollider, platform, false);
     }
@@ -76,7 +139,6 @@ public class PlayerController : MonoBehaviour
         Vector3 velocity = rb.linearVelocity;
         rb.linearVelocity = new Vector3(moveInput * moveSpeed, velocity.y, velocity.z);
 
-        // Flip the sprite direction
         if (moveInput > 0 && !isFacingRight)
         {
             FlipSprite();
@@ -93,9 +155,9 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded)
         {
-            coyoteTimeCounter = coyoteTime; // Reset coyote time when grounded
+            coyoteTimeCounter = coyoteTime;
             isJumping = false;
-            canDoubleJump = true; // Reset double jump when grounded
+            canDoubleJump = true;
         }
         else
         {
@@ -108,13 +170,13 @@ public class PlayerController : MonoBehaviour
             {
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
                 isJumping = true;
-                coyoteTimeCounter = 0f; // Prevent multiple jumps during coyote time
+                coyoteTimeCounter = 0f;
             }
             else if (hasDoubleJump && canDoubleJump)
             {
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
-                canDoubleJump = false; // Disable double jump after use
-                isJumping = true; // Ensure double jump is recognized as a jump
+                canDoubleJump = false;
+                isJumping = true;
             }
         }
     }
@@ -123,12 +185,10 @@ public class PlayerController : MonoBehaviour
     {
         if (rb.linearVelocity.y < 0)
         {
-            // Apply fall multiplier for faster falling
             rb.linearVelocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
         else if (rb.linearVelocity.y > 0 && !Input.GetButton("Jump"))
         {
-            // Apply low jump multiplier when jump button is released early
             rb.linearVelocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
