@@ -4,10 +4,9 @@ using UnityEngine;
 public class CardsManagerUI : MonoBehaviour
 {
     [SerializeField] private Transform[] cardSlots; 
-    [SerializeField] private bool[] availableCardSlot; //Bool to check if its free to use
     [SerializeField] private List<CardSO> cardList;
-    [SerializeField] private List<CardSO> tempCards; //Temporary storage for cards
 
+    private bool[] availableCardSlot; //Bool to check if its free to use
     private int selectedCardIndex = 0;
     private int currentNumberOfCards = 0;
 
@@ -15,7 +14,9 @@ public class CardsManagerUI : MonoBehaviour
 
     private void Awake()
     {
+        availableCardSlot = new bool[cardSlots.Length];
         cardList = new List<CardSO>();
+        for (int i = 0; i < availableCardSlot.Length; i++) availableCardSlot[i] = true;
     }
 
     private void Update()
@@ -37,6 +38,17 @@ public class CardsManagerUI : MonoBehaviour
         {
             if (i == selectedCardIndex) cardSlots[i].localScale = selectedSize;
             else cardSlots[i].localScale = Vector3.one;
+
+            if (cardSlots[i].childCount > 0)
+            {
+                float swapSpeed = 10f;
+                Transform card = cardSlots[i].GetChild(0);
+                if (card.localPosition != Vector3.zero || card.localRotation != Quaternion.identity)
+                {
+                    card.localPosition = Vector3.Lerp(card.localPosition, Vector3.zero, Time.deltaTime * swapSpeed);
+                    card.localRotation = Quaternion.Lerp(card.localRotation, Quaternion.identity, Time.deltaTime * swapSpeed);
+                }
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -69,6 +81,11 @@ public class CardsManagerUI : MonoBehaviour
         {
             cardList[selectedCardIndex].cardPrefab.UseCard();
             cardList.RemoveAt(selectedCardIndex);
+            availableCardSlot[selectedCardIndex] = true;
+            Destroy(cardSlots[selectedCardIndex].GetChild(0).gameObject);
+            currentNumberOfCards--;
+            
+            if (selectedCardIndex >= currentNumberOfCards) selectedCardIndex = 0;
         }
         RearrangeCards();
     }
@@ -81,25 +98,24 @@ public class CardsManagerUI : MonoBehaviour
 
     private void RearrangeCards()
     {
-        for (int i = 0; i < cardSlots.Length; i++)
+        for(int i = 0; i < cardSlots.Length - 1; i++)
         {
-            availableCardSlot[i] = true;
-            if (cardSlots[i].childCount > 0)
+            if (availableCardSlot[i])
             {
-                Destroy(cardSlots[i].GetChild(0).gameObject);
+                if (!availableCardSlot[i + 1])
+                {
+                    if (cardSlots[i + 1].childCount > 0)
+                    {
+                        Transform card = cardSlots[i + 1].GetChild(0);
+                        card.SetParent(cardSlots[i]);
+                        //card.localPosition = Vector3.zero;
+                        //card.localRotation = Quaternion.identity;
+                        card.localScale = Vector3.one;
+                        availableCardSlot[i] = false;
+                        availableCardSlot[i + 1] = true;
+                    }
+                }
             }
         }
-        foreach (CardSO card in cardList)
-        {
-            tempCards.Add(card);
-        }
-        cardList.Clear();
-        foreach (CardSO card in tempCards)
-        {
-            if (CanAddMoreCards()) AddCard(card);
-        }
-        tempCards.Clear();
-        currentNumberOfCards = 0;
-        selectedCardIndex = 0;
     }
 }
