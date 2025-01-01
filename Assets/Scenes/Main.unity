@@ -980,6 +980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 91124237414150274, guid: 4e79fab790ba5494a90f15d11960b906, type: 3}
   firePoint: {fileID: 123917794}
+  projectileSpeedMultiplier: 1
   projectileSpeed: 7
   projectileLifetime: 2
 --- !u!1 &684047123

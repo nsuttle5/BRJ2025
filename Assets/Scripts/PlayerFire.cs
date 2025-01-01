@@ -4,8 +4,15 @@ public class PlayerFire : MonoBehaviour
 {
     public GameObject projectilePrefab; // The projectile prefab
     public Transform firePoint;         // The transform of the FirePoint GameObject
+    public float projectileSpeedMultiplier = 1f; // Multiplier for the projectile speed
     public float projectileSpeed = 10f; // Speed of the projectile
     public float projectileLifetime = 5f; // Time before the projectile is destroyed
+
+
+    void Start()
+    {
+        projectileSpeed *= projectileSpeedMultiplier;
+    }
 
     void Update()
     {
