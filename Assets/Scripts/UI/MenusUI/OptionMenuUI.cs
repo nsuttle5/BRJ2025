@@ -1,11 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OptionMenuUI : MonoBehaviour
 {
     private const string FULLSCREEN = "FULLSCREEN";
     private const string WINDOWED = "WINDOWED";
+    private const string START_SCENE = "StartScreen";
 
     [SerializeField] private Slider soundEffectSlider;
     [SerializeField] private Slider musicSlider;
@@ -35,7 +37,7 @@ public class OptionMenuUI : MonoBehaviour
         closeButton.onClick.AddListener(() =>
         {
             //Switch scene or close option window
-            Debug.Log("Window closed or some other scene opened");
+            SceneManager.LoadScene(START_SCENE);
         });
     }
 
