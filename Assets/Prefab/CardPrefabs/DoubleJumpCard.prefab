@@ -84,9 +84,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5063612126597333423}
-  - component: {fileID: 7673403016080962645}
+  - component: {fileID: 6138709839448527929}
   m_Layer: 5
-  m_Name: DashCard
+  m_Name: DoubleJumpCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 110, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7673403016080962645
+--- !u!114 &6138709839448527929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5940656244354254523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a14114322b5bb094889794917ac00652, type: 3}
+  m_Script: {fileID: 11500000, guid: 522711467101ce8419d9f1db9643a71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 4781096180371931114}

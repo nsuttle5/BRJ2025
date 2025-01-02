@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,11 +14,14 @@ public class PlayerManager : MonoBehaviour
     public Image[] hearts;
 
     [Header("Damage Settings")]
-    public float invincibilityDuration = 1f; // Time the player is invincible after taking damage
+    public float invincibilityDuration = 0.2f; // Time the player is invincible after taking damage
     public float knockbackForce = 5f;       // Knockback force applied to the player
 
     private bool isInvincible = false; // Tracks if the player is invincible
     private Rigidbody rb;             // Reference to the player's Rigidbody
+    private PlayerController playerController;
+
+    private List<(int damage, Vector3 knockback)> damageQueue = new List<(int, Vector3)>();
 
     private void Start()
     {
@@ -27,9 +31,22 @@ public class PlayerManager : MonoBehaviour
 
         // Get the Rigidbody component
         rb = GetComponent<Rigidbody>();
+        playerController = GetComponent<PlayerController>();
         if (rb == null)
         {
             Debug.LogError("PlayerManager: Rigidbody component missing!");
+        }
+    }
+
+    private void Update()
+    {
+        if (damageQueue.Count > 0 && !isInvincible)
+        {
+            Debug.Log("DOING DAMAGE");
+            int damage = damageQueue[0].damage;
+            Vector3 knockback = damageQueue[0].knockback;
+            TakeDamage(damage, knockback);
+            damageQueue.RemoveAt(0);
         }
     }
 
@@ -51,6 +68,7 @@ public class PlayerManager : MonoBehaviour
             // Apply knockback
             if (rb != null)
             {
+                playerController.SetCanMove(false);
                 rb.AddForce(knockbackDirection.normalized * knockbackForce, ForceMode.Impulse);
             }
 
@@ -93,4 +111,8 @@ public class PlayerManager : MonoBehaviour
         yield return new WaitForSeconds(invincibilityDuration);
         isInvincible = false;
     }
+
+    public Rigidbody GetPlayerRigidbody() => rb;
+
+    public List<(int, Vector3)> GetDamageQuene() => damageQueue;
 }

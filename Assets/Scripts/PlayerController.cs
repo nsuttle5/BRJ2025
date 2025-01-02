@@ -39,14 +39,23 @@ public class PlayerController : MonoBehaviour
     public LayerMask fallThroughPlatformLayer;
 
     private bool isInvincible = false; // Tracks invincibility state
+    private bool canMove = true; // Check if the player can move (Cannot when attacked or damaged due to stun)
+    private float stunTime = 0.2f;
+    private float stunTimer;
 
     private void Start()
     {
         playerCollider = GetComponent<Collider>();
+        stunTimer = stunTime;
     }
 
     private void Update()
     {
+        if (!canMove) stunTimer -= Time.deltaTime;
+        else stunTimer = stunTime;
+
+        if (stunTimer <= 0) SetCanMove(true);
+
         if (isDashing)
         {
             Dash();
@@ -136,8 +145,10 @@ public class PlayerController : MonoBehaviour
     private void HandleMovement()
     {
         float moveInput = Input.GetAxis("Horizontal");
-        Vector3 velocity = rb.linearVelocity;
-        rb.linearVelocity = new Vector3(moveInput * moveSpeed, velocity.y, velocity.z);
+        if (canMove)
+        {
+            rb.linearVelocity = new Vector3(moveInput * moveSpeed, rb.linearVelocity.y, rb.linearVelocity.z);
+        }
 
         if (moveInput > 0 && !isFacingRight)
         {
@@ -200,6 +211,8 @@ public class PlayerController : MonoBehaviour
         scale.x *= -1;
         spriteTransform.localScale = scale;
     }
+
+    public void SetCanMove(bool value) => canMove = value;
 
     private void OnDrawGizmosSelected()
     {
