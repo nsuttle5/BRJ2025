@@ -941,6 +941,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   hasDoubleJump: 0
+  dashSpeed: 10
+  dashDuration: 0.15
+  dashCooldown: 1
   fallThroughPlatformLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -1041,7 +1044,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   emptyHeart: {fileID: 7482667652216324306, guid: d30ba71b601580b4fb95653a0e8f5bda, type: 3}
-  fullHeart: {fileID: 7482667652216324306, guid: 6f4f0bf36344ed94a82959ac0c586ed1, type: 3}
+  fullHeart: {fileID: 21300000, guid: 6f4f0bf36344ed94a82959ac0c586ed1, type: 3}
   hearts:
   - {fileID: 760492683}
   - {fileID: 1259787677}
