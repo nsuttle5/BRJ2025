@@ -8,13 +8,17 @@ public class StartSceneCameraManager : MonoBehaviour
 
     private Animator animator;
     private bool hasStarted = false;
+    private Animator blackScreenAnimator;
 
     public float animationTime = 1.5f;
+
+    public GameObject blackScreen;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
+        blackScreenAnimator = blackScreen.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,6 +33,7 @@ public class StartSceneCameraManager : MonoBehaviour
         {
             hasStarted = true;
             animator.SetBool("HasStarted", true);
+            blackScreenAnimator.SetBool("FadeOut", true);
         }
     }
 }
