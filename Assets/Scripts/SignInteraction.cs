@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SignInteraction : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class SignInteraction : MonoBehaviour
 
     public LevelManager levelManager; // Reference to the LevelManager script
     public string action; // "play", "options", or "quit" (set this per sign in Inspector)
+    public StartSceneCameraManager startSceneCameraManager;
 
     private Animator animator;
     private bool isHovered = false;
@@ -55,7 +57,7 @@ public class SignInteraction : MonoBehaviour
             switch (action.ToLower())
             {
                 case "play":
-                    levelManager.LoadScene();
+                    StartCoroutine(startGame());
                     break;
                 case "options":
                     levelManager.LoadOptions();
@@ -77,5 +79,20 @@ public class SignInteraction : MonoBehaviour
             var renderer = light.GetComponent<Renderer>();
             renderer.material = state ? lightOnMaterial : lightOffMaterial;
         }
+    }
+
+    IEnumerator startGame()
+    {
+        if (startSceneCameraManager != null)
+        {
+            startSceneCameraManager.Play();
+            yield return new WaitForSeconds(startSceneCameraManager.animationTime);
+        }
+        else
+        {
+            Debug.LogWarning("startSceneCameraManager is not assigned!");
+            yield break;
+        }
+        levelManager.LoadScene();
     }
 }
