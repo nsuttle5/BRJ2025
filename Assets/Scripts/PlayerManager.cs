@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
+    public static PlayerManager Instance;
+
     [Header("Player Settings")]
     public int maxHealth = 4; // Maximum health the player can have
     public int currentHealth; // Player's current health
@@ -23,6 +25,15 @@ public class PlayerManager : MonoBehaviour
 
     private List<(int damage, Vector3 knockback)> damageQueue = new List<(int, Vector3)>();
 
+    private void Awake()
+    {
+        if (Instance != null) Destroy(gameObject);
+        else Instance = this;
+
+        playerController = GetComponent<PlayerController>();
+        rb = GetComponent<Rigidbody>();
+    }
+
     private void Start()
     {
         // Initialize health
@@ -30,8 +41,6 @@ public class PlayerManager : MonoBehaviour
         UpdateHealthUI();
 
         // Get the Rigidbody component
-        rb = GetComponent<Rigidbody>();
-        playerController = GetComponent<PlayerController>();
         if (rb == null)
         {
             Debug.LogError("PlayerManager: Rigidbody component missing!");
@@ -113,6 +122,9 @@ public class PlayerManager : MonoBehaviour
     }
 
     public Rigidbody GetPlayerRigidbody() => rb;
+    public PlayerController GetPlayerController() => playerController;
+    public float GetMoveSpeed() => playerController.moveSpeed;
+    public void SetMoveSpeed(float value) => playerController.moveSpeed = value;
 
     public List<(int, Vector3)> GetDamageQuene() => damageQueue;
 }

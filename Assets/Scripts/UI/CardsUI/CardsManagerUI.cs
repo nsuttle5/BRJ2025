@@ -82,7 +82,12 @@ public class CardsManagerUI : MonoBehaviour
             cardList[selectedCardIndex].cardPrefab.UseCard();
             cardList.RemoveAt(selectedCardIndex);
             availableCardSlot[selectedCardIndex] = true;
-            Destroy(cardSlots[selectedCardIndex].GetChild(0).gameObject);
+            Transform card = cardSlots[selectedCardIndex].GetChild(0);
+            card.SetParent(null);
+            if (card.TryGetComponent(out Card usedCard))
+            {
+                usedCard.SetImageActive(false);
+            }
             currentNumberOfCards--;
             
             if (selectedCardIndex >= currentNumberOfCards) selectedCardIndex = 0;

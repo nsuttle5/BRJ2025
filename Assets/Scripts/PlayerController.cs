@@ -213,6 +213,8 @@ public class PlayerController : MonoBehaviour
     }
 
     public void SetCanMove(bool value) => canMove = value;
+    public float GetSpeed => moveSpeed;
+    public void SetMoveSpeed(float value) => moveSpeed = value;
 
     private void OnDrawGizmosSelected()
     {

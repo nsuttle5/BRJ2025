@@ -10,5 +10,11 @@ public abstract class Card : MonoBehaviour
     {
         image.sprite = cardSO.cardImage;
     }
+
+    public void SetImageActive(bool condition)
+    {
+        image.enabled = condition;
+    }
+
     public abstract void UseCard();
 }
