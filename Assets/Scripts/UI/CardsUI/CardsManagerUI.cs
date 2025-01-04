@@ -6,6 +6,8 @@ public class CardsManagerUI : MonoBehaviour
     [SerializeField] private Transform[] cardSlots; 
     [SerializeField] private List<CardSO> cardList;
 
+    //private List<GameObject> instantiatedCards;
+
     private bool[] availableCardSlot; //Bool to check if its free to use
     private int selectedCardIndex = 0;
     private int currentNumberOfCards = 0;
@@ -79,15 +81,16 @@ public class CardsManagerUI : MonoBehaviour
     {
         if (cardList.Count > 0)
         {
-            cardList[selectedCardIndex].cardPrefab.GetComponent<Card>().UseCard();
+            //instantiatedCards[selectedCardIndex].GetComponent<Card>().UseCard();
             cardList.RemoveAt(selectedCardIndex);
             availableCardSlot[selectedCardIndex] = true;
             Transform card = cardSlots[selectedCardIndex].GetChild(0);
+            card.GetComponent<Card>().UseCard();
             card.SetParent(null);
-            if (card.TryGetComponent(out Card usedCard))
-            {
-                usedCard.SetImageActive(false);
-            }
+            //if (card.TryGetComponent(out Card usedCard))
+            //{
+            //    usedCard.SetImageActive(false);
+            //}
             currentNumberOfCards--;
             
             if (selectedCardIndex >= currentNumberOfCards) selectedCardIndex = 0;
