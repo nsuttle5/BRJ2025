@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour
     public float invincibilityDuration = 0.2f; // Time the player is invincible after taking damage
     public float knockbackForce = 5f;       // Knockback force applied to the player
 
-    private bool isInvincible = false; // Tracks if the player is invincible
+    public bool isInvincible = false; // Tracks if the player is invincible
     private Rigidbody rb;             // Reference to the player's Rigidbody
     private PlayerController playerController;
 
