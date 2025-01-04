@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
+    public float crouchSpeed = 2.5f; // Speed while crouching
     public float jumpForce = 10f;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     public Transform spriteTransform;
     private Collider playerCollider;
+    private Vector3 originalColliderSize;
+    private Vector3 crouchedColliderSize = new Vector3(1, 0.5f, 1); // Adjust as needed
 
     [Header("Ground Detection")]
     public Transform groundCheck;
@@ -43,9 +46,12 @@ public class PlayerController : MonoBehaviour
     private float stunTime = 0.2f;
     private float stunTimer;
 
+    private bool isCrouching = false; // Tracks crouching state
+
     private void Start()
     {
         playerCollider = GetComponent<Collider>();
+        originalColliderSize = playerCollider.bounds.size;
         stunTimer = stunTime;
     }
 
@@ -69,6 +75,15 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.S))
             {
                 DropThroughPlatform();
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                Crouch();
+            }
+            else if (Input.GetKeyUp(KeyCode.S))
+            {
+                StandUp();
             }
 
             if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= dashCooldownTime)
@@ -147,7 +162,8 @@ public class PlayerController : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal");
         if (canMove)
         {
-            rb.linearVelocity = new Vector3(moveInput * moveSpeed, rb.linearVelocity.y, rb.linearVelocity.z);
+            float speed = isCrouching ? crouchSpeed : moveSpeed;
+            rb.linearVelocity = new Vector3(moveInput * speed, rb.linearVelocity.y, rb.linearVelocity.z);
         }
 
         if (moveInput > 0 && !isFacingRight)
@@ -210,6 +226,34 @@ public class PlayerController : MonoBehaviour
         Vector3 scale = spriteTransform.localScale;
         scale.x *= -1;
         spriteTransform.localScale = scale;
+    }
+
+    private void Crouch()
+    {
+        if (!isCrouching)
+        {
+            isCrouching = true;
+            playerCollider.transform.localScale = crouchedColliderSize;
+            // Adjust the player's position to prevent sinking into the ground
+            transform.position = new Vector3(transform.position.x, transform.position.y - (originalColliderSize.y - crouchedColliderSize.y) / 2, transform.position.z);
+        }
+    }
+
+    private void StandUp()
+    {
+        if (isCrouching)
+        {
+            isCrouching = false;
+            playerCollider.transform.localScale = originalColliderSize;
+            // Adjust the player's position to prevent floating above the ground
+            transform.position = new Vector3(transform.position.x, transform.position.y + (originalColliderSize.y - crouchedColliderSize.y) / 2, transform.position.z);
+
+            // Ensure the player maintains the correct facing direction
+            if (isFacingRight && spriteTransform.localScale.x < 0 || !isFacingRight && spriteTransform.localScale.x > 0)
+            {
+                FlipSprite();
+            }
+        }
     }
 
     public void SetCanMove(bool value) => canMove = value;
