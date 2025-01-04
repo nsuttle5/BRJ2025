@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private Collider playerCollider;
     private Vector3 originalColliderSize;
     private Vector3 crouchedColliderSize = new Vector3(1, 0.5f, 1); // Adjust as needed
+    [SerializeField] private StatsHandler statsHandler;
 
     [Header("Ground Detection")]
     public Transform groundCheck;
@@ -164,7 +165,7 @@ public class PlayerController : MonoBehaviour
         if (canMove)
         {
             float speed = isCrouching ? crouchSpeed : moveSpeed;
-            rb.linearVelocity = new Vector3(moveInput * speed * StatsHandler.Instance.moveSpeedMultiplier, rb.linearVelocity.y, rb.linearVelocity.z);
+            rb.linearVelocity = new Vector3(moveInput * speed * statsHandler.moveSpeedMultiplier, rb.linearVelocity.y, rb.linearVelocity.z);
         }
 
         if (moveInput > 0 && !isFacingRight)

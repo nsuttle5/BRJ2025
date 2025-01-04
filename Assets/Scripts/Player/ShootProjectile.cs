@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ShootProjectile : MonoBehaviour
 {
+    [SerializeField] private StatsHandler statHandler;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float fireRate;
@@ -10,7 +11,7 @@ public class ShootProjectile : MonoBehaviour
 
     private void Awake()
     {
-        fireRateTimer = fireRate * StatsHandler.Instance.fireRateMultiplier;
+        fireRateTimer = fireRate * statHandler.fireRateMultiplier;
     }
 
     private void Update()
@@ -24,7 +25,7 @@ public class ShootProjectile : MonoBehaviour
                 //Shoot
                 Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
-                fireRateTimer = fireRate * StatsHandler.Instance.fireRateMultiplier;
+                fireRateTimer = fireRate * statHandler.fireRateMultiplier;
             }
         }
     }

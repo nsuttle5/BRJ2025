@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class TheMagicianCard : Card
 {
+    [SerializeField] private StatsHandler statsHandler;
     [SerializeField] private float fireRateMultiplier;
     [SerializeField] private float damageIncreaseAmount;
     [SerializeField] private float buffDuration;
@@ -10,16 +11,16 @@ public class TheMagicianCard : Card
     public override void UseCard()
     {
         //Increase fire rate and damage for some time
-        StatsHandler.Instance.fireRateMultiplier = fireRateMultiplier;
-        StatsHandler.Instance.damageMultiplier = damageIncreaseAmount;
+        statsHandler.fireRateMultiplier = fireRateMultiplier;
+        statsHandler.damageMultiplier = damageIncreaseAmount;
         StartCoroutine(BuffDuration());
     }
 
     private IEnumerator BuffDuration()
     {
         yield return new WaitForSeconds(buffDuration);
-        StatsHandler.Instance.fireRateMultiplier = 1f;
-        StatsHandler.Instance.damageMultiplier = 1f;
+        statsHandler.fireRateMultiplier = 1f;
+        statsHandler.damageMultiplier = 1f;
         Destroy(gameObject);
     }
 }

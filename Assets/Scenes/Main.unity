@@ -1034,6 +1034,7 @@ MonoBehaviour:
   coyoteTime: 0.2
   rb: {fileID: 672186694}
   spriteTransform: {fileID: 672186691}
+  statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
   groundCheck: {fileID: 1931838400}
   groundCheckRadius: 0.09
   groundLayer:
@@ -1164,6 +1165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781e09c5cdc2e2c498b897d99fe8f49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
   firePoint: {fileID: 123917794}
   projectilePrefab: {fileID: 91124237414150274, guid: 4e79fab790ba5494a90f15d11960b906, type: 3}
   fireRate: 0.8
@@ -1489,53 +1491,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767925560}
   m_CullTransparentMesh: 1
---- !u!1 &770833609
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 770833610}
-  - component: {fileID: 770833611}
-  m_Layer: 0
-  m_Name: StatsHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &770833610
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770833609}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &770833611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770833609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b23e757ec1038ed40a522fea96e7e032, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeedMultiplier: 1
-  fireRateMultiplier: 1
-  damageMultiplier: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,4 +2418,3 @@ SceneRoots:
   - {fileID: 1752414098}
   - {fileID: 418098207}
   - {fileID: 1318074115}
-  - {fileID: 770833610}

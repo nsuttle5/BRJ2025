@@ -126,5 +126,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1138570843038561440}
   cardSO: {fileID: 11400000, guid: 2a5808750b343ac4e9a2addb72eb17c3, type: 2}
+  statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
   moveSpeedMultiplier: 0.7
   buffDuration: 3

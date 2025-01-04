@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class BasicProjectile : MonoBehaviour
 {
+    [SerializeField] private StatsHandler statsHandler;
     [SerializeField] private float projectileSpeed;
     [SerializeField] private float aliveTime;
     [SerializeField] private float damage;
 
     private void Awake()
     {
+        damage = damage * statsHandler.damageMultiplier;
     }
 
     private void Update()

@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 4781096180371931114}
   cardSO: {fileID: 11400000, guid: f5859bc5bbdb84049a76b147fa10193d, type: 2}
+  statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
   fireRateMultiplier: 0.5
   damageIncreaseAmount: 1.4
   buffDuration: 5
