@@ -223,10 +223,9 @@ public class PlayerController : MonoBehaviour
 
     private void FlipSprite()
     {
+        if (isFacingRight) transform.Rotate(0, 180, 0);
+        else transform.Rotate(0, -180, 0);
         isFacingRight = !isFacingRight;
-        Vector3 scale = spriteTransform.localScale;
-        scale.x *= -1;
-        spriteTransform.localScale = scale;
     }
 
     private void Crouch()

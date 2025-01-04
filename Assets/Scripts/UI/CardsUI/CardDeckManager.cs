@@ -36,8 +36,8 @@ public class CardDeckManager : MonoBehaviour
 
     private CardSO SelectCard(List<CardSO> cardSOList)
     {
-        //Copied the code from somewhere its complicated but works
-        //All this code do is select a random card according to its rarity(If its rare then less chance of selection)
+        //There will be an error for now cause cards with different rarity do not exist
+        //Once we add enough card the error should be fixed
         Dictionary<int, int> probabililities = new Dictionary<int, int> 
         {
             //These are probability for each value i.e., 65% chances for common, 30% for uncommon and 5% for rare
