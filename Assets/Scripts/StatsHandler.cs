@@ -7,4 +7,5 @@ public class StatsHandler : ScriptableObject
     public float fireRateMultiplier = 1f;
     public float damageMultiplier = 1f;
     public float dashDistanceMultiplier = 1f;
+    public float jumpHeightMultiplier = 1f;
 }
