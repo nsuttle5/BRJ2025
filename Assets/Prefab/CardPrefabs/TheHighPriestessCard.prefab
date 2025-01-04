@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.51565987, g: 0.33018857, b: 1, a: 1}
+  m_Color: {r: 0.7735849, g: 0.73446923, b: 0.19120681, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -84,9 +84,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7710719628918824068}
-  - component: {fileID: 8527142057168516459}
+  - component: {fileID: 5168084587963485033}
   m_Layer: 5
-  m_Name: TheFoolCard
+  m_Name: TheHighPriestessCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000061035156, y: -0.000030517578}
   m_SizeDelta: {x: 110, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8527142057168516459
+--- !u!114 &5168084587963485033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,12 +121,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608719029102665420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f25c2b95e016bc048bd663b539bdeea4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7492c0817f26ff844bf8d277674fc681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1138570843038561440}
-  cardSO: {fileID: 11400000, guid: 2a5808750b343ac4e9a2addb72eb17c3, type: 2}
-  statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
-  playerManager: {fileID: 0}
-  moveSpeedMultiplier: 0.7
-  buffDuration: 3
+  cardSO: {fileID: 11400000, guid: d5e2f4feceedfdf4cb0a4e1d3532eacd, type: 2}

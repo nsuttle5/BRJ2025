@@ -17,7 +17,6 @@ public class ShootProjectile : MonoBehaviour
     private void Update()
     {
         fireRateTimer -= Time.deltaTime;
-        Debug.Log(fireRateTimer);
         if (Input.GetKey(KeyCode.Mouse0))
         {
             if (fireRateTimer <= 0)

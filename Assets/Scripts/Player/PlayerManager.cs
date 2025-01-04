@@ -11,9 +11,10 @@ public class PlayerManager : MonoBehaviour
     public int currentHealth; // Player's current health
 
     [Header("UI Elements")]
+    [SerializeField] private Transform playerHealthUI;
+    [SerializeField] private GameObject heartPrefab;
     public Sprite emptyHeart; // Sprite for empty heart
     public Sprite fullHeart;  // Sprite for full heart
-    public Image[] hearts;
 
     [Header("Damage Settings")]
     public float invincibilityDuration = 0.2f; // Time the player is invincible after taking damage
@@ -95,15 +96,20 @@ public class PlayerManager : MonoBehaviour
 
     private void UpdateHealthUI()
     {
-        for (int i = 0; i < hearts.Length; i++)
+        foreach(Transform child in playerHealthUI.transform)
         {
+            Destroy(child.gameObject);
+        }
+        for (int i = 0; i < maxHealth; i++)
+        {
+            Transform heart = Instantiate(heartPrefab, playerHealthUI, false).transform;
             if (i < currentHealth)
             {
-                hearts[i].sprite = fullHeart;
+                heart.GetComponent<Image>().sprite = fullHeart;
             }
             else
             {
-                hearts[i].sprite = emptyHeart;
+                heart.GetComponent<Image>().sprite = emptyHeart;
             }
         }
     }
@@ -112,6 +118,13 @@ public class PlayerManager : MonoBehaviour
     {
         Debug.Log("Player has died!");
         // Add death logic (e.g., respawn, game over screen)
+    }
+
+    public void IncreaseMaxHealth()
+    {
+        if (currentHealth == maxHealth) currentHealth++;
+        maxHealth++;
+        UpdateHealthUI();
     }
 
     private System.Collections.IEnumerator InvincibilityCoroutine()

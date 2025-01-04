@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class CardDeckManager : MonoBehaviour
 {
     [Header("Cardpack Settings")]
-    [SerializeField] private int cardpackNum = 3;
     [SerializeField] private Transform[] cardpackSlots;
     [SerializeField] private List<CardSO> cardList;
     [SerializeField] private Button openDeckButton;
