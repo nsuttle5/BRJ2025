@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public float coyoteTime = 0.2f;
+
     private float coyoteTimeCounter;
 
     [Header("Components")]

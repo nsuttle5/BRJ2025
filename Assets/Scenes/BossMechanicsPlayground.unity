@@ -2072,6 +2072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  crouchSpeed: 2.5
   jumpForce: 5
   fallMultiplier: 3
   lowJumpMultiplier: 3

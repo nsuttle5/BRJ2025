@@ -79,7 +79,7 @@ public class CardsManagerUI : MonoBehaviour
     {
         if (cardList.Count > 0)
         {
-            cardList[selectedCardIndex].cardPrefab.UseCard();
+            cardList[selectedCardIndex].cardPrefab.GetComponent<Card>().UseCard();
             cardList.RemoveAt(selectedCardIndex);
             availableCardSlot[selectedCardIndex] = true;
             Transform card = cardSlots[selectedCardIndex].GetChild(0);
