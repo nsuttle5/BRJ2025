@@ -1930,7 +1930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missilePrefab: {fileID: 6411042251170524974, guid: 3caff196e255e604992c5737b7621764, type: 3}
   spawnRadius: 5
-  arcAngle: 180
+  arcAngle: 103.4
   minMissileSpacing: 1
   heightOffset: 0
   visualizeSpawnPoints: 1
