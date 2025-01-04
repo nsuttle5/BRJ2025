@@ -1636,6 +1636,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a5808750b343ac4e9a2addb72eb17c3, type: 2}
   - {fileID: 11400000, guid: f5859bc5bbdb84049a76b147fa10193d, type: 2}
   - {fileID: 11400000, guid: d5e2f4feceedfdf4cb0a4e1d3532eacd, type: 2}
+  - {fileID: 11400000, guid: 83a6662f2bd3de74d85061847b540235, type: 2}
   cardsManagerUI: {fileID: 1607458194}
 --- !u!4 &1752414098
 Transform:

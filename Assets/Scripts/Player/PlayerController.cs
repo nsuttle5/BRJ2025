@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float crouchSpeed = 2.5f; // Speed while crouching
@@ -9,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public float coyoteTime = 0.2f;
-
 
     private float coyoteTimeCounter;
 
@@ -50,6 +51,14 @@ public class PlayerController : MonoBehaviour
     private float stunTimer;
 
     private bool isCrouching = false; // Tracks crouching state
+
+    private void Awake()
+    {
+        if (Instance != null) Destroy(gameObject);
+        else Instance = this;
+
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void Start()
     {
@@ -259,6 +268,11 @@ public class PlayerController : MonoBehaviour
     }
 
     public void SetCanMove(bool value) => canMove = value;
+
+    public void EnableDoubleJump()
+    {
+        hasDoubleJump = true;
+    }
 
     private void OnDrawGizmosSelected()
     {
