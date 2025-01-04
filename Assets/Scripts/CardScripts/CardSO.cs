@@ -15,4 +15,5 @@ public class CardSO : ScriptableObject
         UNCOMMON,
         Rare
     }
+
 }

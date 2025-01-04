@@ -23,4 +23,5 @@ public class TheFoolCard : Card
         statsHandler.moveSpeedMultiplier = 1f;
         Destroy(gameObject);
     }
+
 }

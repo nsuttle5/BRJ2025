@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d6476d3416b564f808b501d88f54d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 4
   currentHealth: 0
   playerHealthUI: {fileID: 1245180692}
   heartPrefab: {fileID: 2288006889136981888, guid: f493f7725fc57304b81be5b8d8227b82, type: 3}

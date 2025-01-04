@@ -96,7 +96,7 @@ public class PlayerManager : MonoBehaviour
 
     private void UpdateHealthUI()
     {
-        foreach(Transform child in playerHealthUI.transform)
+        foreach (Transform child in playerHealthUI.transform)
         {
             Destroy(child.gameObject);
         }

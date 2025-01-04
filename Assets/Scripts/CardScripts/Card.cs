@@ -16,5 +16,6 @@ public abstract class Card : MonoBehaviour
         image.enabled = condition;
     }
 
+
     public abstract void UseCard();
 }

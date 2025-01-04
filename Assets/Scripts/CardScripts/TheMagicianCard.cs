@@ -23,4 +23,5 @@ public class TheMagicianCard : Card
         statsHandler.damageMultiplier = 1f;
         Destroy(gameObject);
     }
+
 }
