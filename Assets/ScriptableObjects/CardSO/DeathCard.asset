@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
-  m_Name: TemperanceCard
+  m_Name: DeathCard
   m_EditorClassIdentifier: 
-  cardName: Temperance
-  description: Minus 2 health, wait, then max health
+  cardName: Death
+  description: Reduce health to 2, inc speed and damage
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 2133184309056195831, guid: 943d369342c93fd47a280b347b455cdb, type: 3}
+  cardPrefab: {fileID: 5139695526271337460, guid: c71c293b20ba1cf45ad83fcde251e611, type: 3}
   rarity: 1

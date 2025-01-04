@@ -1642,6 +1642,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 601c1a81edade1542844ab7b87e9507e, type: 2}
   - {fileID: 11400000, guid: 4aea194b95e61244d916a05f8e249ba9, type: 2}
   - {fileID: 11400000, guid: d54c5b600e81da3459f95dd655d08349, type: 2}
+  - {fileID: 11400000, guid: 26b4b85b600070d4895bc5b7d64b0417, type: 2}
+  - {fileID: 11400000, guid: 51690b1c4b322ee4a8f3875c06f9afeb, type: 2}
+  - {fileID: 11400000, guid: 48b2be29cd48a6444b569f76247ab9b2, type: 2}
   cardsManagerUI: {fileID: 1607458194}
 --- !u!4 &1752414098
 Transform:

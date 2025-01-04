@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
   m_Name: TheHermitCard
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
+  cardName: The Hermit
+  description: Fire rate inc, dash cooldown dec
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 0}
+  cardPrefab: {fileID: 5430918864076615742, guid: 3b719cbf1456a8247afbced34a395292, type: 3}
   rarity: 0
