@@ -123,8 +123,5 @@ public class PlayerManager : MonoBehaviour
 
     public Rigidbody GetPlayerRigidbody() => rb;
     public PlayerController GetPlayerController() => playerController;
-    public float GetMoveSpeed() => playerController.moveSpeed;
-    public void SetMoveSpeed(float value) => playerController.moveSpeed = value;
-
     public List<(int, Vector3)> GetDamageQuene() => damageQueue;
 }

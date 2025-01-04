@@ -9,7 +9,7 @@ public class TheFoolCard : Card
     public override void UseCard()
     {
         //Reduce move speed for certain duration
-        PlayerManager.Instance.SetMoveSpeed(PlayerManager.Instance.GetMoveSpeed() * moveSpeedMultiplier);
+        StatsHandler.Instance.moveSpeedMultiplier = moveSpeedMultiplier;
         StartCoroutine(BuffDuration());
 
         //Increase health by one
@@ -19,7 +19,7 @@ public class TheFoolCard : Card
     private IEnumerator BuffDuration()
     {
         yield return new WaitForSeconds(buffDuration);
-        PlayerManager.Instance.SetMoveSpeed(PlayerManager.Instance.GetMoveSpeed() / moveSpeedMultiplier);
+        StatsHandler.Instance.moveSpeedMultiplier = 1f;
         Destroy(gameObject);
     }
 }

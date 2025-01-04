@@ -4,21 +4,19 @@ public class ShootProjectile : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private float defaultFireRate;
+    [SerializeField] private float fireRate;
 
-    private float currentFireRate;
     private float fireRateTimer;
 
     private void Awake()
     {
-        currentFireRate = defaultFireRate;
-        fireRateTimer = currentFireRate;
+        fireRateTimer = fireRate * StatsHandler.Instance.fireRateMultiplier;
     }
 
     private void Update()
     {
         fireRateTimer -= Time.deltaTime;
-
+        Debug.Log(fireRateTimer);
         if (Input.GetKey(KeyCode.Mouse0))
         {
             if (fireRateTimer <= 0)
@@ -26,7 +24,7 @@ public class ShootProjectile : MonoBehaviour
                 //Shoot
                 Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
-                fireRateTimer = currentFireRate;
+                fireRateTimer = fireRate * StatsHandler.Instance.fireRateMultiplier;
             }
         }
     }

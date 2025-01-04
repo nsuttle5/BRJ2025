@@ -6,6 +6,9 @@ public class BasicProjectile : MonoBehaviour
     [SerializeField] private float aliveTime;
     [SerializeField] private float damage;
 
+    private void Awake()
+    {
+    }
 
     private void Update()
     {

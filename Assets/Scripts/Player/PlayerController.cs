@@ -164,7 +164,7 @@ public class PlayerController : MonoBehaviour
         if (canMove)
         {
             float speed = isCrouching ? crouchSpeed : moveSpeed;
-            rb.linearVelocity = new Vector3(moveInput * speed, rb.linearVelocity.y, rb.linearVelocity.z);
+            rb.linearVelocity = new Vector3(moveInput * speed * StatsHandler.Instance.moveSpeedMultiplier, rb.linearVelocity.y, rb.linearVelocity.z);
         }
 
         if (moveInput > 0 && !isFacingRight)
@@ -257,8 +257,6 @@ public class PlayerController : MonoBehaviour
     }
 
     public void SetCanMove(bool value) => canMove = value;
-    public float GetSpeed => moveSpeed;
-    public void SetMoveSpeed(float value) => moveSpeed = value;
 
     private void OnDrawGizmosSelected()
     {
