@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
   m_Name: TheStarCard
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
+  cardName: The Star
+  description: Ricochet bullets that explode
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 0}
+  cardPrefab: {fileID: 975523899201409546, guid: b4c99e7206f5b7648a821b2c6b1b2364, type: 3}
   rarity: 0

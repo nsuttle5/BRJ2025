@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
   m_Name: TheWorldCard
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
+  cardName: The World
+  description: Stops the spinning of arena
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 0}
-  rarity: 0
+  cardPrefab: {fileID: 9204414790253132856, guid: 9a479527149d4fe46a15c95bc200e8f1, type: 3}
+  rarity: 2

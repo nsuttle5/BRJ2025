@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
   m_Name: TheMoonCard
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
+  cardName: The Moon
+  description: Decreases gravity
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 0}
+  cardPrefab: {fileID: 8075726491362557220, guid: 539c77d6ec6f6cd4ca75fb916617520b, type: 3}
   rarity: 0

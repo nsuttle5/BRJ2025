@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
   m_Name: TheLoversCard
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
+  cardName: The Lovers
+  description: Add ally that attacks
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 0}
-  rarity: 0
+  cardPrefab: {fileID: 2594333802363747592, guid: 425f6c1b623e95b4ba73444704437877, type: 3}
+  rarity: 1

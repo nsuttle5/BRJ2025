@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
   m_Name: JudgementCard
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
+  cardName: Judgement
+  description: Life Steal
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 0}
-  rarity: 0
+  cardPrefab: {fileID: 5331139242568483920, guid: 68831d13d445f084abb0c7013c96e9e1, type: 3}
+  rarity: 1

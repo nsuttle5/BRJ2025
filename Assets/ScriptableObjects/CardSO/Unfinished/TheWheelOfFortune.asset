@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
   m_Name: TheWheelOfFortune
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
+  cardName: Wheel of Fortune
+  description: Random power-up
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 0}
+  cardPrefab: {fileID: 6452508065216223703, guid: f081594781ec0a4429020626eb7c52ac, type: 3}
   rarity: 0

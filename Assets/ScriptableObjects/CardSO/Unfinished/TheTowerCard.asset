@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
   m_Name: TheTowerCard
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
+  cardName: The Tower
+  description: Jump height inc
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 0}
+  cardPrefab: {fileID: 3419501755325547820, guid: 89b6e9f92140e764892c7e118889d8e8, type: 3}
   rarity: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
   m_Name: TheDevilCard
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
+  cardName: The Devil
+  description: Blood Lust (each attack => more dmg)
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 0}
-  rarity: 0
+  cardPrefab: {fileID: 4197071421619911251, guid: ba1ed5eef9c620c48aec4a7074c8989a, type: 3}
+  rarity: 2
