@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TheSunCard
   m_EditorClassIdentifier: 
   cardName: The Sun
-  description: Shoot large fireball
+  description: Grants the user to fire a large fire ball
   cardImage: {fileID: 0}
-  cardPrefab: {fileID: 671329032166651220, guid: 8c980edc0f5f5314ab1b0e7016239bdc, type: 3}
+  cardPrefab: {fileID: 6608719029102665420, guid: ecfce84a08b64734fa9269596ead7d2d, type: 3}
   rarity: 2

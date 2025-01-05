@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3592000006774986208}
   - component: {fileID: 4911421712635415275}
   - component: {fileID: 6963646918755841819}
-  - component: {fileID: -5613157811735011379}
+  - component: {fileID: 3269630904773904972}
   - component: {fileID: -1717987586767413287}
   m_Layer: 8
-  m_Name: ProjectileTemp
+  m_Name: FireballTemp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.9886155, y: -2.0221162, z: 13.869193}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: -6478536213147159724, guid: e01ec281110205247bec3aa59411b09c, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,7 +110,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-5613157811735011379
+--- !u!114 &3269630904773904972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,13 +119,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 91124237414150274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 178f77bde95e32c49afb44a84f78f63b, type: 3}
+  m_Script: {fileID: 11500000, guid: b95e73931735d0c458f71d85cba1491c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
-  projectileSpeed: 7
-  aliveTime: 1
-  damage: 5
+  projectileSpeed: 20
+  aliveTime: 2
+  damage: 20
 --- !u!54 &-1717987586767413287
 Rigidbody:
   m_ObjectHideFlags: 0

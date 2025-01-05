@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] private Transform playerHealthUI;
     [SerializeField] private GameObject heartPrefab;
+    [SerializeField] private Transform firePoint;
     public Sprite emptyHeart; // Sprite for empty heart
     public Sprite fullHeart;  // Sprite for full heart
 
@@ -137,4 +138,5 @@ public class PlayerManager : MonoBehaviour
     public Rigidbody GetPlayerRigidbody() => rb;
     public PlayerMovement GetPlayerMovement() => playerMovement;
     public List<(int, Vector3)> GetDamageQuene() => damageQueue;
+    public Transform GetFirePoint() => firePoint;
 }
