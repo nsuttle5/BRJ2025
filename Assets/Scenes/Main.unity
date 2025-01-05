@@ -1088,6 +1088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672186691}
   - component: {fileID: 672186692}
+  - component: {fileID: 672186700}
   - component: {fileID: 672186694}
   - component: {fileID: 672186695}
   - component: {fileID: 672186696}
@@ -1137,10 +1138,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.32
-  m_Height: 0.94
+  m_Radius: 0.24
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!54 &672186694
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1275,10 +1276,12 @@ MonoBehaviour:
   playerDataSO: {fileID: 11400000, guid: f0bc593380d39b248bb5688b9991c590, type: 2}
   statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
   groundCheckPoint: {fileID: 1931838400}
-  groundCheckRadius: 0.09
+  groundCheckRadius: 0.1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  standingCollider: {fileID: 672186692}
+  crouchCollider: {fileID: 672186700}
 --- !u!96 &672186699
 TrailRenderer:
   serializedVersion: 3
@@ -1386,6 +1389,29 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!136 &672186700
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672186690}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.24
+  m_Height: 0.6
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.15, z: 0}
 --- !u!1 &680713580
 GameObject:
   m_ObjectHideFlags: 0

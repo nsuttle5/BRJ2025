@@ -12,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundCheckRadius;
     [Space(10)]
     [SerializeField] private LayerMask groundLayer;
+    [Space(10)]
+    [Header("CROUCH")]
+    [SerializeField] private CapsuleCollider standingCollider;
+    [SerializeField] private CapsuleCollider crouchCollider;
 
     private Rigidbody playerRB;
 
@@ -46,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
         playerRB = GetComponent<Rigidbody>();
         hasAirJump = true;
         dashCooldownTimer = playerDataSO.dashCooldown * statsHandler.dashCooldownMultiplier;
+        standingCollider.enabled = true;
+        crouchCollider.enabled = false;
     }
 
     private void Start()
@@ -88,6 +94,17 @@ public class PlayerMovement : MonoBehaviour
             {
                 isJumping = true;
                 isJumpCut = false;
+            }
+
+            if (verticalInput < 0)
+            {
+                crouchCollider.enabled = true;
+                standingCollider.enabled = false;
+            }
+            else
+            {
+                crouchCollider.enabled = false;
+                standingCollider.enabled = true;
             }
         }
         else if (hasAirJump && jumpBufferTimer > 0 && !isDashing)
