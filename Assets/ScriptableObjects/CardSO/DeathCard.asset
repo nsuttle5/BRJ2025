@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: DeathCard
   m_EditorClassIdentifier: 
   cardName: Death
-  description: Reduce health to 2, inc speed and damage
+  description: Reduces the health to 2 and gives the user a massive damage and speed
+    boost
   cardImage: {fileID: 0}
   cardPrefab: {fileID: 5139695526271337460, guid: c71c293b20ba1cf45ad83fcde251e611, type: 3}
   rarity: 1

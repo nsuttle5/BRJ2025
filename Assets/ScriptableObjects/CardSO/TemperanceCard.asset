@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TemperanceCard
   m_EditorClassIdentifier: 
   cardName: Temperance
-  description: Minus 2 health, wait, then max health
+  description: Reduces the user health to 2 and returns to max health after 5 seconds
   cardImage: {fileID: 0}
   cardPrefab: {fileID: 2133184309056195831, guid: 943d369342c93fd47a280b347b455cdb, type: 3}
   rarity: 1

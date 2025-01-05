@@ -10,18 +10,10 @@ public class DeathCard : Card
 
     public override void UseCard()
     {
-        healthDec();
+        PlayerManager.Instance.currentHealth = 2;
         statsHandler.damageMultiplier = damageMultiplier;
         statsHandler.moveSpeedMultiplier = moveSpeedMultiplier;
         StartCoroutine(BuffDuration());
-    }
-
-    public void healthDec()
-    {
-        for (int i = PlayerManager.Instance.currentHealth; i > 2; i--)
-        {
-            PlayerManager.Instance.Heal(-1);
-        }
     }
 
     private IEnumerator BuffDuration()

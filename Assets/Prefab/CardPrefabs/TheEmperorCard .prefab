@@ -52,8 +52,8 @@ MonoBehaviour:
   image: {fileID: 5291322992431954898}
   cardSO: {fileID: 11400000, guid: 5879d18fa34bb1743a8e2895fd000ce2, type: 2}
   statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
-  damageMultiplier: 1
-  buffDuration: 1
+  damageMultiplier: 1.4
+  buffDuration: 3
 --- !u!1 &4812250034371213267
 GameObject:
   m_ObjectHideFlags: 0

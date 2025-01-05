@@ -128,4 +128,4 @@ MonoBehaviour:
   cardSO: {fileID: 11400000, guid: abfac9088fe7dbd48be34827cac6d681, type: 2}
   statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
   moveSpeedMultiplier: 1.3
-  buffDuration: 2
+  buffDuration: 3

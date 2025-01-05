@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        gravityScale = playerDataSO.gravityScale;
+        gravityScale = playerDataSO.gravityScale * statsHandler.gravityMultiplier;
     }
 
     private void Update()
@@ -157,17 +157,17 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (playerRB.linearVelocity.y < 0 && verticalInput < 0)
         {
-            gravityScale = playerDataSO.gravityScale * playerDataSO.fastFallMultiplier;
+            gravityScale = playerDataSO.gravityScale * playerDataSO.fastFallMultiplier * statsHandler.gravityMultiplier;
         }
         else if (isJumpCut)
         {
-            gravityScale = playerDataSO.gravityScale * playerDataSO.jumpCutGravityMultiplier;
+            gravityScale = playerDataSO.gravityScale * playerDataSO.jumpCutGravityMultiplier * statsHandler.gravityMultiplier;
         }
         else if ((isJumping || isFalling) && Mathf.Abs(playerRB.linearVelocity.y) < playerDataSO.jumpHangTimeThreshold)
         {
-            gravityScale = playerDataSO.gravityScale * playerDataSO.jumpHangGravityMultiplier;
+            gravityScale = playerDataSO.gravityScale * playerDataSO.jumpHangGravityMultiplier * statsHandler.gravityMultiplier;
         }
-        else gravityScale = playerDataSO.gravityScale;
+        else gravityScale = playerDataSO.gravityScale * statsHandler.gravityMultiplier;
         #endregion
     }
 

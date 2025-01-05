@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TheMagicianCard
   m_EditorClassIdentifier: 
   cardName: The Magician
-  description: Increase Fire Rate and Damage
+  description: Increases magic use rate and damage dealth by the user
   cardImage: {fileID: 0}
   cardPrefab: {fileID: 5940656244354254523, guid: 67f1f3b1ca2658f4e9427d1b6f64853e, type: 3}
   rarity: 0

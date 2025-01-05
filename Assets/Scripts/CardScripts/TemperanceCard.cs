@@ -3,18 +3,18 @@ using System.Collections;
 
 public class TemperanceCard : Card
 {
-    public float waitDuration = 1f;
+    [SerializeField] private float waitDuration = 1f;
 
     public override void UseCard()
     {
-        PlayerManager.Instance.Heal(-2);
+        PlayerManager.Instance.currentHealth -= 2;
         StartCoroutine(HealOverTime());
     }
 
     private IEnumerator HealOverTime()
     {
         yield return new WaitForSeconds(waitDuration);
-        PlayerManager.Instance.Heal(10);
+        PlayerManager.Instance.currentHealth = PlayerManager.Instance.maxHealth;
         Destroy(gameObject);
     }
 }

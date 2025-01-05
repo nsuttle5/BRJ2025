@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TheHermitCard
   m_EditorClassIdentifier: 
   cardName: The Hermit
-  description: Fire rate inc, dash cooldown dec
+  description: Increase magic use rate and decreases dash cooldown of the user
   cardImage: {fileID: 0}
   cardPrefab: {fileID: 5430918864076615742, guid: 3b719cbf1456a8247afbced34a395292, type: 3}
   rarity: 0

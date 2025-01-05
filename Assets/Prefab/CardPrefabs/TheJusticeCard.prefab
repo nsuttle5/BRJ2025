@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 7681127983114222014}
   cardSO: {fileID: 11400000, guid: 601c1a81edade1542844ab7b87e9507e, type: 2}
+  invincibleDuration: 2
 --- !u!1 &9196826418387244516
 GameObject:
   m_ObjectHideFlags: 0

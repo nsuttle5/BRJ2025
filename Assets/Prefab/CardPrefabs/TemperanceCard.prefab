@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 4733339776276771186}
   cardSO: {fileID: 11400000, guid: 26b4b85b600070d4895bc5b7d64b0417, type: 2}
+  waitDuration: 5
 --- !u!1 &3508290942866141383
 GameObject:
   m_ObjectHideFlags: 0

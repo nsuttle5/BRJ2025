@@ -127,5 +127,5 @@ MonoBehaviour:
   image: {fileID: 6037670883497908919}
   cardSO: {fileID: 11400000, guid: fe253617d8f42bb47acea32306dd77a0, type: 2}
   statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
-  gravityMultiplier: 1
-  buffDuration: 1
+  gravityMultiplier: 0.3
+  buffDuration: 4

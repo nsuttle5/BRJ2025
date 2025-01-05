@@ -52,9 +52,9 @@ MonoBehaviour:
   image: {fileID: 1130125599019578947}
   cardSO: {fileID: 11400000, guid: 48b2be29cd48a6444b569f76247ab9b2, type: 2}
   statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
-  damageMultiplier: 1
-  moveSpeedMultiplier: 1
-  buffDuration: 1
+  damageMultiplier: 3
+  moveSpeedMultiplier: 2
+  buffDuration: 5
 --- !u!1 &7709819092148464109
 GameObject:
   m_ObjectHideFlags: 0

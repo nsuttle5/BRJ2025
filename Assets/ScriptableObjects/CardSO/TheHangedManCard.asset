@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TheHangedManCard
   m_EditorClassIdentifier: 
   cardName: The Hanged Man
-  description: Minus 1 heart for damage inc
+  description: Takes a heart for a permanent damage boost
   cardImage: {fileID: 0}
   cardPrefab: {fileID: 2366322670586941895, guid: 7f4031a180a19284f9b30413ec4f0fd8, type: 3}
   rarity: 0

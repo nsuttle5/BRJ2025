@@ -9,7 +9,7 @@ public class BasicProjectile : MonoBehaviour
 
     private void Awake()
     {
-        damage = damage * statsHandler.damageMultiplier;
+        damage = damage * statsHandler.damageMultiplier * statsHandler.permanentDamageIncrease;
     }
 
     private void Update()

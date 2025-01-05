@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CardsManagerUI : MonoBehaviour
 {
     [SerializeField] private Transform[] cardSlots; 
     [SerializeField] private List<CardSO> cardList;
+    [SerializeField] private TextMeshProUGUI currentCardNameText;
 
     //private List<GameObject> instantiatedCards;
 
@@ -52,6 +54,12 @@ public class CardsManagerUI : MonoBehaviour
                 }
             }
         }
+
+        if (cardList.Count > 0)
+        {
+            currentCardNameText.text = cardList[selectedCardIndex].cardName;
+        }
+        else currentCardNameText.text = "";
 
         if (Input.GetKeyDown(KeyCode.E))
         {

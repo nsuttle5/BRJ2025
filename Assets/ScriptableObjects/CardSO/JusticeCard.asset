@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JusticeCard
   m_EditorClassIdentifier: 
   cardName: Justice
-  description: Invincible for a few seconds
+  description: Make the user invincible for 2 seconds
   cardImage: {fileID: 0}
   cardPrefab: {fileID: 941646363980916324, guid: 4e09c83de27db2f438c1c47eab520a15, type: 3}
   rarity: 0

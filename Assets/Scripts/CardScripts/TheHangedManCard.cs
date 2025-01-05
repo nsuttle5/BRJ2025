@@ -3,12 +3,12 @@ using UnityEngine;
 public class TheHangedManCard : Card
 {
     [SerializeField] private StatsHandler statsHandler;
-    [SerializeField] private float damageMultiplier;
+    [SerializeField] private float damageIncrease;
 
     public override void UseCard()
     {
-        PlayerManager.Instance.Heal(-1);
-        statsHandler.damageMultiplier = damageMultiplier;
+        PlayerManager.Instance.currentHealth--;
+        statsHandler.permanentDamageIncrease += damageIncrease;
         Destroy(gameObject);
     }
 }

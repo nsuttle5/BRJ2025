@@ -52,8 +52,8 @@ MonoBehaviour:
   image: {fileID: 1472863539432011487}
   cardSO: {fileID: 11400000, guid: e60e889e184a1194599b8f78118fea5c, type: 2}
   statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
-  jumpHeightMultiplier: 1
-  buffDuration: 5
+  jumpHeightMultiplier: 1.5
+  buffDuration: 3
 --- !u!1 &6479831096393764878
 GameObject:
   m_ObjectHideFlags: 0
