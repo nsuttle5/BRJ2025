@@ -9,4 +9,5 @@ public class StatsHandler : ScriptableObject
     public float dashDistanceMultiplier = 1f;
     public float jumpHeightMultiplier = 1f;
     public float dashCooldownMultiplier = 1f;
+    public float gravityMultiplier = 1f;
 }
