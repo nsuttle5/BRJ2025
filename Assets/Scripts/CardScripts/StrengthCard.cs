@@ -9,7 +9,7 @@ public class StrengthCard : Card
 
     public override void UseCard()
     {
-        PlayerController.Instance.EnableDoubleJump();
+        PlayerManager.Instance.GetPlayerMovement().CanDoubleJump(true);
         statsHandler.jumpHeightMultiplier = jumpHeightMultiplier;
         StartCoroutine(BuffDuration());
     }
@@ -17,6 +17,7 @@ public class StrengthCard : Card
     private IEnumerator BuffDuration()
     {
         yield return new WaitForSeconds(buffDuration);
+        PlayerManager.Instance.GetPlayerMovement().CanDoubleJump(true);
         statsHandler.jumpHeightMultiplier = 1f;
         Destroy(gameObject);
     }

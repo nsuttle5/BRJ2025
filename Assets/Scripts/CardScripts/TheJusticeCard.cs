@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TheJusticeCard : Card
 {
-    public float invincibleDuration = 5f;
+    [SerializeField] private float invincibleDuration = 5f;
     public override void UseCard()
     {
         PlayerManager.Instance.isInvincible = true;

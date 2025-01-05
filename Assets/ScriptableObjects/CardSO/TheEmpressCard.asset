@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TheEmpressCard
   m_EditorClassIdentifier: 
   cardName: The Empress
-  description: Speed movement inc
+  description: Movement Speed Increase
   cardImage: {fileID: 0}
   cardPrefab: {fileID: 8570479025294249352, guid: a5a1d9b91d88356478a6f37eb80b1d14, type: 3}
   rarity: 0

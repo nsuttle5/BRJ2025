@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TheHierophantCard
   m_EditorClassIdentifier: 
   cardName: The Hierophant
-  description: Gives double jump
+  description: Grants Double Jump
   cardImage: {fileID: 0}
   cardPrefab: {fileID: 1920939067055536163, guid: 1debb973daffb43428d8660ca7bbff74, type: 3}
   rarity: 0

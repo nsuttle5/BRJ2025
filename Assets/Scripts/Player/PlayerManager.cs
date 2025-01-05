@@ -22,7 +22,7 @@ public class PlayerManager : MonoBehaviour
 
     public bool isInvincible = false; // Tracks if the player is invincible
     private Rigidbody rb;             // Reference to the player's Rigidbody
-    private PlayerController playerController;
+    private PlayerMovement playerMovement;
 
     private List<(int damage, Vector3 knockback)> damageQueue = new List<(int, Vector3)>();
 
@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
         if (Instance != null) Destroy(gameObject);
         else Instance = this;
 
-        playerController = GetComponent<PlayerController>();
+        playerMovement = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -78,7 +78,7 @@ public class PlayerManager : MonoBehaviour
             // Apply knockback
             if (rb != null)
             {
-                playerController.SetCanMove(false);
+                playerMovement.SetStun(0.2f);
                 rb.AddForce(knockbackDirection.normalized * knockbackForce, ForceMode.Impulse);
             }
 
@@ -135,6 +135,6 @@ public class PlayerManager : MonoBehaviour
     }
 
     public Rigidbody GetPlayerRigidbody() => rb;
-    public PlayerController GetPlayerController() => playerController;
+    public PlayerMovement GetPlayerMovement() => playerMovement;
     public List<(int, Vector3)> GetDamageQuene() => damageQueue;
 }
