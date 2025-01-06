@@ -6,14 +6,14 @@ public class TheJusticeCard : Card
     [SerializeField] private float invincibleDuration = 5f;
     public override void UseCard()
     {
-        PlayerManager.Instance.isInvincible = true;
+        PlayerManager.Instance.SetInvincibility(true);
         StartCoroutine(BuffDuration());
     }
 
     private IEnumerator BuffDuration()
     {
         yield return new WaitForSeconds(invincibleDuration);
-        PlayerManager.Instance.isInvincible = false;
+        PlayerManager.Instance.SetInvincibility(false);
         Destroy(gameObject);
     }
 }

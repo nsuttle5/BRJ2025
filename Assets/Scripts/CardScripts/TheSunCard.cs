@@ -7,5 +7,6 @@ public class TheSunCard : Card
     {
         Transform firePoint = PlayerManager.Instance.GetFirePoint();
         Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
+        Destroy(gameObject);
     }
 }

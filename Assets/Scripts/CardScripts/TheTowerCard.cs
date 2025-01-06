@@ -4,7 +4,7 @@ using System.Collections;
 public class TheTowerCard : Card
 {
     [SerializeField] private StatsHandler statsHandler;
-    [SerializeField] private float jumpHeightMultiplier = 1f;
+    [SerializeField] private float jumpHeightMultiplier;
     [SerializeField] private float buffDuration = 5f;
 
     public override void UseCard()

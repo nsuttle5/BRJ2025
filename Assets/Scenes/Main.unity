@@ -555,6 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8dc5b1f820a36e4a9b4efe4f6d2793e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
   generalOutRangeRotationSpeed: 0.2
   generalInRangeRotationSpeed: 0.1
   centrePoint: {fileID: 1970975385}
@@ -1143,7 +1144,6 @@ MonoBehaviour:
   fullHeart: {fileID: 21300000, guid: 6f4f0bf36344ed94a82959ac0c586ed1, type: 3}
   invincibilityDuration: 1
   knockbackForce: 8
-  isInvincible: 0
 --- !u!114 &672186697
 MonoBehaviour:
   m_ObjectHideFlags: 0

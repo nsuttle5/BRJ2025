@@ -7,21 +7,21 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance;
 
     [Header("Player Settings")]
-    public int maxHealth = 4; // Maximum health the player can have
-    public int currentHealth; // Player's current health
+    [SerializeField] private int maxHealth = 4; // Maximum health the player can have
+    [SerializeField] private int currentHealth; // Player's current health
 
     [Header("UI Elements")]
     [SerializeField] private Transform playerHealthUI;
     [SerializeField] private GameObject heartPrefab;
     [SerializeField] private Transform firePoint;
-    public Sprite emptyHeart; // Sprite for empty heart
-    public Sprite fullHeart;  // Sprite for full heart
+    [SerializeField] private Sprite emptyHeart; // Sprite for empty heart
+    [SerializeField] private Sprite fullHeart;  // Sprite for full heart
 
     [Header("Damage Settings")]
-    public float invincibilityDuration = 0.2f; // Time the player is invincible after taking damage
-    public float knockbackForce = 5f;       // Knockback force applied to the player
+    [SerializeField] private float invincibilityDuration = 0.2f; // Time the player is invincible after taking damage
+    [SerializeField] private float knockbackForce = 5f;       // Knockback force applied to the player
 
-    public bool isInvincible = false; // Tracks if the player is invincible
+    private bool isInvincible = false; // Tracks if the player is invincible
     private Rigidbody rb;             // Reference to the player's Rigidbody
     private PlayerMovement playerMovement;
 
@@ -38,65 +38,43 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        // Initialize health
         currentHealth = maxHealth;
         UpdateHealthUI();
-
-        // Get the Rigidbody component
-        if (rb == null)
-        {
-            Debug.LogError("PlayerManager: Rigidbody component missing!");
-        }
     }
 
     private void Update()
     {
+        //Give damage that was stored
         if (damageQueue.Count > 0 && !isInvincible)
         {
-            Debug.Log("DOING DAMAGE");
             int damage = damageQueue[0].damage;
             Vector3 knockback = damageQueue[0].knockback;
-            TakeDamage(damage, knockback);
+            TakeDamage(damage, knockback, invincibilityDuration);
             damageQueue.RemoveAt(0);
         }
     }
 
-    public void TakeDamage(int damage, Vector3 knockbackDirection)
+    public void TakeDamage(int damage, Vector3 knockbackDirection, float stunTime)
     {
         if (isInvincible) return;
 
         // Apply damage
         currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthUI();
-
-        if (currentHealth <= 0)
+        
+        if (currentHealth > 0)
         {
-            Die();
-        }
-        else
-        {
-            // Apply knockback
-            if (rb != null)
-            {
-                playerMovement.SetStun(0.2f);
-                rb.AddForce(knockbackDirection.normalized * knockbackForce, ForceMode.Impulse);
-            }
+            playerMovement.SetStun(stunTime);
+            rb.AddForce(knockbackDirection.normalized * knockbackForce, ForceMode.Impulse);
 
             // Start invincibility period
-            StartCoroutine(InvincibilityCoroutine());
+            StartCoroutine(InvincibilityCoroutine(stunTime));
         }
-    }
-
-    public void Heal(int amount)
-    {
-        currentHealth += amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHealthUI();
     }
 
     private void UpdateHealthUI()
     {
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         foreach (Transform child in playerHealthUI.transform)
         {
             Destroy(child.gameObject);
@@ -113,6 +91,10 @@ public class PlayerManager : MonoBehaviour
                 heart.GetComponent<Image>().sprite = emptyHeart;
             }
         }
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
     private void Die()
@@ -127,16 +109,29 @@ public class PlayerManager : MonoBehaviour
         maxHealth++;
         UpdateHealthUI();
     }
+    public void SetCurrentHealth(int amount)
+    {
+        currentHealth = amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        UpdateHealthUI();
+    }
+    public int GetCurrentHealth() => currentHealth;
+    public void SetMaxHealth(int amount)
+    {
+        maxHealth = amount;
+        UpdateHealthUI();
+    }
+    public int GetMaxHealth() => maxHealth;
+    public void SetInvincibility(bool condition) => isInvincible = condition;
+    public Rigidbody GetPlayerRigidbody() => rb;
+    public PlayerMovement GetPlayerMovement() => playerMovement;
+    public List<(int, Vector3)> GetDamageQuene() => damageQueue;
+    public Transform GetFirePoint() => firePoint;
 
-    private System.Collections.IEnumerator InvincibilityCoroutine()
+    private System.Collections.IEnumerator InvincibilityCoroutine(float invincibilityDuration)
     {
         isInvincible = true;
         yield return new WaitForSeconds(invincibilityDuration);
         isInvincible = false;
     }
-
-    public Rigidbody GetPlayerRigidbody() => rb;
-    public PlayerMovement GetPlayerMovement() => playerMovement;
-    public List<(int, Vector3)> GetDamageQuene() => damageQueue;
-    public Transform GetFirePoint() => firePoint;
 }

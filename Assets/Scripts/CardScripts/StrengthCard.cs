@@ -17,7 +17,7 @@ public class StrengthCard : Card
     private IEnumerator BuffDuration()
     {
         yield return new WaitForSeconds(buffDuration);
-        PlayerManager.Instance.GetPlayerMovement().CanDoubleJump(true);
+        PlayerManager.Instance.GetPlayerMovement().CanDoubleJump(false);
         statsHandler.jumpHeightMultiplier = 1f;
         Destroy(gameObject);
     }

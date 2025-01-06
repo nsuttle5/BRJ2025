@@ -10,7 +10,7 @@ public class DeathCard : Card
 
     public override void UseCard()
     {
-        PlayerManager.Instance.currentHealth = 2;
+        PlayerManager.Instance.SetCurrentHealth(2);
         statsHandler.damageMultiplier = damageMultiplier;
         statsHandler.moveSpeedMultiplier = moveSpeedMultiplier;
         StartCoroutine(BuffDuration());

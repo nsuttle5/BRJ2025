@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LevelSpin : MonoBehaviour
 {
+    [SerializeField] private StatsHandler statsHandler;
     [SerializeField] private float generalOutRangeRotationSpeed;
     [SerializeField] private float generalInRangeRotationSpeed;
     [SerializeField] private Transform centrePoint;
@@ -26,11 +27,11 @@ public class LevelSpin : MonoBehaviour
         if (playerPosition.position.x > (centrePoint.position.x + range)
             || playerPosition.position.x < (centrePoint.position.x - range))
         {
-            transform.Rotate(new Vector3(0, horizontalInput * generalOutRangeRotationSpeed, 0));
+            transform.Rotate(new Vector3(0, horizontalInput * generalOutRangeRotationSpeed * statsHandler.moveSpeedMultiplier, 0));
         }
         else
         {
-            transform.Rotate(new Vector3(0, horizontalInput * generalInRangeRotationSpeed, 0));
+            transform.Rotate(new Vector3(0, horizontalInput * generalInRangeRotationSpeed * statsHandler.moveSpeedMultiplier, 0));
         }
 
         deltaPositionX = playerPosition.position.x - previousPositionX;

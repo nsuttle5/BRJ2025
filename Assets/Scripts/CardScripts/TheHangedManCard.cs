@@ -7,7 +7,7 @@ public class TheHangedManCard : Card
 
     public override void UseCard()
     {
-        PlayerManager.Instance.currentHealth--;
+        PlayerManager.Instance.SetCurrentHealth(PlayerManager.Instance.GetCurrentHealth() - 1);
         statsHandler.permanentDamageIncrease += damageIncrease;
         Destroy(gameObject);
     }

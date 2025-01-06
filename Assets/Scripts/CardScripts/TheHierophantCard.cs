@@ -15,6 +15,7 @@ public class TheHierophantCard : Card
     {
         yield return new WaitForSeconds(buffDuration);
         PlayerManager.Instance.GetPlayerMovement().CanDoubleJump(false);
+        Destroy(gameObject);
     }
 
 

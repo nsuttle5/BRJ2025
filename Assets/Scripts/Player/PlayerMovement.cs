@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody>();
         hasAirJump = true;
+        canAirJump = false;
         dashCooldownTimer = playerDataSO.dashCooldown * statsHandler.dashCooldownMultiplier;
         standingCollider.enabled = true;
         crouchCollider.enabled = false;

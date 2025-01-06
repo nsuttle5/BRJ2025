@@ -14,7 +14,7 @@ public class TheFoolCard : Card
         StartCoroutine(BuffDuration());
 
         //Increase health by one
-        PlayerManager.Instance.Heal(1);
+        PlayerManager.Instance.SetCurrentHealth(PlayerManager.Instance.GetCurrentHealth() + 1);
     }
 
     private IEnumerator BuffDuration()

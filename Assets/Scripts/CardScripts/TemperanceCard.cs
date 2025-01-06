@@ -7,14 +7,14 @@ public class TemperanceCard : Card
 
     public override void UseCard()
     {
-        PlayerManager.Instance.currentHealth -= 2;
+        PlayerManager.Instance.SetCurrentHealth(2);
         StartCoroutine(HealOverTime());
     }
 
     private IEnumerator HealOverTime()
     {
         yield return new WaitForSeconds(waitDuration);
-        PlayerManager.Instance.currentHealth = PlayerManager.Instance.maxHealth;
+        PlayerManager.Instance.SetCurrentHealth(PlayerManager.Instance.GetMaxHealth());
         Destroy(gameObject);
     }
 }
