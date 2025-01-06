@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d258122d62d9474b990a07e434d05b0, type: 3}
   m_Name: StrengthCard
   m_EditorClassIdentifier: 
-  cardName: Stength
+  cardName: Strength
   description: Grants the user the strength to double jump with increased jump height
   cardImage: {fileID: 0}
   cardPrefab: {fileID: 2531717542915171003, guid: d584165e52cb7a14a945189b4eeeda26, type: 3}

@@ -6,31 +6,79 @@ using UnityEngine.UI;
 public class CardDeckManager : MonoBehaviour
 {
     [Header("Cardpack Settings")]
-    [SerializeField] private Transform[] cardpackSlots;
+    [SerializeField] private CardsManagerUI cardsManagerUI;
+    [SerializeField] private CardShow[] cardShows;
     [SerializeField] private List<CardSO> cardList;
-    [SerializeField] private Button openDeckButton;
+    [SerializeField] private Image timeToReuseFillBar;
 
     private bool canOpenDeck = true;
+    [SerializeField] private float reuseTime;
+    private float reuseTimer = 0;
+
 
     private void Awake()
     {
-        openDeckButton.onClick.AddListener(() =>
+        HideCards();
+    }
+
+    private void Start()
+    {
+        foreach (CardShow cardShow in cardShows)
         {
-            if (canOpenDeck)
+            cardShow.OnSelectButtonClicked += CardShow_OnSelectButtonClicked;
+        }
+    }
+
+    private void CardShow_OnSelectButtonClicked(object sender, CardShow.OnSelectButtonClickedEventArgs e)
+    {
+        cardsManagerUI.AddCard(e.cardSO);
+        canOpenDeck = true;
+        HideCards();
+    }
+
+
+    private void Update()
+    {
+        if (canOpenDeck) reuseTimer -= Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.F) && canOpenDeck && cardsManagerUI.CanAddMoreCards())
+        {
+            if (reuseTimer <= 0)
             {
-                for (int i = 0; i < cardpackSlots.Length; i++)
+                for (int i = 0; i < cardShows.Length; i++)
                 {
                     //Select 3 card from the list (Also consider the rarity value)
                     CardSO selectedCard = SelectCard(cardList);
 
                     //From the selected 3 card place each of them on the card slot pack
-                    GameObject card = Instantiate(selectedCard.cardPrefab, cardpackSlots[i], false);
-                    card.transform.localScale = new Vector3(2, 2, 2);
-
+                    CardShow cardShow = cardShows[i];
+                    cardShow.gameObject.SetActive(true);
+                    cardShow.cardNameText.text = selectedCard.cardName;
+                    cardShow.cardDescriptionText.text = selectedCard.description;
+                    cardShow.cardImage.sprite = selectedCard.cardImage;
+                    switch (selectedCard.rarity)
+                    {
+                        case CardSO.Rarity.COMMON:
+                            cardShow.rarityText.text = "COMMON";
+                            break;
+                        case CardSO.Rarity.UNCOMMON:
+                            cardShow.rarityText.text = "UNCOMMON";
+                            break;
+                        case CardSO.Rarity.Rare:
+                            cardShow.rarityText.text = "RARE";
+                            break;
+                    }
+                    cardShow.cardSO = selectedCard;
+                    
                     canOpenDeck = false;
                 }
+
+                reuseTimer = reuseTime;
             }
-        });
+        }
+
+        //Time To Reuse Fill Bar
+        timeToReuseFillBar.fillAmount = 1 - (reuseTimer / reuseTime);
     }
 
     private CardSO SelectCard(List<CardSO> cardSOList)
@@ -67,5 +115,13 @@ public class CardDeckManager : MonoBehaviour
         }
 
         return null; //Should not reach here if reached then there is a problem with code;
+    }
+
+    private void HideCards()
+    {
+        foreach (CardShow cardShow in cardShows)
+        {
+            if (cardShow.gameObject.activeSelf) cardShow.gameObject.SetActive(false);
+        }
     }
 }
