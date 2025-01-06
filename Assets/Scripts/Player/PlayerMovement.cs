@@ -120,6 +120,11 @@ public class PlayerMovement : MonoBehaviour
             Jump(playerDataSO.airJumpForceMultiplier);
         }
 
+        //Flip Sprite in the direciton of motion
+        if (horizontalInput > 0) isFacingRight = true;
+        else if (horizontalInput < 0) isFacingRight = false;
+        FlipSprite();
+
         if (!isDashing && !isStun)
         {
             Move();
@@ -208,9 +213,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FlipSprite()
     {
-        if (isFacingRight) transform.Rotate(0, 180, 0);
-        else transform.Rotate(0, -180, 0);
-        isFacingRight = !isFacingRight;
+        if (!isFacingRight) transform.eulerAngles = new Vector3(0, 180, 0);
+        else transform.eulerAngles = Vector3.zero;
     }
 
     private bool IsGrounded()
