@@ -9,20 +9,15 @@ public class LevelSpin : MonoBehaviour
     [SerializeField] private Transform playerPosition;
     [SerializeField] private float range;
 
-    private float deltaPositionX;
-    private float previousPositionX;
-
     private float horizontalInput;
-
-    private void Awake()
-    {
-        deltaPositionX = 0;
-        previousPositionX = playerPosition.position.x;
-    }
+    private float verticalInput;
 
     private void Update()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+
+        if (horizontalInput != 0 && verticalInput != 0 && Input.GetMouseButton(0)) return;
 
         if (playerPosition.position.x > (centrePoint.position.x + range)
             || playerPosition.position.x < (centrePoint.position.x - range))
@@ -33,10 +28,6 @@ public class LevelSpin : MonoBehaviour
         {
             transform.Rotate(new Vector3(0, horizontalInput * generalInRangeRotationSpeed * statsHandler.moveSpeedMultiplier, 0));
         }
-
-        deltaPositionX = playerPosition.position.x - previousPositionX;
-        previousPositionX = playerPosition.position.x;
-
     }
 
     private void OnDrawGizmos()

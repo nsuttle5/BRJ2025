@@ -17,8 +17,8 @@ MonoBehaviour:
   gravityScale: 5.6631546
   fallGravityMultiplier: 10
   maxFallSpeed: 20
-  fastFallMultiplier: 3
   moveSpeed: 5
+  crouchMoveSpeed: 3
   jumpHeight: 2.5
   jumpReachTime: 0.3
   jumpForce: 16.666666

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5613157811735011379}
   - component: {fileID: -1717987586767413287}
   m_Layer: 8
-  m_Name: ProjectileTemp
+  m_Name: Bullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,13 +119,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 91124237414150274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 178f77bde95e32c49afb44a84f78f63b, type: 3}
+  m_Script: {fileID: 11500000, guid: 27066a468a410fd408c5d2f9c44e3966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
-  projectileSpeed: 7
-  aliveTime: 1
-  damage: 5
+  projectileSpeed: 10
+  aliveTime: 4
+  damage: 10
 --- !u!54 &-1717987586767413287
 Rigidbody:
   m_ObjectHideFlags: 0

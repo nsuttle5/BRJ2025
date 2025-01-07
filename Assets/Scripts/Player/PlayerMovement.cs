@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash;
     private bool isFacingRight = true;
     private bool isStun = false;
+    private bool isFiringDiagonal = false;
 
     //TIMERS
     // Coyote time is the timer after jumping off a ledge
@@ -74,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space)) isJumpCut = isJumping;
         #endregion
 
+        isFiringDiagonal = Input.GetMouseButton(0) && horizontalInput != 0 && verticalInput != 0;
         isGrounded = IsGrounded();
 
         //TIMERS
@@ -126,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         else if (horizontalInput < 0) isFacingRight = false;
         FlipSprite();
 
-        if (!isDashing && !isStun)
+        if (!isDashing && !isStun && !isFiringDiagonal)
         {
             Move();
         }
@@ -161,10 +163,6 @@ public class PlayerMovement : MonoBehaviour
         {
             gravityScale = 0;
         }
-        else if (playerRB.linearVelocity.y < 0 && verticalInput < 0)
-        {
-            gravityScale = playerDataSO.gravityScale * playerDataSO.fastFallMultiplier * statsHandler.gravityMultiplier;
-        }
         else if (isJumpCut)
         {
             gravityScale = playerDataSO.gravityScale * playerDataSO.jumpCutGravityMultiplier * statsHandler.gravityMultiplier;
@@ -184,7 +182,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        playerRB.linearVelocity = new Vector3(playerDataSO.moveSpeed * horizontalInput * statsHandler.moveSpeedMultiplier, playerRB.linearVelocity.y, playerRB.linearVelocity.z);
+        float moveSpeed = (isGrounded && verticalInput < 0) ? playerDataSO.crouchMoveSpeed : playerDataSO.moveSpeed;
+        playerRB.linearVelocity = new Vector3(moveSpeed * horizontalInput * statsHandler.moveSpeedMultiplier, playerRB.linearVelocity.y, playerRB.linearVelocity.z);
     }
 
     private void Jump(float jumpForceMultiplier)
@@ -228,6 +227,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void CanDoubleJump(bool condition) => canAirJump = condition;
+    public Vector2 GetMovementDirection() => new Vector2(horizontalInput, verticalInput);
+    public bool GetIsGrounded() => isGrounded;
 
     private void OnDrawGizmos()
     {
