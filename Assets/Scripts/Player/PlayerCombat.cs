@@ -78,28 +78,22 @@ public class PlayerCombat : MonoBehaviour
         {
             if (fireRateTimer <= 0 && currentProjectileType != ProjectileTypes.Fireball)
             {
-                if (isGrounded)
+                if (playerMovement.IsFiringDiagonal())
                 {
-                    if (moveDirection.x != 0)
-                    {
-                        currentFirePoint = (moveDirection.y > 0)
-                        ? firePointDiagonalUp : (moveDirection.y < 0)
-                        ? firePointDiagonalDown
-                        : firePointForward;
-                    }
-                    else
-                    {
-                        currentFirePoint = (moveDirection.y > 0)
-                        ? firePointUp
-                        : firePointForward;
-                    }
+                    currentFirePoint = (moveDirection.y > 0)
+                        ? firePointDiagonalUp
+                        : firePointDiagonalDown;
                 }
                 else if (!isGrounded)
                 {
                     currentFirePoint = (moveDirection.y > 0)
                         ? firePointUp : (moveDirection.y < 0)
-                        ? firePointDown
-                        : firePointForward;
+                        ? firePointDown : firePointForward;
+                }
+                else
+                {
+                    currentFirePoint = (moveDirection.y > 0)
+                        ? firePointUp : firePointForward;
                 }
                 SpawnFromPool(currentProjectileType, currentFirePoint.position, currentFirePoint.rotation);
                 fireRateTimer = fireRate;

@@ -125,7 +125,7 @@ MonoBehaviour:
   statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
   projectileSpeed: 10
   aliveTime: 4
-  damage: 10
+  baseDamage: 10
 --- !u!54 &-1717987586767413287
 Rigidbody:
   m_ObjectHideFlags: 0

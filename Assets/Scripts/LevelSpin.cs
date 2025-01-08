@@ -9,24 +9,28 @@ public class LevelSpin : MonoBehaviour
     [SerializeField] private Transform playerPosition;
     [SerializeField] private float range;
 
-    private float horizontalInput;
-    private float verticalInput;
+    private PlayerMovement playerMovement;
+    private Vector2 movementInput;
+
+    private void Awake()
+    {
+        playerMovement = playerPosition.GetComponent<PlayerMovement>();
+    }
 
     private void Update()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        movementInput = playerMovement.GetMovementDirection();
 
-        if (horizontalInput != 0 && verticalInput != 0 && Input.GetMouseButton(0)) return;
+        if (playerMovement.IsFiringDiagonal()) return;
 
         if (playerPosition.position.x > (centrePoint.position.x + range)
             || playerPosition.position.x < (centrePoint.position.x - range))
         {
-            transform.Rotate(new Vector3(0, horizontalInput * generalOutRangeRotationSpeed * statsHandler.moveSpeedMultiplier, 0));
+            transform.Rotate(new Vector3(0, movementInput.x * generalOutRangeRotationSpeed * statsHandler.moveSpeedMultiplier, 0));
         }
         else
         {
-            transform.Rotate(new Vector3(0, horizontalInput * generalInRangeRotationSpeed * statsHandler.moveSpeedMultiplier, 0));
+            transform.Rotate(new Vector3(0, movementInput.x * generalInRangeRotationSpeed * statsHandler.moveSpeedMultiplier, 0));
         }
     }
 

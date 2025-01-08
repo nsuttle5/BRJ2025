@@ -52,8 +52,8 @@ MonoBehaviour:
   image: {fileID: 4131963121364554769}
   cardSO: {fileID: 11400000, guid: 51690b1c4b322ee4a8f3875c06f9afeb, type: 2}
   statsHandler: {fileID: 11400000, guid: f2b04c15a0c83ad468a2b9dc3bf2f7d6, type: 2}
-  jumpHeightMultiplier: 1
   dashCooldownMultiplier: 1
+  fireRateMultiplier: 1.2
   buffDuration: 1
 --- !u!1 &6742398428554963899
 GameObject:

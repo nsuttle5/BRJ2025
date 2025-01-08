@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
     private float dashStopTimer;
     private float dashCooldownTimer;
     private float stunTimer;
+    private float diagonalFireBufferTime = 0.4f;
+    private float diagonalFireBufferTimer;
 
     private float horizontalInput;
     private float verticalInput;
@@ -54,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         dashCooldownTimer = playerDataSO.dashCooldown * statsHandler.dashCooldownMultiplier;
         standingCollider.enabled = true;
         crouchCollider.enabled = false;
+        diagonalFireBufferTimer = diagonalFireBufferTime;
     }
 
     private void Start()
@@ -75,8 +78,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space)) isJumpCut = isJumping;
         #endregion
 
-        isFiringDiagonal = Input.GetMouseButton(0) && horizontalInput != 0 && verticalInput != 0;
         isGrounded = IsGrounded();
+        isFiringDiagonal = Input.GetMouseButton(0) && horizontalInput != 0 && verticalInput != 0 && isGrounded && diagonalFireBufferTimer <= 0;
 
         //TIMERS
         jumpBufferTimer -= Time.deltaTime;
@@ -88,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded)
         {
+            diagonalFireBufferTimer -= Time.deltaTime;
             coyoteTimer = playerDataSO.coyoteTime;
             isJumpCut = false;
             isFalling = false;
@@ -122,15 +126,17 @@ public class PlayerMovement : MonoBehaviour
             }
             Jump(playerDataSO.airJumpForceMultiplier);
         }
+        else diagonalFireBufferTimer = diagonalFireBufferTime;
 
         //Flip Sprite in the direciton of motion
         if (horizontalInput > 0) isFacingRight = true;
         else if (horizontalInput < 0) isFacingRight = false;
         FlipSprite();
 
-        if (!isDashing && !isStun && !isFiringDiagonal)
+        if (!isDashing && !isStun)
         {
-            Move();
+            if (!isFiringDiagonal) Move();
+            else playerRB.linearVelocity = new Vector3(0 , playerRB.linearVelocity.y, playerRB.linearVelocity.z);
         }
 
         if (isJumping && playerRB.linearVelocity.y < 0)
@@ -229,6 +235,7 @@ public class PlayerMovement : MonoBehaviour
     public void CanDoubleJump(bool condition) => canAirJump = condition;
     public Vector2 GetMovementDirection() => new Vector2(horizontalInput, verticalInput);
     public bool GetIsGrounded() => isGrounded;
+    public bool IsFiringDiagonal() => isFiringDiagonal;
 
     private void OnDrawGizmos()
     {

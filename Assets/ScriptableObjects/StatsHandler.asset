@@ -15,3 +15,8 @@ MonoBehaviour:
   moveSpeedMultiplier: 1
   fireRateMultiplier: 1
   damageMultiplier: 1
+  dashDistanceMultiplier: 1
+  jumpHeightMultiplier: 1
+  dashCooldownMultiplier: 1
+  gravityMultiplier: 1
+  permanentDamageIncrease: 0
