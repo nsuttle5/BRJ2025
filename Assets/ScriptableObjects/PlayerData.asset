@@ -24,7 +24,7 @@ MonoBehaviour:
   jumpForce: 16.666666
   airJumpForceMultiplier: 0.85
   jumpCutGravityMultiplier: 2
-  jumpHangGravityMultiplier: 0.505
+  jumpHangGravityMultiplier: 0.879
   jumpHangTimeThreshold: 4
   jumpHangAccelerationMultiplier: 1.2
   jumpHangMoveSpeedMultiplier: 1.3
