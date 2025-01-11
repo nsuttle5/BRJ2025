@@ -206,6 +206,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &81672312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 81672314}
+  - component: {fileID: 81672313}
+  m_Layer: 0
+  m_Name: CardInventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &81672313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81672312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c86fcc26f192964db5186f2282f921a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardsList:
+  - {fileID: 11400000, guid: 48b2be29cd48a6444b569f76247ab9b2, type: 2}
+  - {fileID: 11400000, guid: 601c1a81edade1542844ab7b87e9507e, type: 2}
+  - {fileID: 11400000, guid: 4aea194b95e61244d916a05f8e249ba9, type: 2}
+  - {fileID: 11400000, guid: 26b4b85b600070d4895bc5b7d64b0417, type: 2}
+  - {fileID: 11400000, guid: b376eb66f27f32145b8feebf500677a8, type: 2}
+  - {fileID: 11400000, guid: 5879d18fa34bb1743a8e2895fd000ce2, type: 2}
+  - {fileID: 11400000, guid: abfac9088fe7dbd48be34827cac6d681, type: 2}
+  - {fileID: 11400000, guid: 2a5808750b343ac4e9a2addb72eb17c3, type: 2}
+  - {fileID: 11400000, guid: d54c5b600e81da3459f95dd655d08349, type: 2}
+  - {fileID: 11400000, guid: 51690b1c4b322ee4a8f3875c06f9afeb, type: 2}
+  - {fileID: 11400000, guid: 83a6662f2bd3de74d85061847b540235, type: 2}
+  - {fileID: 11400000, guid: d5e2f4feceedfdf4cb0a4e1d3532eacd, type: 2}
+  - {fileID: 11400000, guid: f5859bc5bbdb84049a76b147fa10193d, type: 2}
+  - {fileID: 11400000, guid: fe253617d8f42bb47acea32306dd77a0, type: 2}
+  - {fileID: 11400000, guid: 0e2b0b9fc3843144c9391321488959a3, type: 2}
+  - {fileID: 11400000, guid: e60e889e184a1194599b8f78118fea5c, type: 2}
+  maxCardToUse: 12
+--- !u!4 &81672314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81672312}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &101599140
 GameObject:
   m_ObjectHideFlags: 0
@@ -4257,25 +4319,8 @@ MonoBehaviour:
   - {fileID: 571622391}
   - {fileID: 1540685650}
   - {fileID: 315394419}
-  cardList:
-  - {fileID: 11400000, guid: 48b2be29cd48a6444b569f76247ab9b2, type: 2}
-  - {fileID: 11400000, guid: 601c1a81edade1542844ab7b87e9507e, type: 2}
-  - {fileID: 11400000, guid: 4aea194b95e61244d916a05f8e249ba9, type: 2}
-  - {fileID: 11400000, guid: 26b4b85b600070d4895bc5b7d64b0417, type: 2}
-  - {fileID: 11400000, guid: b376eb66f27f32145b8feebf500677a8, type: 2}
-  - {fileID: 11400000, guid: 5879d18fa34bb1743a8e2895fd000ce2, type: 2}
-  - {fileID: 11400000, guid: abfac9088fe7dbd48be34827cac6d681, type: 2}
-  - {fileID: 11400000, guid: 2a5808750b343ac4e9a2addb72eb17c3, type: 2}
-  - {fileID: 11400000, guid: d54c5b600e81da3459f95dd655d08349, type: 2}
-  - {fileID: 11400000, guid: 51690b1c4b322ee4a8f3875c06f9afeb, type: 2}
-  - {fileID: 11400000, guid: 83a6662f2bd3de74d85061847b540235, type: 2}
-  - {fileID: 11400000, guid: d5e2f4feceedfdf4cb0a4e1d3532eacd, type: 2}
-  - {fileID: 11400000, guid: f5859bc5bbdb84049a76b147fa10193d, type: 2}
-  - {fileID: 11400000, guid: fe253617d8f42bb47acea32306dd77a0, type: 2}
-  - {fileID: 11400000, guid: 0e2b0b9fc3843144c9391321488959a3, type: 2}
-  - {fileID: 11400000, guid: e60e889e184a1194599b8f78118fea5c, type: 2}
   timeToReuseFillBar: {fileID: 1171487841}
-  reuseTime: 4
+  reuseTime: 10
 --- !u!1 &1508447764
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,3 +5449,4 @@ SceneRoots:
   - {fileID: 530251471}
   - {fileID: 454363416}
   - {fileID: 1754117693}
+  - {fileID: 81672314}
