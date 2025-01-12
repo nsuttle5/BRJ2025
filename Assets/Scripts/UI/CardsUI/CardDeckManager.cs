@@ -8,8 +8,8 @@ public class CardDeckManager : MonoBehaviour
     [Header("Cardpack Settings")]
     [SerializeField] private CardsManagerUI cardsManagerUI;
     [SerializeField] private CardShow[] cardShows;
-    [SerializeField] private List<CardSO> cardList;
     [SerializeField] private Image timeToReuseFillBar;
+    private List<CardSO> availabeCardsList;
 
     private bool canOpenDeck = true;
     [SerializeField] private float reuseTime;
@@ -23,32 +23,28 @@ public class CardDeckManager : MonoBehaviour
 
     private void Start()
     {
+        InputManager.Instance.OnCardDeckOpened += InputManager_OnCardDeckOpened;
+        availabeCardsList = CardInventoryManager.Instance.GetUnlockedCardsList();
+        foreach (CardSO card in availabeCardsList) Debug.Log(card.cardName);
+
         foreach (CardShow cardShow in cardShows)
         {
             cardShow.OnSelectButtonClicked += CardShow_OnSelectButtonClicked;
         }
     }
 
-    private void CardShow_OnSelectButtonClicked(object sender, CardShow.OnSelectButtonClickedEventArgs e)
-    {
-        cardsManagerUI.AddCard(e.cardSO);
-        canOpenDeck = true;
-        HideCards();
-    }
-
-
-    private void Update()
-    {
-        if (canOpenDeck) reuseTimer -= Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.F) && canOpenDeck && cardsManagerUI.CanAddMoreCards())
-        {
-            if (reuseTimer <= 0)
-            {
-                for (int i = 0; i < cardShows.Length; i++)
-                {
+    private void InputManager_OnCardDeckOpened(object sender, System.EventArgs e) {
+        if (canOpenDeck && cardsManagerUI.CanAddMoreCards()) {
+            if (reuseTimer <= 0) {
+                for (int i = 0; i < cardShows.Length; i++) {
                     //Select 3 card from the list (Also consider the rarity value)
-                    CardSO selectedCard = SelectCard(cardList);
+                    CardSO selectedCard = SelectCard(availabeCardsList);
+
+                    //There might me an issue here which I will fix when we complete the card system 
+                    if (selectedCard == null) {
+                        Debug.LogError("As expected there is a null refrence in selected card", selectedCard);
+                        return;
+                    }
 
                     //From the selected 3 card place each of them on the card slot pack
                     CardShow cardShow = cardShows[i];
@@ -56,8 +52,7 @@ public class CardDeckManager : MonoBehaviour
                     cardShow.cardNameText.text = selectedCard.cardName;
                     cardShow.cardDescriptionText.text = selectedCard.description;
                     cardShow.cardImage.sprite = selectedCard.cardImage;
-                    switch (selectedCard.rarity)
-                    {
+                    switch (selectedCard.rarity) {
                         case CardSO.Rarity.COMMON:
                             cardShow.rarityText.text = "COMMON";
                             break;
@@ -69,15 +64,25 @@ public class CardDeckManager : MonoBehaviour
                             break;
                     }
                     cardShow.cardSO = selectedCard;
-                    
+
                     canOpenDeck = false;
                 }
 
                 reuseTimer = reuseTime;
             }
         }
+    }
 
-        //Time To Reuse Fill Bar
+    private void CardShow_OnSelectButtonClicked(object sender, CardShow.OnSelectButtonClickedEventArgs e)
+    {
+        cardsManagerUI.AddCard(e.cardSO);
+        canOpenDeck = true;
+        HideCards();
+    }
+
+    private void Update()
+    {
+        if (canOpenDeck) reuseTimer -= Time.deltaTime;
         timeToReuseFillBar.fillAmount = 1 - (reuseTimer / reuseTime);
     }
 
@@ -109,14 +114,15 @@ public class CardDeckManager : MonoBehaviour
             if (randomNumber <= cumulativeProbability.Value)
             {
                 List<CardSO> filteredList = cardSOList.Where(cardSO => (int)cardSO.rarity == cumulativeProbability.Key).ToList();
-                int randomFromFiltered = Random.Range(0, filteredList.Count);
-                return filteredList[randomFromFiltered];
+                if (filteredList.Count > 0)
+                {
+                    int randomFromFiltered = Random.Range(0, filteredList.Count);
+                    return filteredList[randomFromFiltered];
+                }
             }
         }
-
-        return null; //Should not reach here if reached then there is a problem with code;
+        return null;
     }
-
     private void HideCards()
     {
         foreach (CardShow cardShow in cardShows)
@@ -124,4 +130,5 @@ public class CardDeckManager : MonoBehaviour
             if (cardShow.gameObject.activeSelf) cardShow.gameObject.SetActive(false);
         }
     }
+    public List<CardSO> GetAvailableCardsList() => availabeCardsList;
 }

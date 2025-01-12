@@ -12,10 +12,10 @@ public class PlayerDataSO : ScriptableObject
     public float fallGravityMultiplier;
     public float maxFallSpeed;
     [Space(5)]
-    public float fastFallMultiplier;
 
     [Header("Move")]
     public float moveSpeed;
+    public float crouchMoveSpeed;
 
     [Space(20)]
     [Header("Jump")]
