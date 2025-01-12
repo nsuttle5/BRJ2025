@@ -235,6 +235,7 @@ MonoBehaviour:
   firePointDiagonalUp: {fileID: 6418444940147670528}
   firePointDiagonalDown: {fileID: 4461435230115966943}
   firePointDown: {fileID: 2444094976871889484}
+  firePointCrouched: {fileID: 0}
   fireRate: 0.3
   objectPoolList:
   - projectileType: 0
@@ -270,6 +271,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1006664187669376383}
+  - {fileID: 1197252505585712365}
   - {fileID: 1480556888371147102}
   - {fileID: 2444094976871889484}
   - {fileID: 4461435230115966943}
@@ -307,6 +309,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8401872557980759013}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+--- !u!1 &6856625477208843656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197252505585712365}
+  m_Layer: 0
+  m_Name: FirePointCrouched
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1197252505585712365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6856625477208843656}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.3499999, y: -0.162, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8401872557980759013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7384162031802849084
 GameObject:
   m_ObjectHideFlags: 0

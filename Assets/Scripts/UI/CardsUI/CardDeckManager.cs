@@ -23,6 +23,7 @@ public class CardDeckManager : MonoBehaviour
 
     private void Start()
     {
+        InputManager.Instance.OnCardDeckOpened += InputManager_OnCardDeckOpened;
         availabeCardsList = CardInventoryManager.Instance.GetUnlockedCardsList();
         foreach (CardSO card in availabeCardsList) Debug.Log(card.cardName);
 
@@ -32,31 +33,16 @@ public class CardDeckManager : MonoBehaviour
         }
     }
 
-    private void CardShow_OnSelectButtonClicked(object sender, CardShow.OnSelectButtonClickedEventArgs e)
-    {
-        cardsManagerUI.AddCard(e.cardSO);
-        canOpenDeck = true;
-        HideCards();
-    }
-
-
-    private void Update()
-    {
-        if (canOpenDeck) reuseTimer -= Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.F) && canOpenDeck && cardsManagerUI.CanAddMoreCards())
-        {
-            if (reuseTimer <= 0)
-            {
-                for (int i = 0; i < cardShows.Length; i++)
-                {
+    private void InputManager_OnCardDeckOpened(object sender, System.EventArgs e) {
+        if (canOpenDeck && cardsManagerUI.CanAddMoreCards()) {
+            if (reuseTimer <= 0) {
+                for (int i = 0; i < cardShows.Length; i++) {
                     //Select 3 card from the list (Also consider the rarity value)
                     CardSO selectedCard = SelectCard(availabeCardsList);
 
                     //There might me an issue here which I will fix when we complete the card system 
-                    if (selectedCard == null)
-                    {
-                        Debug.LogError("As expected there is a null refrence in selected card" , selectedCard);
+                    if (selectedCard == null) {
+                        Debug.LogError("As expected there is a null refrence in selected card", selectedCard);
                         return;
                     }
 
@@ -66,8 +52,7 @@ public class CardDeckManager : MonoBehaviour
                     cardShow.cardNameText.text = selectedCard.cardName;
                     cardShow.cardDescriptionText.text = selectedCard.description;
                     cardShow.cardImage.sprite = selectedCard.cardImage;
-                    switch (selectedCard.rarity)
-                    {
+                    switch (selectedCard.rarity) {
                         case CardSO.Rarity.COMMON:
                             cardShow.rarityText.text = "COMMON";
                             break;
@@ -79,15 +64,25 @@ public class CardDeckManager : MonoBehaviour
                             break;
                     }
                     cardShow.cardSO = selectedCard;
-                    
+
                     canOpenDeck = false;
                 }
 
                 reuseTimer = reuseTime;
             }
         }
+    }
 
-        //Time To Reuse Fill Bar
+    private void CardShow_OnSelectButtonClicked(object sender, CardShow.OnSelectButtonClickedEventArgs e)
+    {
+        cardsManagerUI.AddCard(e.cardSO);
+        canOpenDeck = true;
+        HideCards();
+    }
+
+    private void Update()
+    {
+        if (canOpenDeck) reuseTimer -= Time.deltaTime;
         timeToReuseFillBar.fillAmount = 1 - (reuseTimer / reuseTime);
     }
 

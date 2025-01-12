@@ -21,7 +21,7 @@ public class LevelSpin : MonoBehaviour
     {
         movementInput = playerMovement.GetMovementDirection();
 
-        if (playerMovement.IsFiringDiagonal()) return;
+        if (playerMovement.IsPositionLocked()) return;
 
         if (playerPosition.position.x > (centrePoint.position.x + range)
             || playerPosition.position.x < (centrePoint.position.x - range))

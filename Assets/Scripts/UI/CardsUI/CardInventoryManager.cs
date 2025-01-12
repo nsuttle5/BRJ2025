@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardInventoryManager : MonoBehaviour
-{
+public class CardInventoryManager : MonoBehaviour {
     public static CardInventoryManager Instance;
 
     [SerializeField] private List<CardSO> cardsList;
@@ -11,8 +10,7 @@ public class CardInventoryManager : MonoBehaviour
     private List<CardSO> unlockedCardsList;
     private List<CardSO> equippedCards;
 
-    private void Awake()
-    {
+    private void Awake() {
         if (Instance != null) Destroy(gameObject);
         else Instance = this;
 
@@ -26,8 +24,7 @@ public class CardInventoryManager : MonoBehaviour
 
 
     //Use this function to unlock new types of card.
-    public void UnlockCard(CardSO card)
-    {
+    public void UnlockCard(CardSO card) {
         unlockedCardsList.Add(card);
     }
     public List<CardSO> GetUnlockedCardsList() => unlockedCardsList;

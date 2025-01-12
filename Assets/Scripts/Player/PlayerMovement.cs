@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour {
     #region VARIABLES
     [SerializeField] private PlayerDataSO playerDataSO;
     [SerializeField] private StatsHandler statsHandler;
+    private InputManager inputManager;
 
     [Space(15)]
     [Header("CHECKS")]
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash;
     private bool isFacingRight = true;
     private bool isStun = false;
-    private bool isFiringDiagonal = false;
+    private bool isPositionLocked = false;
 
     //TIMERS
     // Coyote time is the timer after jumping off a ledge
@@ -39,8 +39,6 @@ public class PlayerMovement : MonoBehaviour
     private float dashStopTimer;
     private float dashCooldownTimer;
     private float stunTimer;
-    private float diagonalFireBufferTime = 0.4f;
-    private float diagonalFireBufferTimer;
 
     private float horizontalInput;
     private float verticalInput;
@@ -48,38 +46,45 @@ public class PlayerMovement : MonoBehaviour
     private float lastInputX;
     #endregion
 
-    private void Awake()
-    {
+    private void Awake() {
         playerRB = GetComponent<Rigidbody>();
         hasAirJump = true;
         canAirJump = false;
         dashCooldownTimer = playerDataSO.dashCooldown * statsHandler.dashCooldownMultiplier;
         standingCollider.enabled = true;
         crouchCollider.enabled = false;
-        diagonalFireBufferTimer = diagonalFireBufferTime;
     }
 
-    private void Start()
-    {
+    private void Start() {
+        inputManager = InputManager.Instance;
+        inputManager.OnDashPressed += InputManager_OnDashPressed;
+        inputManager.OnJumpPressed += InputManager_OnJumpPressed;
+        inputManager.OnJumpReleased += InputManager_OnJumpReleased;
+        inputManager.OnLockPressed += InputManager_OnLockPressed;
+        inputManager.OnLockReleased += InputManager_OnLockReleased;
+
         gravityScale = playerDataSO.gravityScale * statsHandler.gravityMultiplier;
     }
 
-    private void Update()
-    {
-        #region Inputs
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
-        
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            if (dashCooldownTimer <= 0 && canDash) Dash();
-        }
-        if (Input.GetKeyDown(KeyCode.Space)) jumpBufferTimer = playerDataSO.jumpBufferTime;
-        if (Input.GetKeyUp(KeyCode.Space)) isJumpCut = isJumping;
-        #endregion
+    #region InputManager Events
+    private void InputManager_OnLockReleased(object sender, System.EventArgs e) => isPositionLocked = false;
+    private void InputManager_OnLockPressed(object sender, System.EventArgs e) {
+        if (isGrounded) isPositionLocked = true;
+    }
+    private void InputManager_OnJumpReleased(object sender, System.EventArgs e) => isJumpCut = isJumping;
+    private void InputManager_OnJumpPressed(object sender, System.EventArgs e) {
+        if (!isPositionLocked) jumpBufferTimer = playerDataSO.jumpBufferTime;
+    }
+    private void InputManager_OnDashPressed(object sender, System.EventArgs e) {
+        if (dashCooldownTimer <= 0 && canDash) Dash();
+    }
+    #endregion
+
+    private void Update() {
+        horizontalInput = inputManager.GetHorizontalMovement();
+        verticalInput = inputManager.GetVerticalMovement();
 
         isGrounded = IsGrounded();
-        isFiringDiagonal = Input.GetMouseButton(0) && horizontalInput != 0 && verticalInput != 0 && isGrounded && diagonalFireBufferTimer <= 0;
 
         //TIMERS
         jumpBufferTimer -= Time.deltaTime;
@@ -89,74 +94,63 @@ public class PlayerMovement : MonoBehaviour
         if (stunTimer > 0) stunTimer -= Time.deltaTime;
         else if (stunTimer <= 0) isStun = false;
 
-        if (isGrounded)
-        {
-            diagonalFireBufferTimer -= Time.deltaTime;
+        if (isGrounded) {
             coyoteTimer = playerDataSO.coyoteTime;
             isJumpCut = false;
             isFalling = false;
             if (canAirJump) hasAirJump = true;
             canDash = true;
-            if (jumpBufferTimer > 0 && !isJumping)
-            {
+
+            if (jumpBufferTimer > 0 && !isJumping) {
                 isJumping = true;
                 isJumpCut = false;
             }
 
-            if (verticalInput < 0)
-            {
+            if (verticalInput < 0) {
                 crouchCollider.enabled = true;
                 standingCollider.enabled = false;
             }
-            else
-            {
+            else {
                 crouchCollider.enabled = false;
                 standingCollider.enabled = true;
             }
         }
-        else if (hasAirJump && jumpBufferTimer > 0 && !isDashing)
-        {
+        else if (hasAirJump && jumpBufferTimer > 0 && !isDashing) {
             isJumpCut = false;
             isFalling = false;
             hasAirJump = false;
-            if (!isJumping)
-            {
+
+            if (!isJumping) {
                 isJumping = true;
                 isJumpCut = false;
             }
             Jump(playerDataSO.airJumpForceMultiplier);
         }
-        else diagonalFireBufferTimer = diagonalFireBufferTime;
 
         //Flip Sprite in the direciton of motion
         if (horizontalInput > 0) isFacingRight = true;
         else if (horizontalInput < 0) isFacingRight = false;
         FlipSprite();
 
-        if (!isDashing && !isStun)
-        {
-            if (!isFiringDiagonal) Move();
+        if (!isDashing && !isStun) {
+            if (!isPositionLocked) Move();
             else playerRB.linearVelocity = new Vector3(0 , playerRB.linearVelocity.y, playerRB.linearVelocity.z);
         }
 
-        if (isJumping && playerRB.linearVelocity.y < 0)
-        {
+        if (isJumping && playerRB.linearVelocity.y < 0) {
             isJumping = false;
             isFalling = true;
         }
 
-        if (coyoteTimer > 0 && jumpBufferTimer > 0 && !isDashing)
-        {
+        if (coyoteTimer > 0 && jumpBufferTimer > 0 && !isDashing) {
             Jump(1);
         }
 
-        if (playerRB.linearVelocity.y < 0)
-        {
+        if (playerRB.linearVelocity.y < 0) {
             playerRB.linearVelocity = new Vector3(playerRB.linearVelocity.x, Mathf.Max(playerRB.linearVelocity.y, -playerDataSO.maxFallSpeed), playerRB.linearVelocity.z);
         }
 
-        if (isDashing && dashStopTimer <= 0)
-        {
+        if (isDashing && dashStopTimer <= 0) {
             isDashing = false;
             gravityScale = playerDataSO.gravityScale;
             playerRB.linearVelocity = Vector2.zero;
@@ -165,35 +159,29 @@ public class PlayerMovement : MonoBehaviour
         }
 
         #region GRAVITY
-        if (isDashing)
-        {
+        if (isDashing) {
             gravityScale = 0;
         }
-        else if (isJumpCut)
-        {
+        else if (isJumpCut) {
             gravityScale = playerDataSO.gravityScale * playerDataSO.jumpCutGravityMultiplier * statsHandler.gravityMultiplier;
         }
-        else if ((isJumping || isFalling) && Mathf.Abs(playerRB.linearVelocity.y) < playerDataSO.jumpHangTimeThreshold)
-        {
+        else if ((isJumping || isFalling) && Mathf.Abs(playerRB.linearVelocity.y) < playerDataSO.jumpHangTimeThreshold) {
             gravityScale = playerDataSO.gravityScale * playerDataSO.jumpHangGravityMultiplier * statsHandler.gravityMultiplier;
         }
         else gravityScale = playerDataSO.gravityScale * statsHandler.gravityMultiplier;
         #endregion
     }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate() {
         ApplyGravity();
     }
 
-    private void Move()
-    {
+    private void Move() {
         float moveSpeed = (isGrounded && verticalInput < 0) ? playerDataSO.crouchMoveSpeed : playerDataSO.moveSpeed;
         playerRB.linearVelocity = new Vector3(moveSpeed * horizontalInput * statsHandler.moveSpeedMultiplier, playerRB.linearVelocity.y, playerRB.linearVelocity.z);
     }
 
-    private void Jump(float jumpForceMultiplier)
-    {
+    private void Jump(float jumpForceMultiplier) {
         jumpBufferTimer = 0;
         coyoteTimer = 0;
         isJumping = true;
@@ -204,21 +192,18 @@ public class PlayerMovement : MonoBehaviour
         playerRB.AddForce(Vector2.up * force, ForceMode.Impulse);
     }
 
-    private void ApplyGravity()
-    {
+    private void ApplyGravity() {
         playerRB.AddForce(Physics.gravity * gravityScale, ForceMode.Force);
     }
 
-    private void Dash()
-    {
+    private void Dash() {
         isDashing = true;
         canDash = false;
         dashStopTimer = playerDataSO.dashTime;
         playerRB.linearVelocity = new Vector2(horizontalInput * playerDataSO.dashVelocity, 0);
     }
 
-    private void FlipSprite()
-    {
+    private void FlipSprite() {
         if (!isFacingRight) transform.eulerAngles = new Vector3(0, 180, 0);
         else transform.eulerAngles = Vector3.zero;
     }
@@ -226,8 +211,7 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
         => Physics.CheckSphere(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
-    public void SetStun(float stunTime)
-    {
+    public void SetStun(float stunTime) {
         isStun = true;
         stunTimer = stunTime;
     }
@@ -235,10 +219,9 @@ public class PlayerMovement : MonoBehaviour
     public void CanDoubleJump(bool condition) => canAirJump = condition;
     public Vector2 GetMovementDirection() => new Vector2(horizontalInput, verticalInput);
     public bool GetIsGrounded() => isGrounded;
-    public bool IsFiringDiagonal() => isFiringDiagonal;
+    public bool IsPositionLocked() => isPositionLocked;
 
-    private void OnDrawGizmos()
-    {
+    private void OnDrawGizmos() {
         if (groundCheckPoint != null)
         {
             Gizmos.color = Color.green;
