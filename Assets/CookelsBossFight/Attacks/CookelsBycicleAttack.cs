@@ -9,15 +9,23 @@ public class CookelsBycicleAttack : MonoBehaviour {
     public Transform stageCenterTransform;
     
     private float currentAngle;
+    private bool isEnabled;
     
     // ToDo: add animations
-    
-    void Start() {
+
+    public void Enable() {
+        if (isEnabled) return;
         // Set initial position, maybe transition slowly instead of instant snap lol
         transform.position = stageCenterTransform.position + new Vector3(radius, initialHeightOffset, 0);
+        isEnabled = true;
+    }
+
+    public void Disable() {
+        isEnabled = false;
     }
     
     void Update() {
+        if (!isEnabled) return;
         if (stageCenterTransform == null) return;
         
         HandleMovementAndRotation();

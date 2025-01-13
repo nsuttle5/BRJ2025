@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: CookelsBossFight Blackboard
   m_EditorClassIdentifier: 
-  VersionTimestamp: 638723000875932671
+  VersionTimestamp: 638723242447660140
   AssetID:
     m_Value0: 14177420951337585118
     m_Value1: 3592377455521367497
@@ -20,6 +20,10 @@ MonoBehaviour:
     m_Variables:
     - rid: 58274408644477003
     - rid: 58274408644477004
+    - rid: 58274408644477269
+    - rid: 58274408644477413
+    - rid: 58274408644477580
+    - rid: 58274408644477811
   m_SharedBlackboardVariableGuids: []
   references:
     version: 2
@@ -40,6 +44,38 @@ MonoBehaviour:
           m_Value1: 1835795478430369400
         Name: CurentStage
         m_Value: 1
+    - rid: 58274408644477269
+      type: {class: 'BlackboardVariable`1[[CookelsMechanicsController, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5102380186302459733
+          m_Value1: 89317262670986346
+        Name: CookelsMechanicsController
+        m_Value: {fileID: 0}
+    - rid: 58274408644477413
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5474091271894458458
+          m_Value1: 17463780544862230179
+        Name: BycicleAttackDuration
+        m_Value: 5
+    - rid: 58274408644477580
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 283480699611182178
+          m_Value1: 6479976081568255919
+        Name: BalloonAttackDuration
+        m_Value: 5
+    - rid: 58274408644477811
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 14348314478507831746
+          m_Value1: 11721233876096241401
+        Name: BouncyBallAttackDuration
+        m_Value: 5
 --- !u!114 &-4672634732652970310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58,7 +94,11 @@ MonoBehaviour:
   m_Variables:
   - rid: 58274408644476996
   - rid: 58274408644477002
-  m_VersionTimestamp: 638723000875932671
+  - rid: 58274408644477268
+  - rid: 58274408644477411
+  - rid: 58274408644477575
+  - rid: 58274408644477809
+  m_VersionTimestamp: 638723242663614887
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: -5739385034140103397}
@@ -85,6 +125,46 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value: 1
+    - rid: 58274408644477268
+      type: {class: 'TypedVariableModel`1[[CookelsMechanicsController, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 5102380186302459733
+          m_Value1: 89317262670986346
+        Name: CookelsMechanicsController
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 58274408644477411
+      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 5474091271894458458
+          m_Value1: 17463780544862230179
+        Name: BycicleAttackDuration
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 5
+    - rid: 58274408644477575
+      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 283480699611182178
+          m_Value1: 6479976081568255919
+        Name: BalloonAttackDuration
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 5
+    - rid: 58274408644477809
+      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 14348314478507831746
+          m_Value1: 11721233876096241401
+        Name: BouncyBallAttackDuration
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 5
 --- !u!114 &-2473041137645361985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,16 +178,16 @@ MonoBehaviour:
   m_Name: CookelsBossFight
   m_EditorClassIdentifier: 
   Graphs:
-  - rid: 58274408644477216
+  - rid: 58274408644477877
   RootGraph:
-    rid: 58274408644477216
+    rid: 58274408644477877
   m_DebugInfo: {fileID: 9163065464073032980}
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 58274408644477216
+    - rid: 58274408644477877
       type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         AuthoringAssetID:
@@ -115,76 +195,80 @@ MonoBehaviour:
           m_Value1: 3592377455521367497
         m_DebugInfo: {fileID: 0}
         Root:
-          rid: 58274408644477217
+          rid: 58274408644477878
         BlackboardReference:
-          rid: 58274408644477218
+          rid: 58274408644477879
         BlackboardGroupReferences: []
-        m_VersionTimestamp: 638723000875634563
-    - rid: 58274408644477217
+        m_VersionTimestamp: 638723242663614887
+    - rid: 58274408644477878
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 11833354615309694421
           m_Value1: 8063459855997815286
         Graph:
-          rid: 58274408644477216
+          rid: 58274408644477877
         m_Parent:
           rid: -2
         m_Child:
-          rid: 58274408644477219
+          rid: 58274408644477880
         Repeat: 1
-    - rid: 58274408644477218
+    - rid: 58274408644477879
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Blackboard:
-          rid: 58274408644477220
+          rid: 58274408644477881
         m_Source: {fileID: -5739385034140103397}
-    - rid: 58274408644477219
+    - rid: 58274408644477880
       type: {class: ParallelAnySuccess, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 3095608994126460370
           m_Value1: 5025432265307200971
         Graph:
-          rid: 58274408644477216
+          rid: 58274408644477877
         m_Parent:
-          rid: 58274408644477217
+          rid: 58274408644477878
         m_Children:
-        - rid: 58274408644477221
-        - rid: 58274408644477222
-    - rid: 58274408644477220
+        - rid: 58274408644477882
+        - rid: 58274408644477883
+    - rid: 58274408644477881
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 58274408644477223
-        - rid: 58274408644477224
-    - rid: 58274408644477221
+        - rid: 58274408644477884
+        - rid: 58274408644477885
+        - rid: 58274408644477886
+        - rid: 58274408644477887
+        - rid: 58274408644477888
+        - rid: 58274408644477889
+    - rid: 58274408644477882
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 13566141451088543274
           m_Value1: 963217896973465779
         Graph:
-          rid: 58274408644477216
+          rid: 58274408644477877
         m_Parent:
-          rid: 58274408644477219
+          rid: 58274408644477880
         m_Children:
-        - rid: 58274408644477225
-        - rid: 58274408644477226
-    - rid: 58274408644477222
+        - rid: 58274408644477890
+        - rid: 58274408644477891
+    - rid: 58274408644477883
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 18335549565916047644
           m_Value1: 13419637185285448405
         Graph:
-          rid: 58274408644477216
+          rid: 58274408644477877
         m_Parent:
-          rid: 58274408644477219
+          rid: 58274408644477880
         m_Children:
-        - rid: 58274408644477227
-        - rid: 58274408644477228
-    - rid: 58274408644477223
+        - rid: 58274408644477892
+        - rid: 58274408644477893
+    - rid: 58274408644477884
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -192,7 +276,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 0}
-    - rid: 58274408644477224
+    - rid: 58274408644477885
       type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -200,99 +284,163 @@ MonoBehaviour:
           m_Value1: 1835795478430369400
         Name: CurentStage
         m_Value: 1
-    - rid: 58274408644477225
+    - rid: 58274408644477886
+      type: {class: 'BlackboardVariable`1[[CookelsMechanicsController, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5102380186302459733
+          m_Value1: 89317262670986346
+        Name: CookelsMechanicsController
+        m_Value: {fileID: 0}
+    - rid: 58274408644477887
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5474091271894458458
+          m_Value1: 17463780544862230179
+        Name: BycicleAttackDuration
+        m_Value: 5
+    - rid: 58274408644477888
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 283480699611182178
+          m_Value1: 6479976081568255919
+        Name: BalloonAttackDuration
+        m_Value: 5
+    - rid: 58274408644477889
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 14348314478507831746
+          m_Value1: 11721233876096241401
+        Name: BouncyBallAttackDuration
+        m_Value: 5
+    - rid: 58274408644477890
       type: {class: ConditionalGuardAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 13566141451088543274
           m_Value1: 963217896973465779
         Graph:
-          rid: 58274408644477216
+          rid: 58274408644477877
         m_Parent:
-          rid: 58274408644477221
+          rid: 58274408644477882
         m_Conditions:
-        - rid: 58274408644477229
+        - rid: 58274408644477894
         m_RequiresAllConditions: 0
-    - rid: 58274408644477226
-      type: {class: LogMessageToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 58274408644477891
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
-          m_Value0: 18294258222673491809
-          m_Value1: 8988464997555757660
+          m_Value0: 6403331391255835315
+          m_Value1: 7463474993138278868
         Graph:
-          rid: 58274408644477216
+          rid: 58274408644477877
         m_Parent:
-          rid: 58274408644477221
-        Message:
-          rid: 58274408644477230
-        LogLevel:
-          rid: 58274408644477231
-    - rid: 58274408644477227
+          rid: 58274408644477882
+        m_Children:
+        - rid: 58274408644477895
+        - rid: 58274408644477896
+        - rid: 58274408644477897
+    - rid: 58274408644477892
       type: {class: ConditionalGuardAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 18335549565916047644
           m_Value1: 13419637185285448405
         Graph:
-          rid: 58274408644477216
+          rid: 58274408644477877
         m_Parent:
-          rid: 58274408644477222
+          rid: 58274408644477883
         m_Conditions:
-        - rid: 58274408644477232
+        - rid: 58274408644477898
         m_RequiresAllConditions: 0
-    - rid: 58274408644477228
+    - rid: 58274408644477893
       type: {class: LogMessageToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 3029414182462272428
           m_Value1: 18327381381587358418
         Graph:
-          rid: 58274408644477216
+          rid: 58274408644477877
         m_Parent:
-          rid: 58274408644477222
+          rid: 58274408644477883
         Message:
-          rid: 58274408644477233
+          rid: 58274408644477899
         LogLevel:
-          rid: 58274408644477234
-    - rid: 58274408644477229
+          rid: 58274408644477900
+    - rid: 58274408644477894
       type: {class: VariableComparisonCondition, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         Graph:
-          rid: 58274408644477216
+          rid: 58274408644477877
         Variable:
-          rid: 58274408644477224
+          rid: 58274408644477885
         Operator:
-          rid: 58274408644477235
+          rid: 58274408644477901
         ComparisonValue:
-          rid: 58274408644477236
-    - rid: 58274408644477230
-      type: {class: 'BlackboardVariable`1[[System.String, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+          rid: 58274408644477902
+    - rid: 58274408644477895
+      type: {class: EnableAttackForDurationAction, ns: , asm: Assembly-CSharp}
       data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: First stage activated!
-    - rid: 58274408644477231
-      type: {class: 'BlackboardVariable`1[[Unity.Behavior.LogMessageToConsoleAction/LogType, Unity.Behavior]]', ns: Unity.Behavior, asm: Unity.Behavior}
+        ID:
+          m_Value0: 4723087660314426163
+          m_Value1: 16962300756816981621
+        Graph:
+          rid: 58274408644477877
+        m_Parent:
+          rid: 58274408644477891
+        Controller:
+          rid: 58274408644477886
+        Attack:
+          rid: 58274408644477903
+        Duration:
+          rid: 58274408644477887
+    - rid: 58274408644477896
+      type: {class: EnableAttackForDurationAction, ns: , asm: Assembly-CSharp}
       data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 0
-    - rid: 58274408644477232
+        ID:
+          m_Value0: 13641603209777768875
+          m_Value1: 13221098385271682799
+        Graph:
+          rid: 58274408644477877
+        m_Parent:
+          rid: 58274408644477891
+        Controller:
+          rid: 58274408644477886
+        Attack:
+          rid: 58274408644477904
+        Duration:
+          rid: 58274408644477888
+    - rid: 58274408644477897
+      type: {class: EnableAttackForDurationAction, ns: , asm: Assembly-CSharp}
+      data:
+        ID:
+          m_Value0: 11705269202668167548
+          m_Value1: 3097290049380759791
+        Graph:
+          rid: 58274408644477877
+        m_Parent:
+          rid: 58274408644477891
+        Controller:
+          rid: 58274408644477886
+        Attack:
+          rid: 58274408644477905
+        Duration:
+          rid: 58274408644477889
+    - rid: 58274408644477898
       type: {class: VariableComparisonCondition, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         Graph:
-          rid: 58274408644477216
+          rid: 58274408644477877
         Variable:
-          rid: 58274408644477224
+          rid: 58274408644477885
         Operator:
-          rid: 58274408644477237
+          rid: 58274408644477906
         ComparisonValue:
-          rid: 58274408644477238
-    - rid: 58274408644477233
+          rid: 58274408644477907
+    - rid: 58274408644477899
       type: {class: 'BlackboardVariable`1[[System.String, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -300,7 +448,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: Second Stage Activated
-    - rid: 58274408644477234
+    - rid: 58274408644477900
       type: {class: 'BlackboardVariable`1[[Unity.Behavior.LogMessageToConsoleAction/LogType, Unity.Behavior]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -308,7 +456,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 0
-    - rid: 58274408644477235
+    - rid: 58274408644477901
       type: {class: 'BlackboardVariable`1[[Unity.Behavior.ConditionOperator, Unity.Behavior]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -316,7 +464,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 0
-    - rid: 58274408644477236
+    - rid: 58274408644477902
       type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -324,7 +472,31 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 1
-    - rid: 58274408644477237
+    - rid: 58274408644477903
+      type: {class: 'BlackboardVariable`1[[CookelsAttackEnum, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 58274408644477904
+      type: {class: 'BlackboardVariable`1[[CookelsAttackEnum, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 1
+    - rid: 58274408644477905
+      type: {class: 'BlackboardVariable`1[[CookelsAttackEnum, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 2
+    - rid: 58274408644477906
       type: {class: 'BlackboardVariable`1[[Unity.Behavior.ConditionOperator, Unity.Behavior]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -332,7 +504,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 0
-    - rid: 58274408644477238
+    - rid: 58274408644477907
       type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -359,9 +531,12 @@ MonoBehaviour:
   - rid: 58274408644477035
   - rid: 58274408644477049
   - rid: 58274408644477071
-  - rid: 58274408644477074
   - rid: 58274408644477081
-  m_VersionTimestamp: 638723000875634563
+  - rid: 58274408644477577
+  - rid: 58274408644477721
+  - rid: 58274408644477732
+  - rid: 58274408644477770
+  m_VersionTimestamp: 638723242663614887
   m_DebugInfo: {fileID: 9163065464073032980}
   m_RuntimeGraph: {fileID: -2473041137645361985}
   AssetID:
@@ -408,6 +583,81 @@ MonoBehaviour:
       Type:
         m_SerializableType: Unity.Behavior.LogMessageToConsoleAction+LogType, Unity.Behavior,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    NamedChildren: []
+  - Name: Sequence
+    Story: 
+    RuntimeTypeID:
+      m_Value0: 10181448252506100447
+      m_Value1: 8737116843063128493
+    Variables: []
+    NamedChildren: []
+  - Name: EnableAttackForDuration
+    Story: '[Controller] enables [Attack] for [Duration] seconds'
+    RuntimeTypeID:
+      m_Value0: 1712947222916399543
+      m_Value1: 10403519686547400126
+    Variables:
+    - Name: Controller
+      Type:
+        m_SerializableType: CookelsMechanicsController, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    - Name: Attack
+      Type:
+        m_SerializableType: CookelsAttackEnum, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    - Name: Duration
+      Type:
+        m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    NamedChildren: []
+  - Name: EnableAttack
+    Story: '[Controller] enables [attack]'
+    RuntimeTypeID:
+      m_Value0: 3927875294823706096
+      m_Value1: 15113023499027594825
+    Variables:
+    - Name: Controller
+      Type:
+        m_SerializableType: CookelsMechanicsController, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    - Name: Attack
+      Type:
+        m_SerializableType: CookelsAttackEnum, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    NamedChildren: []
+  - Name: Wait
+    Story: Wait for [SecondsToWait] seconds
+    RuntimeTypeID:
+      m_Value0: 7729581452106168333
+      m_Value1: 8820302366443624372
+    Variables:
+    - Name: SecondsToWait
+      Type:
+        m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    NamedChildren: []
+  - Name: DisableAttackAction
+    Story: '[Controller] disable [Attack]'
+    RuntimeTypeID:
+      m_Value0: 11483877736569622737
+      m_Value1: 14200769438276549414
+    Variables:
+    - Name: Controller
+      Type:
+        m_SerializableType: CookelsMechanicsController, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    - Name: Attack
+      Type:
+        m_SerializableType: CookelsAttackEnum, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
       Tooltip: 
     NamedChildren: []
   - Name: Run Subgraph
@@ -511,7 +761,7 @@ MonoBehaviour:
         m_NodeModel:
           rid: 58274408644477035
         m_Connections:
-        - rid: 58274408644477075
+        - rid: 58274408644477578
     - rid: 58274408644477038
       type: {class: ConditionModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -749,83 +999,6 @@ MonoBehaviour:
         m_Connections:
         - rid: 58274408644477036
         - rid: 58274408644477050
-    - rid: 58274408644477074
-      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        Position: {x: -630.07947, y: 315.40384}
-        ID:
-          m_Value0: 18294258222673491809
-          m_Value1: 8988464997555757660
-        Parents: []
-        PortModels:
-        - rid: 58274408644477075
-        - rid: 58274408644477076
-        NodeType:
-          m_SerializableType: Unity.Behavior.LogMessageToConsoleAction, Unity.Behavior,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        NodeTypeID:
-          m_Value0: 14362779694071371193
-          m_Value1: 7851297057022692581
-        m_FieldValues:
-        - rid: 58274408644477077
-        - rid: 58274408644477078
-    - rid: 58274408644477075
-      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        m_Name: InputPort
-        m_PortDataFlowType: 0
-        m_IsFloating: 0
-        m_NodeModel:
-          rid: 58274408644477074
-        m_Connections:
-        - rid: 58274408644477037
-    - rid: 58274408644477076
-      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        m_Name: OutputPort
-        m_PortDataFlowType: 1
-        m_IsFloating: 0
-        m_NodeModel:
-          rid: 58274408644477074
-        m_Connections: []
-    - rid: 58274408644477077
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: Message
-        Type:
-          m_SerializableType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        LocalValue:
-          rid: 58274408644477079
-        LinkedVariable:
-          rid: -2
-    - rid: 58274408644477078
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: LogLevel
-        Type:
-          m_SerializableType: Unity.Behavior.LogMessageToConsoleAction+LogType, Unity.Behavior,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        LocalValue:
-          rid: 58274408644477080
-        LinkedVariable:
-          rid: -2
-    - rid: 58274408644477079
-      type: {class: 'BlackboardVariable`1[[System.String, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: First stage activated!
-    - rid: 58274408644477080
-      type: {class: 'BlackboardVariable`1[[Unity.Behavior.LogMessageToConsoleAction/LogType, Unity.Behavior]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 0
     - rid: 58274408644477081
       type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -903,6 +1076,373 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 0
+    - rid: 58274408644477577
+      type: {class: CompositeNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -626.06494, y: 327.03873}
+        ID:
+          m_Value0: 6403331391255835315
+          m_Value1: 7463474993138278868
+        Parents: []
+        PortModels:
+        - rid: 58274408644477578
+        - rid: 58274408644477579
+        NodeType:
+          m_SerializableType: Unity.Behavior.SequenceComposite, Unity.Behavior, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 10181448252506100447
+          m_Value1: 8737116843063128493
+        m_FieldValues: []
+    - rid: 58274408644477578
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 58274408644477577
+        m_Connections:
+        - rid: 58274408644477037
+    - rid: 58274408644477579
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 58274408644477577
+        m_Connections:
+        - rid: 58274408644477722
+        - rid: 58274408644477733
+        - rid: 58274408644477771
+    - rid: 58274408644477721
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -989.1823, y: 511.2419}
+        ID:
+          m_Value0: 4723087660314426163
+          m_Value1: 16962300756816981621
+        Parents: []
+        PortModels:
+        - rid: 58274408644477722
+        - rid: 58274408644477723
+        NodeType:
+          m_SerializableType: EnableAttackForDurationAction, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 1712947222916399543
+          m_Value1: 10403519686547400126
+        m_FieldValues:
+        - rid: 58274408644477724
+        - rid: 58274408644477725
+        - rid: 58274408644477726
+    - rid: 58274408644477722
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 58274408644477721
+        m_Connections:
+        - rid: 58274408644477579
+    - rid: 58274408644477723
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 58274408644477721
+        m_Connections: []
+    - rid: 58274408644477724
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Controller
+        Type:
+          m_SerializableType: CookelsMechanicsController, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 58274408644477727
+        LinkedVariable:
+          rid: 58274408644477730
+    - rid: 58274408644477725
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Attack
+        Type:
+          m_SerializableType: CookelsAttackEnum, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 58274408644477728
+        LinkedVariable:
+          rid: -2
+    - rid: 58274408644477726
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Duration
+        Type:
+          m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 58274408644477729
+        LinkedVariable:
+          rid: 58274408644477731
+    - rid: 58274408644477727
+      type: {class: 'BlackboardVariable`1[[CookelsMechanicsController, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 58274408644477728
+      type: {class: 'BlackboardVariable`1[[CookelsAttackEnum, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 58274408644477729
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 5
+    - rid: 58274408644477730
+      type: {class: 'TypedVariableModel`1[[CookelsMechanicsController, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 5102380186302459733
+          m_Value1: 89317262670986346
+        Name: CookelsMechanicsController
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 58274408644477731
+      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 5474091271894458458
+          m_Value1: 17463780544862230179
+        Name: BycicleAttackDuration
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 5
+    - rid: 58274408644477732
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -626.97864, y: 626.5384}
+        ID:
+          m_Value0: 13641603209777768875
+          m_Value1: 13221098385271682799
+        Parents: []
+        PortModels:
+        - rid: 58274408644477733
+        - rid: 58274408644477734
+        NodeType:
+          m_SerializableType: EnableAttackForDurationAction, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 1712947222916399543
+          m_Value1: 10403519686547400126
+        m_FieldValues:
+        - rid: 58274408644477735
+        - rid: 58274408644477739
+        - rid: 58274408644477736
+    - rid: 58274408644477733
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 58274408644477732
+        m_Connections:
+        - rid: 58274408644477579
+    - rid: 58274408644477734
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 58274408644477732
+        m_Connections: []
+    - rid: 58274408644477735
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Controller
+        Type:
+          m_SerializableType: 
+        LocalValue:
+          rid: 58274408644477737
+        LinkedVariable:
+          rid: 58274408644477730
+    - rid: 58274408644477736
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Duration
+        Type:
+          m_SerializableType: 
+        LocalValue:
+          rid: 58274408644477738
+        LinkedVariable:
+          rid: 58274408644477741
+    - rid: 58274408644477737
+      type: {class: 'BlackboardVariable`1[[CookelsMechanicsController, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 58274408644477738
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 5
+    - rid: 58274408644477739
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Attack
+        Type:
+          m_SerializableType: CookelsAttackEnum, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 58274408644477740
+        LinkedVariable:
+          rid: -2
+    - rid: 58274408644477740
+      type: {class: 'BlackboardVariable`1[[CookelsAttackEnum, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 1
+    - rid: 58274408644477741
+      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 283480699611182178
+          m_Value1: 6479976081568255919
+        Name: BalloonAttackDuration
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 5
+    - rid: 58274408644477770
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -184.79034, y: 529.41113}
+        ID:
+          m_Value0: 11705269202668167548
+          m_Value1: 3097290049380759791
+        Parents: []
+        PortModels:
+        - rid: 58274408644477771
+        - rid: 58274408644477772
+        NodeType:
+          m_SerializableType: EnableAttackForDurationAction, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 1712947222916399543
+          m_Value1: 10403519686547400126
+        m_FieldValues:
+        - rid: 58274408644477773
+        - rid: 58274408644477777
+        - rid: 58274408644477774
+    - rid: 58274408644477771
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 58274408644477770
+        m_Connections:
+        - rid: 58274408644477579
+    - rid: 58274408644477772
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 58274408644477770
+        m_Connections: []
+    - rid: 58274408644477773
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Controller
+        Type:
+          m_SerializableType: 
+        LocalValue:
+          rid: 58274408644477775
+        LinkedVariable:
+          rid: 58274408644477730
+    - rid: 58274408644477774
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Duration
+        Type:
+          m_SerializableType: 
+        LocalValue:
+          rid: 58274408644477776
+        LinkedVariable:
+          rid: 58274408644477810
+    - rid: 58274408644477775
+      type: {class: 'BlackboardVariable`1[[CookelsMechanicsController, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 58274408644477776
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 5
+    - rid: 58274408644477777
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Attack
+        Type:
+          m_SerializableType: CookelsAttackEnum, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 58274408644477778
+        LinkedVariable:
+          rid: -2
+    - rid: 58274408644477778
+      type: {class: 'BlackboardVariable`1[[CookelsAttackEnum, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 2
+    - rid: 58274408644477810
+      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 14348314478507831746
+          m_Value1: 11721233876096241401
+        Name: BouncyBallAttackDuration
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 5
 --- !u!114 &9163065464073032980
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2623,7 +2623,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -5159,7 +5159,7 @@ GameObject:
   - component: {fileID: 1762480262}
   - component: {fileID: 1762480261}
   m_Layer: 0
-  m_Name: BossBehavior
+  m_Name: CookelsBehaviorTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5180,6 +5180,10 @@ MonoBehaviour:
   m_Graph: {fileID: -2473041137645361985, guid: de49a8733d51c0c4c905793743b0da31, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 58274408644477011
+  - rid: 58274408644477295
+  - rid: 58274408644477874
+  - rid: 58274408644477875
+  - rid: 58274408644477876
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -5193,6 +5197,38 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 1762480260}
+    - rid: 58274408644477295
+      type: {class: 'BlackboardVariable`1[[CookelsMechanicsController, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5102380186302459733
+          m_Value1: 89317262670986346
+        Name: CookelsMechanicsController
+        m_Value: {fileID: 2127976606}
+    - rid: 58274408644477874
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5474091271894458458
+          m_Value1: 17463780544862230179
+        Name: BycicleAttackDuration
+        m_Value: 5
+    - rid: 58274408644477875
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 283480699611182178
+          m_Value1: 6479976081568255919
+        Name: BalloonAttackDuration
+        m_Value: 5
+    - rid: 58274408644477876
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 14348314478507831746
+          m_Value1: 11721233876096241401
+        Name: BouncyBallAttackDuration
+        m_Value: 5
 --- !u!4 &1762480262
 Transform:
   m_ObjectHideFlags: 0
@@ -5960,6 +5996,8 @@ GameObject:
   - component: {fileID: 2127976602}
   - component: {fileID: 2127976603}
   - component: {fileID: 2127976604}
+  - component: {fileID: 2127976605}
+  - component: {fileID: 2127976606}
   m_Layer: 0
   m_Name: Cookels
   m_TagString: Untagged
@@ -6115,7 +6153,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127976594}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 257d32c9ea7ce3e4e9988cdb5fab1793, type: 3}
   m_Name: 
@@ -6143,6 +6181,34 @@ MonoBehaviour:
   balloonPrefab: {fileID: 6178387344766256239, guid: d39cb5f03cc224544880075ec22008c0, type: 3}
   balloonTarget: {fileID: 672186690}
   coolDown: 5
+  initialCooldown: 1
+--- !u!114 &2127976605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127976594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1010626f9668d4d8b5a8d2728b91f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restingTarget: {fileID: 599903866}
+  ballPrefab: {fileID: 6906254130336936256, guid: d366e25f2259bf340b8eace7b1b22102, type: 3}
+  stageCenter: {fileID: 1970975384}
+--- !u!114 &2127976606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127976594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f5bc466e3b3c042b34c83e0e78e89b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
