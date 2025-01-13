@@ -49,8 +49,8 @@ public class OverWorldPlayerScript : MonoBehaviour
     private void HandleMovement()
     {
         // Get Input
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x = Input.GetAxisRaw("Horizontal");
+        float z = Input.GetAxisRaw("Vertical");
 
         Vector3 inputDir = new Vector3(x, 0, z).normalized;
 

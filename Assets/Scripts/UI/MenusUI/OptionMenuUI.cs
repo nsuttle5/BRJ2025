@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OptionMenuUI : MonoBehaviour
@@ -16,28 +15,27 @@ public class OptionMenuUI : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI screenTypeText;
     private bool isFullscreen;
+    private SceneLoader sceneLoader;
 
-    private void Awake()
-    {
+    private void Start() {
+
         isFullscreen = Screen.fullScreen;
-        soundEffectSlider.onValueChanged.AddListener(value =>
-        {
+        sceneLoader = SceneLoader.Instance;
+
+        soundEffectSlider.onValueChanged.AddListener(value => {
             //Add Logic here after we got some sound
             Debug.Log("Sound effect volume : " + value);
         });
-        musicSlider.onValueChanged.AddListener(value =>
-        {
+        musicSlider.onValueChanged.AddListener(value => {
             //Add Logic here after we got some music
             Debug.Log("Music volume : " + value);
         });
-        screenTypeButton.onClick.AddListener(() =>
-        {
+        screenTypeButton.onClick.AddListener(() => {
             ChangeScreenType();
         });
-        closeButton.onClick.AddListener(() =>
-        {
+        closeButton.onClick.AddListener(() => {
             //Switch scene or close option window
-            SceneManager.LoadScene(START_SCENE);
+            sceneLoader.LoadScene(SceneLoader.Scene.StartScene);
         });
     }
 

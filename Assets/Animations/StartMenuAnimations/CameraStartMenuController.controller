@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: HasStarted
+    m_ConditionEvent: GoInsideTent
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6059828738948257512}
@@ -113,7 +113,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: HasStarted
+    m_ConditionEvent: GoInsideTent
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6768645854385677716}
@@ -214,8 +214,8 @@ AnimatorController:
   m_Name: CameraStartMenuController
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: HasStarted
-    m_Type: 4
+  - m_Name: GoInsideTent
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -256,13 +256,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -1801856857483983198}
-    m_Position: {x: 230, y: -10, z: 0}
+    m_Position: {x: 240, y: 30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1272284719843441056}
-    m_Position: {x: 330, y: 80, z: 0}
+    m_Position: {x: 380, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6059828738948257512}
-    m_Position: {x: 340, y: 190, z: 0}
+    m_Position: {x: 380, y: 210, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
