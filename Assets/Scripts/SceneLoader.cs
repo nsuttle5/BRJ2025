@@ -9,13 +9,19 @@ public class SceneLoader : MonoBehaviour {
 
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private Image loadingProgressBar;
+    private float fillAmount;
 
     private void Awake() {
+        fillAmount = 0;
         if (Instance != null) Destroy(gameObject);
         else Instance = this;
         DontDestroyOnLoad(gameObject);
         loadingScreen.SetActive(false);
-        loadingProgressBar.fillAmount = 0;
+        loadingProgressBar.fillAmount = fillAmount;
+    }
+
+    private void Update() {
+        loadingProgressBar.fillAmount = Mathf.MoveTowards(loadingProgressBar.fillAmount, fillAmount, Time.deltaTime * 4);
     }
 
     //Add the Name of all scenes in here
@@ -33,7 +39,7 @@ public class SceneLoader : MonoBehaviour {
 
         do {
             await Task.Delay(1000);
-            loadingProgressBar.fillAmount = scene.progress;
+            fillAmount = scene.progress;
         }
         while (scene.progress < 0.9f);
 
@@ -42,6 +48,7 @@ public class SceneLoader : MonoBehaviour {
         await Task.Delay(1000);
         loadingScreen.SetActive(false);
         loadingProgressBar.fillAmount = 0;
+        fillAmount = 0;
     }
     public void QuitGame() => Application.Quit();
 
