@@ -16,7 +16,7 @@ public class CookelsBycicleAttack : MonoBehaviour {
     public void Enable() {
         if (isEnabled) return;
         // Set initial position, maybe transition slowly instead of instant snap lol
-        transform.position = stageCenterTransform.position + new Vector3(radius, initialHeightOffset, 0);
+        //transform.position = stageCenterTransform.position + new Vector3(radius, initialHeightOffset, 0);
         isEnabled = true;
     }
 

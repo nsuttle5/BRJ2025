@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CookelsBalloonAttack : MonoBehaviour {
     
-    public Transform restingTarget; // The place where the boss will move and stay during this attack, could be a platform or something like that
+    //public Transform restingTarget; // The place where the boss will move and stay during this attack, could be a platform or something like that
     public int missileCount;
     public GameObject balloonPrefab;
     public GameObject balloonTarget; // we could hardcode this but we could also target platforms or other things in the scenario
@@ -11,7 +11,7 @@ public class CookelsBalloonAttack : MonoBehaviour {
     public float initialCooldown = 1f; // The time to wait before triggering the initial attack
     
     private float currentCooldown;
-    private Transform previousPosition; // the position the boss had before transitioning into the balloon attack
+    //private Transform previousPosition; // the position the boss had before transitioning into the balloon attack
     private bool isEnabled;
     
     // ToDo: add animations
@@ -19,14 +19,14 @@ public class CookelsBalloonAttack : MonoBehaviour {
     public void Enable() {
         if (isEnabled) return;
         
-        previousPosition = transform; // store the current position so that we can teleport back when disabling this attack
-        transform.position = restingTarget.position;
+        //previousPosition = transform; // store the current position so that we can teleport back when disabling this attack
+        //transform.position = restingTarget.position;
         currentCooldown = initialCooldown; // wait a bit before starting to spawn balloons
         isEnabled = true;
     }
     
     public void Disable() {
-        transform.position = previousPosition.position;
+        //transform.position = previousPosition.position;
         isEnabled = false;
         currentCooldown = 0;
     }

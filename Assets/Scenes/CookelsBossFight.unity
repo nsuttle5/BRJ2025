@@ -1001,7 +1001,7 @@ Camera:
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 1
-  orthographic size: 3.13
+  orthographic size: 5.21
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1026,7 +1026,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.059393484, y: 0, z: 0, w: 0.9982347}
-  m_LocalPosition: {x: -6.37, y: 1.1509703, z: -9.969103}
+  m_LocalPosition: {x: -6.37, y: 1.9357939, z: -9.87538}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1888,7 +1888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 599903866}
   m_Layer: 0
-  m_Name: BosssSpawnPosition
+  m_Name: PlatformBossPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3252,6 +3252,7 @@ Transform:
   - {fileID: 1328369713}
   - {fileID: 163121797}
   - {fileID: 1970975385}
+  - {fileID: 2092020579}
   m_Father: {fileID: 1754117693}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1075265997
@@ -5184,6 +5185,9 @@ MonoBehaviour:
   - rid: 58274408644477874
   - rid: 58274408644477875
   - rid: 58274408644477876
+  - rid: 58274438051529087
+  - rid: 58274438051529088
+  - rid: 58274438051529089
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -5229,6 +5233,30 @@ MonoBehaviour:
           m_Value1: 11721233876096241401
         Name: BouncyBallAttackDuration
         m_Value: 5
+    - rid: 58274438051529087
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 8683917853782114163
+          m_Value1: 10357484034728742904
+        Name: Cookels
+        m_Value: {fileID: 2127976594}
+    - rid: 58274438051529088
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 15190097975129701176
+          m_Value1: 3122864671523530965
+        Name: PlatformPosition
+        m_Value: {fileID: 599903866}
+    - rid: 58274438051529089
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 3488852416428298135
+          m_Value1: 15850283393398155746
+        Name: StagePosition
+        m_Value: {fileID: 2092020579}
 --- !u!4 &1762480262
 Transform:
   m_ObjectHideFlags: 0
@@ -5685,7 +5713,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60.000004
-    OrthographicSize: 3.13
+    OrthographicSize: 5.21
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -5712,7 +5740,7 @@ Transform:
   m_GameObject: {fileID: 2041210672}
   serializedVersion: 2
   m_LocalRotation: {x: 0.059393484, y: 0, z: 0, w: 0.9982347}
-  m_LocalPosition: {x: -6.37, y: 1.1509703, z: -9.969103}
+  m_LocalPosition: {x: -6.37, y: 1.9357939, z: -9.87538}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5981,6 +6009,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2092020578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092020579}
+  m_Layer: 0
+  m_Name: LevelBossPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2092020579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092020578}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.09, y: 0.85, z: -1.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1000464996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2127976594
 GameObject:
   m_ObjectHideFlags: 0
@@ -6176,7 +6235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced5227d3eb26b141a60375d1d9a5c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restingTarget: {fileID: 599903866}
   missileCount: 5
   balloonPrefab: {fileID: 6178387344766256239, guid: d39cb5f03cc224544880075ec22008c0, type: 3}
   balloonTarget: {fileID: 672186690}
@@ -6194,7 +6252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1010626f9668d4d8b5a8d2728b91f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restingTarget: {fileID: 599903866}
   ballPrefab: {fileID: 6906254130336936256, guid: d366e25f2259bf340b8eace7b1b22102, type: 3}
   stageCenter: {fileID: 1970975384}
 --- !u!114 &2127976606
