@@ -4,7 +4,7 @@ using Unity.Behavior;
 [BlackboardEnum]
 public enum CookelsAttackEnum
 {
-    BycicleAttack,
+    BycycleAttack,
 	BalloonAttack,
     BallAttack
 }

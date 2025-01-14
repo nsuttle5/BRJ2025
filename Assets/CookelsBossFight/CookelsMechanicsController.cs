@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class CookelsMechanicsController : MonoBehaviour {
@@ -21,7 +20,7 @@ public class CookelsMechanicsController : MonoBehaviour {
             case CookelsAttackEnum.BalloonAttack:
                 balloonAttack.Enable();
                 break;
-            case CookelsAttackEnum.BycicleAttack:
+            case CookelsAttackEnum.BycycleAttack:
                 bycicleAttack.Enable();
                 break;
             case CookelsAttackEnum.BallAttack:
@@ -38,7 +37,7 @@ public class CookelsMechanicsController : MonoBehaviour {
             case CookelsAttackEnum.BalloonAttack:
                 balloonAttack.Disable();
                 break;
-            case CookelsAttackEnum.BycicleAttack:
+            case CookelsAttackEnum.BycycleAttack:
                 bycicleAttack.Disable();
                 break;
             case CookelsAttackEnum.BallAttack:

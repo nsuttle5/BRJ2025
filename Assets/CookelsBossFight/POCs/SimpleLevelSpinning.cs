@@ -9,6 +9,5 @@ public class SimpleLevelSpinning : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         transform.Rotate(new Vector3(0, horizontalInput * rotateSpeed, 0));
-
     }
 }

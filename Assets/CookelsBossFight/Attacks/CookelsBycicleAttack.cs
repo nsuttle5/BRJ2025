@@ -7,15 +7,19 @@ public class CookelsBycicleAttack : MonoBehaviour {
     public bool spriteFacesMovementDirection;
     public float initialHeightOffset = 1f;
     public Transform stageCenterTransform;
-    
+
     private float currentAngle;
     private bool isEnabled;
+
+    public Transform stageStartPos;
+    public float initialPositionInRadian;
     
     // ToDo: add animations
 
     public void Enable() {
         if (isEnabled) return;
         // Set initial position, maybe transition slowly instead of instant snap lol
+        currentAngle = initialPositionInRadian;
         //transform.position = stageCenterTransform.position + new Vector3(radius, initialHeightOffset, 0);
         isEnabled = true;
     }
@@ -58,5 +62,9 @@ public class CookelsBycicleAttack : MonoBehaviour {
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(stageCenterTransform.position, radius);
         }
+    }
+
+    private void OnValidate() {
+        stageStartPos.position = stageCenterTransform.position + new Vector3(radius * Mathf.Cos(initialPositionInRadian), 0.3f, radius * Mathf.Sin(initialPositionInRadian));
     }
 }

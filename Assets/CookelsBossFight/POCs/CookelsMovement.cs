@@ -30,10 +30,10 @@ public class CircularMovement : MonoBehaviour
         
         // Update sprite position, maintaining its Y position
         transform.position = new Vector3(newX, transform.position.y, newZ);
-        
+
         // Rotate sprite to face movement direction (around Y axis for 2.5D)
-        //float angle = Mathf.Atan2(newZ - centerTransform.position.z, newX - centerTransform.position.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(0, angle - 90, 0);
+        float angle = Mathf.Atan2(newZ - centerTransform.position.z, newX - centerTransform.position.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, angle - 90, 0);
     }
     
     void OnDrawGizmos()
