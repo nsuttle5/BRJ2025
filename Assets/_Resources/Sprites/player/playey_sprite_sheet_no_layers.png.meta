@@ -1,0 +1,2049 @@
+fileFormatVersion: 2
+guid: f8c472bfa4610514b95a9628551c983c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1694
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e3c5069130cda43abd7a72b78a13ef
+      internalID: 1433881078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1617
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b9a97968009474a98c902b7dfaf29a
+      internalID: -473765669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_2
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1617
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1db0ce3ad7ae745bde927a196404fb
+      internalID: -1337671481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1617
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060487a6a7b52c24baa21c6a29537759
+      internalID: 2122067767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_4
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1617
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebaa9befbbeb584582cd43db1d8efbd
+      internalID: -213847505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1540
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2331bd03e9ae14d884db6fc053fec8
+      internalID: 1101301644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_6
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1540
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e576b70fb4963247a66cd43c283d734
+      internalID: 969567365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1540
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4157f50192a224891d186dc866e50b
+      internalID: -1067067544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_8
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1540
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded9fbd6c88c5d945985cecac72c62a7
+      internalID: -946849992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1463
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafaebe3e0adb0e45b585328bf208f9b
+      internalID: 2134852983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_10
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1463
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ac054ec24bda54d9dcc7255cbc3cbc
+      internalID: 430083797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_11
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1463
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7fc1529f66fac4ba7b14de9a00d56b
+      internalID: -1701265739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_12
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1463
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b69e7eb167a894181c4ead548139e0
+      internalID: 590552423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1386
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc266234c7fb1554eb4b57f1acb85688
+      internalID: -455961780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1309
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd126d6eb4e7bf9418a65a0fccfe7fa2
+      internalID: 1381042494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_15
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1309
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3998e9bfc2b430f468aaa100fcc69541
+      internalID: -580359670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_16
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1309
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cd05310faa6954ea7566467c5967bb
+      internalID: 1768300015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_17
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1309
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06766e84a1ceeef4798299ce2374bad3
+      internalID: 962098259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1232
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599f0843dbcf33b44a2c2c7d6719b64e
+      internalID: 2123377742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_19
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1232
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4712240eed99d7c4586566a7dc6aecbc
+      internalID: -1134500282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_20
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1232
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12929c208d321c040b904911e7709acb
+      internalID: 21720243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_21
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1232
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beef0405fec46414a9eeb8ed2ad18d62
+      internalID: -194347024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1155
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299b56d4031e76f43bc10c244132f221
+      internalID: -1573521607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_23
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1155
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194bee31208584940847c224d5bba458
+      internalID: 710084330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_24
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1155
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7210b42e6a0564db0f298774e4e338
+      internalID: 277758696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_25
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1155
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20efe491b48d21646973e78e0778c342
+      internalID: -1793393281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1078
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab5cb4b8934b2144853af12e9365ce6
+      internalID: 273268055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1001
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f42cf08c8165f4d9dd40fc3aca1104
+      internalID: 1098611529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_28
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1001
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14defaf4fd21bbd4bbaa1d3aff71026b
+      internalID: -241875358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_29
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1001
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f64e8b5e4f4e5b4ba19402f83032774
+      internalID: 1080069453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_30
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1001
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892820a5e78b0e1438551a1e0d01df3f
+      internalID: 243601273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 924
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659d3bfcab8a186478e8008ab0cd403c
+      internalID: -918982020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_32
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 924
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a356c5b42789394fbeb1aeaffcba064
+      internalID: -1384866778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_33
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 924
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef81b53ac9ceaa4bb03cc4e4dfac071
+      internalID: -851831076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_34
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 924
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b4405cf62b8be469612ddaa9032bae
+      internalID: 1074079773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 847
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2d1ba474afb7641a86e2fc2908e03e
+      internalID: -9501528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_36
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 847
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645e2f8504138cb41a7f5d4853242d5d
+      internalID: -2063852706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_37
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 847
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89c8a264cd0b574f9c643f321a32aba
+      internalID: -2132741748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_38
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 847
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bcc290c99e3ee6479965b8300439c46
+      internalID: -663879406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 770
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5d598e846a76f4095be9f00420a574
+      internalID: 1085220333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_40
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 770
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e08cf9187f5fa42b9bdb3c7666f11c
+      internalID: -1302648579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_41
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 770
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c53f6a3fbbf1941b4f9b8da9c8134b
+      internalID: -178550034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_42
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 770
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b983539840578f4982cebf1749c4be4
+      internalID: -380318004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 693
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd9b15468a235a4db3d1d9922cc405b
+      internalID: -418973566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 616
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec5fa388ba6a974b805b32ff125a0f6
+      internalID: 11404941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_45
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 616
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f967aaeae08f0cc439ce4ba7f6cb278a
+      internalID: -1612427891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_46
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 616
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08686e7b2ee11a049a3d3cb3a9ab55c7
+      internalID: -578750419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_47
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 616
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da98c1bd5f293244fbab4f776b753671
+      internalID: -1118914399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 539
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68eb45b0359465946a4615dd9beecdc6
+      internalID: -818915734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_49
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 539
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4713cd4facec94abc51c198189afea
+      internalID: -969821281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_50
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 539
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67ab1c0718c05e449174b8d2eb5dd7e
+      internalID: -377758781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_51
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 539
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4286cbbc571a148a71d066e7191958
+      internalID: -723247308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 462
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af9c7b6b74894648b199b63b451ebf7
+      internalID: 1496778600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_53
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 462
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783002d3b82d3d94a8363d6f670728a9
+      internalID: 2057368356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_54
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 462
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04da0886511a8a44a8c82ae07b26872b
+      internalID: -393457752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_55
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 462
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdc8e644730bbd46a2a9b6ec7f37f3c
+      internalID: 1221634925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 385
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee526e2698c6bc4f872e27a49209463
+      internalID: -2031434376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab52a3bf371280a49ae6ac386156a7a1
+      internalID: 531816386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_58
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 308
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9745c6c553e0045adc2fc2742d47df
+      internalID: -1860541834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_59
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 308
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62e6c193eacc3c4f8b390ae2cfcb49f
+      internalID: -1178037557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_60
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 308
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d22d7b3baef7b488adda93acea3aab
+      internalID: -1527034796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fde16cdc308efb4ba3a208fd89c2e30
+      internalID: 342515036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_62
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79e74b1a8b75874cb539336430f637c
+      internalID: 1556365428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_63
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8db1f2502519a4fbfba3e263d0d44c
+      internalID: -186460747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_64
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8f4a46f0406154199d221c98cc4ffc
+      internalID: -1400230762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_65
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946d864f148c1984597bebde21c3283e
+      internalID: 1584048175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_66
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c69dd8697de98a498615fbd028d5d19
+      internalID: 1354862205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_67
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7029e5feff15d840929dc0ee3337ffa
+      internalID: 521743414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_68
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b68ba08c4ceeb441a37f864cd6896c4
+      internalID: -735776195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_69
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdaa02c51aaf6849aca84fc12d81707
+      internalID: -2140682669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_70
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c481da994a214140a3390de982975e6
+      internalID: -1669347743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_71
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bef6d6482063344e93ac1d48d260094
+      internalID: -773162484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f171e7210deee6e4daac659c68a103f1
+      internalID: -1127198524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_73
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 154
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0325aa8a53dadba4d8c329bd8fc3e0e0
+      internalID: 1528629732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_74
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 154
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6185ddfc35b82a49a122bfc3290f663
+      internalID: 1761089580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_75
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 154
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ae342f4e6071341a1797952f0962a7
+      internalID: 1883406042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 77
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5981d0660aa3a744d81cabad0fb79b0f
+      internalID: -2020932160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_77
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 77
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ddc28e591e8b7f4989abde1634e2b7e
+      internalID: 29853474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_78
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 77
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47efe4e66b77ffc48ab6fbcce07c68e4
+      internalID: -1246795628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_79
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 77
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2509be678d59f4699365fec1d6d012
+      internalID: -960883601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9144001e3ff55e24a81fe5d8666e7edf
+      internalID: -262711358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_81
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8432c3ced21fd5b4e9cb8b788739d009
+      internalID: 1105705387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_82
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3cbb927d861fd4b827201148076b5d
+      internalID: -1583404667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playey_sprite_sheet_no_layers_83
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741f4acbe6537364eaa7c066b82c7a76
+      internalID: 532538456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 35823edb04aa8a941bdde590cd63e84e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      playey_sprite_sheet_no_layers_0: 1433881078
+      playey_sprite_sheet_no_layers_1: -473765669
+      playey_sprite_sheet_no_layers_10: 430083797
+      playey_sprite_sheet_no_layers_11: -1701265739
+      playey_sprite_sheet_no_layers_12: 590552423
+      playey_sprite_sheet_no_layers_13: -455961780
+      playey_sprite_sheet_no_layers_14: 1381042494
+      playey_sprite_sheet_no_layers_15: -580359670
+      playey_sprite_sheet_no_layers_16: 1768300015
+      playey_sprite_sheet_no_layers_17: 962098259
+      playey_sprite_sheet_no_layers_18: 2123377742
+      playey_sprite_sheet_no_layers_19: -1134500282
+      playey_sprite_sheet_no_layers_2: -1337671481
+      playey_sprite_sheet_no_layers_20: 21720243
+      playey_sprite_sheet_no_layers_21: -194347024
+      playey_sprite_sheet_no_layers_22: -1573521607
+      playey_sprite_sheet_no_layers_23: 710084330
+      playey_sprite_sheet_no_layers_24: 277758696
+      playey_sprite_sheet_no_layers_25: -1793393281
+      playey_sprite_sheet_no_layers_26: 273268055
+      playey_sprite_sheet_no_layers_27: 1098611529
+      playey_sprite_sheet_no_layers_28: -241875358
+      playey_sprite_sheet_no_layers_29: 1080069453
+      playey_sprite_sheet_no_layers_3: 2122067767
+      playey_sprite_sheet_no_layers_30: 243601273
+      playey_sprite_sheet_no_layers_31: -918982020
+      playey_sprite_sheet_no_layers_32: -1384866778
+      playey_sprite_sheet_no_layers_33: -851831076
+      playey_sprite_sheet_no_layers_34: 1074079773
+      playey_sprite_sheet_no_layers_35: -9501528
+      playey_sprite_sheet_no_layers_36: -2063852706
+      playey_sprite_sheet_no_layers_37: -2132741748
+      playey_sprite_sheet_no_layers_38: -663879406
+      playey_sprite_sheet_no_layers_39: 1085220333
+      playey_sprite_sheet_no_layers_4: -213847505
+      playey_sprite_sheet_no_layers_40: -1302648579
+      playey_sprite_sheet_no_layers_41: -178550034
+      playey_sprite_sheet_no_layers_42: -380318004
+      playey_sprite_sheet_no_layers_43: -418973566
+      playey_sprite_sheet_no_layers_44: 11404941
+      playey_sprite_sheet_no_layers_45: -1612427891
+      playey_sprite_sheet_no_layers_46: -578750419
+      playey_sprite_sheet_no_layers_47: -1118914399
+      playey_sprite_sheet_no_layers_48: -818915734
+      playey_sprite_sheet_no_layers_49: -969821281
+      playey_sprite_sheet_no_layers_5: 1101301644
+      playey_sprite_sheet_no_layers_50: -377758781
+      playey_sprite_sheet_no_layers_51: -723247308
+      playey_sprite_sheet_no_layers_52: 1496778600
+      playey_sprite_sheet_no_layers_53: 2057368356
+      playey_sprite_sheet_no_layers_54: -393457752
+      playey_sprite_sheet_no_layers_55: 1221634925
+      playey_sprite_sheet_no_layers_56: -2031434376
+      playey_sprite_sheet_no_layers_57: 531816386
+      playey_sprite_sheet_no_layers_58: -1860541834
+      playey_sprite_sheet_no_layers_59: -1178037557
+      playey_sprite_sheet_no_layers_6: 969567365
+      playey_sprite_sheet_no_layers_60: -1527034796
+      playey_sprite_sheet_no_layers_61: 342515036
+      playey_sprite_sheet_no_layers_62: 1556365428
+      playey_sprite_sheet_no_layers_63: -186460747
+      playey_sprite_sheet_no_layers_64: -1400230762
+      playey_sprite_sheet_no_layers_65: 1584048175
+      playey_sprite_sheet_no_layers_66: 1354862205
+      playey_sprite_sheet_no_layers_67: 521743414
+      playey_sprite_sheet_no_layers_68: -735776195
+      playey_sprite_sheet_no_layers_69: -2140682669
+      playey_sprite_sheet_no_layers_7: -1067067544
+      playey_sprite_sheet_no_layers_70: -1669347743
+      playey_sprite_sheet_no_layers_71: -773162484
+      playey_sprite_sheet_no_layers_72: -1127198524
+      playey_sprite_sheet_no_layers_73: 1528629732
+      playey_sprite_sheet_no_layers_74: 1761089580
+      playey_sprite_sheet_no_layers_75: 1883406042
+      playey_sprite_sheet_no_layers_76: -2020932160
+      playey_sprite_sheet_no_layers_77: 29853474
+      playey_sprite_sheet_no_layers_78: -1246795628
+      playey_sprite_sheet_no_layers_79: -960883601
+      playey_sprite_sheet_no_layers_8: -946849992
+      playey_sprite_sheet_no_layers_80: -262711358
+      playey_sprite_sheet_no_layers_81: 1105705387
+      playey_sprite_sheet_no_layers_82: -1583404667
+      playey_sprite_sheet_no_layers_83: 532538456
+      playey_sprite_sheet_no_layers_9: 2134852983
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
