@@ -23,6 +23,7 @@ public class SceneTransitionsScript : MonoBehaviour
         }
     }
 
+
     void LoadScene()
     {
         SceneManager.LoadScene(sceneToLoad);

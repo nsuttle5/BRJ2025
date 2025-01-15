@@ -8,6 +8,7 @@ public class StartSceneCameraManager : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+    
 
     public void Play()
     {

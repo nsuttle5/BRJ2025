@@ -20,6 +20,7 @@ public class SceneLoader : MonoBehaviour {
         loadingImage.fillAmount = 0;
         loadingScreenAnimator = gameObject.GetComponent<Animator>();
     }
+    
 
     //Add the Name of all scenes in here
     public enum Scene {

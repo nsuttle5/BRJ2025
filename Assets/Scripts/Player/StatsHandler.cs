@@ -11,4 +11,5 @@ public class StatsHandler : ScriptableObject
     public float dashCooldownMultiplier = 1f;
     public float gravityMultiplier = 1f;
     public float permanentDamageIncrease = 1f;
+    
 }

@@ -24,6 +24,7 @@ public class SignInteraction : MonoBehaviour {
         // Turn off lights by default
         SetLights(false);
     }
+    
 
     void OnMouseEnter()
     {
