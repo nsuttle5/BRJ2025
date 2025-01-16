@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
-  m_Name: CookelsBossFight Blackboard
+  m_Name: CookelsBossFIght2_Ketchup Blackboard
   m_EditorClassIdentifier: 
   VersionTimestamp: 638724733898382792
   AssetID:
@@ -140,11 +140,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dd922ae02c94c87a66e46a10a7319b9, type: 3}
-  m_Name: CookelsBossFight Blackboard
+  m_Name: CookelsBossFIght2_Ketchup Blackboard
   m_EditorClassIdentifier: 
   AssetID:
-    m_Value0: 14177420951337585118
-    m_Value1: 3592377455521367497
+    m_Value0: 11871738301333634449
+    m_Value1: 1393555970991223017
   m_Variables:
   - rid: 58274408644476996
   - rid: 58274408644477002
@@ -158,7 +158,7 @@ MonoBehaviour:
   - rid: 4718215827905577303
   - rid: 4718215827905577783
   - rid: 4718215827905577820
-  m_VersionTimestamp: 638724733898382792
+  m_VersionTimestamp: 638725648405375778
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: -5739385034140103397}
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db920e62f70f420bb33c771449926fa4, type: 3}
-  m_Name: CookelsBossFight
+  m_Name: CookelsBossFIght2_Ketchup
   m_EditorClassIdentifier: 
   Graphs:
   - rid: 4718215829491548418
@@ -313,13 +313,13 @@ MonoBehaviour:
         AuthoringAssetID:
           m_Value0: 14177420951337585118
           m_Value1: 3592377455521367497
-        m_DebugInfo: {fileID: 0}
+        m_DebugInfo: {fileID: 9163065464073032980}
         Root:
           rid: 4718215829491548419
         BlackboardReference:
           rid: 4718215829491548420
         BlackboardGroupReferences: []
-        m_VersionTimestamp: 638724734977625817
+        m_VersionTimestamp: 638725648405203360
     - rid: 4718215829491548419
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -884,7 +884,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bad8f2220607dac4db5082ff333fafb8, type: 3}
-  m_Name: CookelsBossFight
+  m_Name: CookelsBossFIght2_Ketchup
   m_EditorClassIdentifier: 
   Blackboard: {fileID: -4672634732652970310}
   m_Description: 
@@ -928,12 +928,13 @@ MonoBehaviour:
   - rid: 4718215829491548170
   - rid: 4718215829491548175
   - rid: 4718215829491548307
-  m_VersionTimestamp: 638724734977625817
+  - rid: 58274479718268995
+  m_VersionTimestamp: 638725648405203360
   m_DebugInfo: {fileID: 9163065464073032980}
   m_RuntimeGraph: {fileID: -2473041137645361985}
   AssetID:
-    m_Value0: 14177420951337585118
-    m_Value1: 3592377455521367497
+    m_Value0: 11871738301333634449
+    m_Value1: 1393555970991223017
   Story:
     Story: 
     StoryVariableNames: []
@@ -1078,6 +1079,18 @@ MonoBehaviour:
       Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    NamedChildren: []
+  - Name: CookelsBycicleAttack
+    Story: '[Cookels] executes bycicle attack'
+    RuntimeTypeID:
+      m_Value0: 12352523223229818082
+      m_Value1: 17422843649229622734
+    Variables:
+    - Name: Cookels
+      Type:
+        m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
       Tooltip: 
     NamedChildren: []
   - Name: Log Variable
@@ -2356,6 +2369,72 @@ MonoBehaviour:
         m_Connections:
         - rid: 58274408644477733
         - rid: 58274408644477771
+    - rid: 58274479718268995
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -1159.5311, y: 987.71234}
+        ID:
+          m_Value0: 6662391317969438068
+          m_Value1: 5989422604228518988
+        Parents: []
+        PortModels:
+        - rid: 58274479718268996
+        - rid: 58274479718268997
+        NodeType:
+          m_SerializableType: CookelsBycicleAttackAction, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 12352523223229818082
+          m_Value1: 17422843649229622734
+        m_FieldValues:
+        - rid: 58274479718268998
+    - rid: 58274479718268996
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 58274479718268995
+        m_Connections: []
+    - rid: 58274479718268997
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 58274479718268995
+        m_Connections: []
+    - rid: 58274479718268998
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Cookels
+        Type:
+          m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 58274479718268999
+        LinkedVariable:
+          rid: 58274479718269000
+    - rid: 58274479718268999
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 58274479718269000
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 8683917853782114163
+          m_Value1: 10357484034728742904
+        Name: Cookels
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
     - rid: 4718215827905577093
       type: {class: SequenceNodeModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -3938,6 +4017,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b27bb6d9a2c8d540a10dff10acc543e, type: 3}
-  m_Name: CookelsBossFight Debug Info
+  m_Name: CookelsBossFIght2_Ketchup Debug Info
   m_EditorClassIdentifier: 
   m_CodeBreakPointsList: []
