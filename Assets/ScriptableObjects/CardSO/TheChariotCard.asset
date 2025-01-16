@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The Chariot
   description: Increases the distance a dash can travel
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 21300000, guid: ea343258dd2a31241895acbde8ddfbfc, type: 3}
   cardPrefab: {fileID: 2965598423266852612, guid: 2d947ddd69c45bd429e2748c0faf0cd5, type: 3}
   rarity: 0

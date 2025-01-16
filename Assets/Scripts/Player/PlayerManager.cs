@@ -25,6 +25,8 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody rb;             // Reference to the player's Rigidbody
     private PlayerMovement playerMovement;
 
+    
+
     private List<(int damage, Vector3 knockback)> damageQueue = new List<(int, Vector3)>();
 
     private void Awake()
@@ -34,6 +36,7 @@ public class PlayerManager : MonoBehaviour
 
         playerMovement = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody>();
+
     }
 
     private void Start()

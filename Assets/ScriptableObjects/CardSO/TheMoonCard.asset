@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The Moon
   description: Lowers the gravity for the user
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 21300000, guid: e4884bc5271dfc849b11c5f4ed97ebc6, type: 3}
   cardPrefab: {fileID: 8075726491362557220, guid: 539c77d6ec6f6cd4ca75fb916617520b, type: 3}
   rarity: 0

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The High Priestess
   description: Gives one Extra Heart to the user
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 21300000, guid: fc3f90853abe1d947914e1aebb17283c, type: 3}
   cardPrefab: {fileID: 6608719029102665420, guid: d83da9aab7dc8f045b32c1ceb5d4eeb7, type: 3}
   rarity: 0

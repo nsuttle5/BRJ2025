@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The Hierophant
   description: Grants Double Jump
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 21300000, guid: d1ee9a4ba232401468198b8c1da67109, type: 3}
   cardPrefab: {fileID: 1920939067055536163, guid: 1debb973daffb43428d8660ca7bbff74, type: 3}
   rarity: 0

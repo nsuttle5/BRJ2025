@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The Fool
   description: Reduces move speed for some time and increase health by 1 permanently
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 21300000, guid: 20f1cb221d77b0342aa99041980ad5d9, type: 3}
   cardPrefab: {fileID: 6608719029102665420, guid: 15d9e4c1bbdb4504792e06481568af42, type: 3}
   rarity: 0

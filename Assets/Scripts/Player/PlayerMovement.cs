@@ -31,6 +31,10 @@ public class PlayerMovement : MonoBehaviour {
     private bool isStun = false;
     private bool isPositionLocked = false;
 
+    [Header("Animator Controller")]
+    [SerializeField] private Animator animator;
+    
+
     //TIMERS
     // Coyote time is the timer after jumping off a ledge
     //Jump Buffer timer is after space is pressed
@@ -53,6 +57,16 @@ public class PlayerMovement : MonoBehaviour {
         dashCooldownTimer = playerDataSO.dashCooldown * statsHandler.dashCooldownMultiplier;
         standingCollider.enabled = true;
         crouchCollider.enabled = false;
+
+        animator.SetBool("isShooting", false);
+        animator.SetBool("isGrounded", false);
+        animator.SetBool("isJumping", false);
+        animator.SetBool("isFalling", false);
+        animator.SetBool("isDashing", false);
+        animator.SetBool("isCrouching", false);
+        animator.SetBool("isDiag", false);
+        animator.SetBool("isUp", false);
+        animator.SetBool("isMoving", false);
     }
 
     private void Start() {
@@ -64,6 +78,8 @@ public class PlayerMovement : MonoBehaviour {
         inputManager.OnLockReleased += InputManager_OnLockReleased;
 
         gravityScale = playerDataSO.gravityScale * statsHandler.gravityMultiplier;
+
+        
     }
 
     #region InputManager Events
@@ -85,6 +101,8 @@ public class PlayerMovement : MonoBehaviour {
         verticalInput = inputManager.GetVerticalMovement();
 
         isGrounded = IsGrounded();
+
+        
 
         //TIMERS
         jumpBufferTimer -= Time.deltaTime;
@@ -170,6 +188,24 @@ public class PlayerMovement : MonoBehaviour {
         }
         else gravityScale = playerDataSO.gravityScale * statsHandler.gravityMultiplier;
         #endregion
+
+        if (isGrounded) animator.SetBool("isGrounded", true);
+        else animator.SetBool("isGrounded", false);
+
+        if (isJumping) animator.SetBool("isJumping", true);
+        else animator.SetBool("isJumping", false);
+
+        if (isFalling) animator.SetBool("isFalling", true);
+        else animator.SetBool("isFalling", false);
+
+        if (isDashing) animator.SetBool("isDashing", true);
+        else animator.SetBool("isDashing", false);
+
+        if (horizontalInput != 0 ) animator.SetBool("isMoving", true);
+        else animator.SetBool("isMoving", false);
+
+        if (standingCollider.enabled) animator.SetBool("isCrouching", false);
+        else animator.SetBool("isCrouching", true);
     }
 
     private void FixedUpdate() {

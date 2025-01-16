@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Strength
   description: Grants the user the strength to double jump with increased jump height
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 21300000, guid: 892159cd07024cb4fabf3537937dc873, type: 3}
   cardPrefab: {fileID: 2531717542915171003, guid: d584165e52cb7a14a945189b4eeeda26, type: 3}
   rarity: 0

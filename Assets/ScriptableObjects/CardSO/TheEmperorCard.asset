@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The Emporer
   description: Increase the damage dealth by user
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 21300000, guid: 67145e4ce6e24724d83fc58f62805fd8, type: 3}
   cardPrefab: {fileID: 3785794599269946431, guid: 658124dbeb3dd1f49ae2a5dea1f6f220, type: 3}
   rarity: 0

@@ -5035,6 +5035,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.357
       objectReference: {fileID: 0}
+    - target: {fileID: 2963303043543948518, guid: 7c47dd9e838bbf54d88877183d37c72f, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1786880117}
+    - target: {fileID: 4468428624933206714, guid: 7c47dd9e838bbf54d88877183d37c72f, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1786880117}
     - target: {fileID: 4468428624933206714, guid: 7c47dd9e838bbf54d88877183d37c72f, type: 3}
       propertyPath: playerHealthUI
       value: 
