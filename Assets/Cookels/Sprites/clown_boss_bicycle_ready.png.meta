@@ -1,0 +1,1244 @@
+fileFormatVersion: 2
+guid: 15de5e61cae8cff418d72e7a810b151b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 174
+        width: 105
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fb89f796f8b954eacf957322729313
+      internalID: -1630052272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 174
+        width: 100
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac5f36da295e8b4ea7b96460e8920a7
+      internalID: 1942605456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_2
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 174
+        width: 89
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3a39bc508e7704598cb6d2c3d587ba
+      internalID: 1304823677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_3
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 174
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5dad24609e47ea42a29ca83b9b5732f
+      internalID: -1277352371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_4
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 174
+        width: 58
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f96c367afc33e84da9794ac10869a5c
+      internalID: 1787770683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_5
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 174
+        width: 69
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a231ada6f1c31a64c8accd27cf830a2f
+      internalID: -561897363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_6
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 174
+        width: 79
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a192447143e83947a020898c7dcea57
+      internalID: 500782971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_7
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 174
+        width: 78
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0946303996b4ec24b85853adfa3f4701
+      internalID: -1264889415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_8
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 174
+        width: 73
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8d416efbaa8ba42adef980caac948a
+      internalID: -1219191816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_9
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 174
+        width: 73
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de824d1506c6ae942bc5b765e5c2f626
+      internalID: 892356197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_10
+      rect:
+        serializedVersion: 2
+        x: 2651
+        y: 174
+        width: 68
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f1c5c70f23c98498aeeaaec143b70c
+      internalID: 709763720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_11
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 174
+        width: 79
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61183c0dc97d0c24cbc143598b653045
+      internalID: -980335274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_12
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 174
+        width: 105
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50beb230ebb04441be75ab1076fb397
+      internalID: 945652431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_13
+      rect:
+        serializedVersion: 2
+        x: 3423
+        y: 174
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb7dc854bb72c943af9e3b83e688977
+      internalID: -1353257495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_14
+      rect:
+        serializedVersion: 2
+        x: 3675
+        y: 174
+        width: 84
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17fb1948a7711c4a8299d257b03026a
+      internalID: 1617750214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_15
+      rect:
+        serializedVersion: 2
+        x: 3932
+        y: 174
+        width: 74
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59d045ad988633498eebb735eb89aa5
+      internalID: -151321198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_16
+      rect:
+        serializedVersion: 2
+        x: 4184
+        y: 174
+        width: 74
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963ea02776ee9dc4da4e0747599a4cb6
+      internalID: -192579474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_17
+      rect:
+        serializedVersion: 2
+        x: 4441
+        y: 174
+        width: 74
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11e7d13491b55741bbfb89aaacc739f
+      internalID: 454857714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_18
+      rect:
+        serializedVersion: 2
+        x: 4699
+        y: 174
+        width: 73
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b38e383705d60a4d97539c5530ed6cd
+      internalID: -1984027428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_19
+      rect:
+        serializedVersion: 2
+        x: 4961
+        y: 180
+        width: 105
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f128b94fcccf97e41a303c73bc7a2fc6
+      internalID: 1475220225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_20
+      rect:
+        serializedVersion: 2
+        x: 5208
+        y: 190
+        width: 94
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696a803fb6ea05e41827758d00abd39d
+      internalID: 1323540656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_21
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 174
+        width: 94
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700836844f6afb342a4a5a78206d32bf
+      internalID: -1832725809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_22
+      rect:
+        serializedVersion: 2
+        x: 5717
+        y: 174
+        width: 95
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6d841e214498f4c890bc87a86795eb
+      internalID: -1336656616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_23
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 174
+        width: 95
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d8ec195154613408a3c9352ba6b6e9
+      internalID: 1698972410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_24
+      rect:
+        serializedVersion: 2
+        x: 6226
+        y: 174
+        width: 95
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c28db105293a9b468547d8d16e95d02
+      internalID: 1996809360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_25
+      rect:
+        serializedVersion: 2
+        x: 6484
+        y: 174
+        width: 94
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825be93651f903541aa3d58100c6cb9e
+      internalID: -2104010120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_26
+      rect:
+        serializedVersion: 2
+        x: 6741
+        y: 174
+        width: 94
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240defe234fd2ce4ea8e779596a246e4
+      internalID: -21268858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_27
+      rect:
+        serializedVersion: 2
+        x: 6998
+        y: 174
+        width: 95
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db933e355c0e75243b726a490fe80c56
+      internalID: -167851933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_28
+      rect:
+        serializedVersion: 2
+        x: 7250
+        y: 174
+        width: 95
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142070ea486028e4a8a3e56ec7e5ecbf
+      internalID: -2061442737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_29
+      rect:
+        serializedVersion: 2
+        x: 7507
+        y: 174
+        width: 95
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4bf2a27ec216244c96e859b575cbb9b
+      internalID: -1866052914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_30
+      rect:
+        serializedVersion: 2
+        x: 7765
+        y: 174
+        width: 89
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5edf06b9f213d24186d6b9ad5fed2c4
+      internalID: 479351755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_31
+      rect:
+        serializedVersion: 2
+        x: 8006
+        y: 174
+        width: 100
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3eb2a24b7653404380a47f103f7819e
+      internalID: -1137838827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_32
+      rect:
+        serializedVersion: 2
+        x: 8258
+        y: 174
+        width: 105
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67158189369207745a1869f481351034
+      internalID: 227605044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_33
+      rect:
+        serializedVersion: 2
+        x: 8510
+        y: 174
+        width: 110
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a99f69b47f3114439c388fb15eff5e4
+      internalID: -154004222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_34
+      rect:
+        serializedVersion: 2
+        x: 8767
+        y: 174
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c161b10d359ff41ac50626d5913e1a
+      internalID: 1904816926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_35
+      rect:
+        serializedVersion: 2
+        x: 9019
+        y: 174
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7381be5440c3de4388acf6221c6e70b
+      internalID: -1988418691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_36
+      rect:
+        serializedVersion: 2
+        x: 9277
+        y: 174
+        width: 110
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63dce0678c254594f80adf26a6efb417
+      internalID: 2103924055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_37
+      rect:
+        serializedVersion: 2
+        x: 9534
+        y: 174
+        width: 110
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942bf056c4fe6fd4f8e23ecfcd847bd2
+      internalID: -897722626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_38
+      rect:
+        serializedVersion: 2
+        x: 9786
+        y: 174
+        width: 115
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa280e32c160b04bb326666bce48b9f
+      internalID: -578436119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_39
+      rect:
+        serializedVersion: 2
+        x: 10043
+        y: 174
+        width: 116
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2bdd14c7dadba4c853d48ce01ab060
+      internalID: 1341266111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_40
+      rect:
+        serializedVersion: 2
+        x: 10316
+        y: 174
+        width: 95
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c98bd58bf8473145ae1ae351d130eb1
+      internalID: 1865207760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_41
+      rect:
+        serializedVersion: 2
+        x: 10584
+        y: 174
+        width: 73
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb14a62bc6cdc94c81e38fa10a00d25
+      internalID: 1815147302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_42
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 79
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f7c3589fc29844bb85a54c7a730ccf
+      internalID: -994773263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_43
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 78
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0f7272e537f5c49ad0efb8acdaf6f0
+      internalID: 98201254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_44
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 0
+        width: 73
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5882459b368170c43aa229449fd9b86e
+      internalID: -398771396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_45
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 0
+        width: 74
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf949e7a30cd1849b29951cfecf74ae
+      internalID: -1200854191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_46
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 0
+        width: 79
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae8c009c9f3c214aa52ab6126d32985
+      internalID: 347054560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_47
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 0
+        width: 79
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d4a05d07d927f47bfb5f4de66c0ab5
+      internalID: -1708507123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_ready_48
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 0
+        width: 73
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7804b30da1b80954187d255dbb342a86
+      internalID: -1530715801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 43785e5bd5a7f50478958ef35a026a47
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      clown_boss_bicycle_ready_0: -1630052272
+      clown_boss_bicycle_ready_1: 1942605456
+      clown_boss_bicycle_ready_10: 709763720
+      clown_boss_bicycle_ready_11: -980335274
+      clown_boss_bicycle_ready_12: 945652431
+      clown_boss_bicycle_ready_13: -1353257495
+      clown_boss_bicycle_ready_14: 1617750214
+      clown_boss_bicycle_ready_15: -151321198
+      clown_boss_bicycle_ready_16: -192579474
+      clown_boss_bicycle_ready_17: 454857714
+      clown_boss_bicycle_ready_18: -1984027428
+      clown_boss_bicycle_ready_19: 1475220225
+      clown_boss_bicycle_ready_2: 1304823677
+      clown_boss_bicycle_ready_20: 1323540656
+      clown_boss_bicycle_ready_21: -1832725809
+      clown_boss_bicycle_ready_22: -1336656616
+      clown_boss_bicycle_ready_23: 1698972410
+      clown_boss_bicycle_ready_24: 1996809360
+      clown_boss_bicycle_ready_25: -2104010120
+      clown_boss_bicycle_ready_26: -21268858
+      clown_boss_bicycle_ready_27: -167851933
+      clown_boss_bicycle_ready_28: -2061442737
+      clown_boss_bicycle_ready_29: -1866052914
+      clown_boss_bicycle_ready_3: -1277352371
+      clown_boss_bicycle_ready_30: 479351755
+      clown_boss_bicycle_ready_31: -1137838827
+      clown_boss_bicycle_ready_32: 227605044
+      clown_boss_bicycle_ready_33: -154004222
+      clown_boss_bicycle_ready_34: 1904816926
+      clown_boss_bicycle_ready_35: -1988418691
+      clown_boss_bicycle_ready_36: 2103924055
+      clown_boss_bicycle_ready_37: -897722626
+      clown_boss_bicycle_ready_38: -578436119
+      clown_boss_bicycle_ready_39: 1341266111
+      clown_boss_bicycle_ready_4: 1787770683
+      clown_boss_bicycle_ready_40: 1865207760
+      clown_boss_bicycle_ready_41: 1815147302
+      clown_boss_bicycle_ready_42: -994773263
+      clown_boss_bicycle_ready_43: 98201254
+      clown_boss_bicycle_ready_44: -398771396
+      clown_boss_bicycle_ready_45: -1200854191
+      clown_boss_bicycle_ready_46: 347054560
+      clown_boss_bicycle_ready_47: -1708507123
+      clown_boss_bicycle_ready_48: -1530715801
+      clown_boss_bicycle_ready_5: -561897363
+      clown_boss_bicycle_ready_6: 500782971
+      clown_boss_bicycle_ready_7: -1264889415
+      clown_boss_bicycle_ready_8: -1219191816
+      clown_boss_bicycle_ready_9: 892356197
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

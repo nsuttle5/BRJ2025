@@ -5,34 +5,35 @@ using Action = Unity.Behavior.Action;
 using Unity.Properties;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "CookelsBycicleAttack", story: "Execute bycicle Attack for [Laps] laps with speed: [MoveSpeed]", category: "Action", id: "e26460d06cfa6cabce8d8021fd5fcaf1")]
+[NodeDescription(name: "CookelsBycicleAttack", story: "Bicycle Attack", category: "Action", id: "e26460d06cfa6cabce8d8021fd5fcaf1")]
 public partial class CookelsBycicleAttackAction : Action
 {
-    [SerializeReference] public BlackboardVariable<GameObject> CookelsGameObject;
-    [SerializeReference] public BlackboardVariable<Animator> CookelsAnimator;
-    [SerializeReference] public BlackboardVariable<Transform> StageCenterTransform;
     [SerializeReference] public BlackboardVariable<int> Laps;
-
     [SerializeReference] public BlackboardVariable<float> MoveSpeed;
+    [SerializeReference] public BlackboardVariable<GameObject> CookelsGameObject;
+    
+    [SerializeReference] public BlackboardVariable<Transform> StageCenterTransform;
+
     [SerializeReference] public BlackboardVariable<float> StageRadius;
     
     [SerializeReference] public BlackboardVariable<bool> Clockwise;
     [SerializeReference] public BlackboardVariable<bool> SpriteFacesMovementDirection;
-    
+
+    private Animator cookelsAnimator;
+    private AnimationStateHandler animationStateHandler;
+
     // Animation constants
-    private const float attackAnticipationAnimationDuration = 2.3f; // This value matches the animation time
-    private const string attackAnticipationStateName = "BycicleAttack_Anticipation"; // This needs to match the animator state name
-    private const string attackStateName = "BycicleAttack";
-    private const float attackEndAnimationDuration = 1.6f; // This value matches the animation time
-    private const string attackEndStateName = "BycicleAttack_End"; // This needs to match the animator state name
-    private const string idleStateName = "IdleCookels";
+    private const string ATTACK_ANTICIPATION_STATE_NAME = "BycicleAttack_Anticipation"; // This needs to match the animator state name
+    private const string ATTACK_STATE_NAME = "BycicleAttack";
+    private const string ATTACK_END_STATE_NAME = "BycicleAttack_End"; // This needs to match the animator state name
+    private const string IDLE_STATE_NAME = "IdleCookels";
 
     // State tracking
     private float currentAngle;
     private float elapsedTime;
     private float totalRotation;
     private AttackPhase currentPhase;
-    
+
     private enum AttackPhase {
         Anticipation,
         Rotating,
@@ -41,16 +42,19 @@ public partial class CookelsBycicleAttackAction : Action
     }
     
     protected override Status OnStart() {
+
+        cookelsAnimator = CookelsGameObject.Value.GetComponent<Animator>();
+        animationStateHandler = CookelsGameObject.Value.GetComponent<AnimationStateHandler>();
+
         if (!ValidateReferences())
             return Status.Failure;
-
         // Initialize state
         currentPhase = AttackPhase.Anticipation;
         elapsedTime = 0f;
         totalRotation = 0f;
 
         // Start anticipation animation
-        CookelsAnimator.Value.Play(attackAnticipationStateName);
+        cookelsAnimator.Play(ATTACK_ANTICIPATION_STATE_NAME);
 
         return Status.Running;
     }
@@ -60,9 +64,10 @@ public partial class CookelsBycicleAttackAction : Action
 
         switch (currentPhase) {
             case AttackPhase.Anticipation:
-                if (elapsedTime >= attackAnticipationAnimationDuration) {
+                if (animationStateHandler.hasCurrentAnimationEnded) {
                     currentPhase = AttackPhase.Rotating;
-                    CookelsAnimator.Value.Play(attackStateName);
+                    cookelsAnimator.Play(ATTACK_STATE_NAME);
+                    animationStateHandler.OnStartNewAnimation();
                     elapsedTime = 0f;
                 }
                 break;
@@ -73,9 +78,10 @@ public partial class CookelsBycicleAttackAction : Action
                 break;
 
             case AttackPhase.Ending:
-                if (elapsedTime >= attackEndAnimationDuration) {
+                if (animationStateHandler.hasCurrentAnimationEnded) {
                     currentPhase = AttackPhase.Complete;
-                    CookelsAnimator.Value.Play(idleStateName);
+                    cookelsAnimator.Play(IDLE_STATE_NAME);
+                    animationStateHandler.OnStartNewAnimation();
                     return Status.Success;
                 }
                 break;
@@ -115,20 +121,19 @@ public partial class CookelsBycicleAttackAction : Action
         if (totalRotation >= rotationForOneLap * Laps.Value) {
             currentPhase = AttackPhase.Ending;
             elapsedTime = 0f;
-            CookelsAnimator.Value.Play(attackEndStateName);
+            cookelsAnimator.Play(ATTACK_END_STATE_NAME);
         }
     }
 
     protected override void OnEnd() {
         // Ensure we're in idle state if interrupted
         if (currentPhase != AttackPhase.Complete) {
-            CookelsAnimator.Value.Play(idleStateName);
+            cookelsAnimator.Play(IDLE_STATE_NAME);
         }
     }
     
     private bool ValidateReferences() {
-        if (CookelsGameObject.Value == null || 
-            CookelsAnimator.Value == null || 
+        if (CookelsGameObject.Value == null ||
             StageCenterTransform.Value == null || 
             Laps.Value <= 0)
         {

@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class CookelsMechanicsController : MonoBehaviour {
     
-    private CookelsBycicleAttack bycicleAttack;
     private CookelsBalloonAttack balloonAttack;
     private CookelsBouncyBallAttack bouncyBallAttack;
 
     private void Start() {
-        bycicleAttack = GetComponent<CookelsBycicleAttack>();
         balloonAttack = GetComponent<CookelsBalloonAttack>();
         bouncyBallAttack = GetComponent<CookelsBouncyBallAttack>();
     }
@@ -21,7 +19,6 @@ public class CookelsMechanicsController : MonoBehaviour {
                 balloonAttack.Enable();
                 break;
             case CookelsAttackEnum.BycycleAttack:
-                bycicleAttack.Enable();
                 break;
             case CookelsAttackEnum.BallAttack:
                 bouncyBallAttack.Enable();
@@ -38,7 +35,6 @@ public class CookelsMechanicsController : MonoBehaviour {
                 balloonAttack.Disable();
                 break;
             case CookelsAttackEnum.BycycleAttack:
-                bycicleAttack.Disable();
                 break;
             case CookelsAttackEnum.BallAttack:
                 bouncyBallAttack.Disable();

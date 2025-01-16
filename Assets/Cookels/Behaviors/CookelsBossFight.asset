@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: CookelsBossFight Blackboard
   m_EditorClassIdentifier: 
-  VersionTimestamp: 638725761624875832
+  VersionTimestamp: 638726547425653833
   AssetID:
     m_Value0: 14177420951337585118
     m_Value1: 3592377455521367497
@@ -20,8 +20,6 @@ MonoBehaviour:
     m_Variables:
     - rid: 58274408644477003
     - rid: 58274408644477004
-    - rid: 58274438051528842
-    - rid: 58274480969220171
     - rid: 58274480969220423
     - rid: 58274480969220567
   m_SharedBlackboardVariableGuids: []
@@ -44,22 +42,6 @@ MonoBehaviour:
           m_Value1: 1835795478430369400
         Name: CurentStage
         m_Value: 1
-    - rid: 58274438051528842
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 8683917853782114163
-          m_Value1: 10357484034728742904
-        Name: Cookels
-        m_Value: {fileID: 0}
-    - rid: 58274480969220171
-      type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 16192586195918805073
-          m_Value1: 13636521646394232925
-        Name: CookelsAnimator
-        m_Value: {fileID: 0}
     - rid: 58274480969220423
       type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -94,11 +76,9 @@ MonoBehaviour:
   m_Variables:
   - rid: 58274408644476996
   - rid: 58274408644477002
-  - rid: 58274438051528841
-  - rid: 58274480969220162
   - rid: 58274480969220422
   - rid: 58274480969220566
-  m_VersionTimestamp: 638725761624875832
+  m_VersionTimestamp: 638726547425653833
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: -5739385034140103397}
@@ -125,26 +105,6 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value: 1
-    - rid: 58274438051528841
-      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 8683917853782114163
-          m_Value1: 10357484034728742904
-        Name: Cookels
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
-    - rid: 58274480969220162
-      type: {class: 'TypedVariableModel`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 16192586195918805073
-          m_Value1: 13636521646394232925
-        Name: CookelsAnimator
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
     - rid: 58274480969220422
       type: {class: 'TypedVariableModel`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -178,16 +138,16 @@ MonoBehaviour:
   m_Name: CookelsBossFight
   m_EditorClassIdentifier: 
   Graphs:
-  - rid: 58274480969220665
+  - rid: 4718215873885897056
   RootGraph:
-    rid: 58274480969220665
+    rid: 4718215873885897056
   m_DebugInfo: {fileID: 9163065464073032980}
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 58274480969220665
+    - rid: 4718215873885897056
       type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         AuthoringAssetID:
@@ -195,92 +155,74 @@ MonoBehaviour:
           m_Value1: 3592377455521367497
         m_DebugInfo: {fileID: 0}
         Root:
-          rid: 58274480969220666
+          rid: 4718215873885897057
         BlackboardReference:
-          rid: 58274480969220667
+          rid: 4718215873885897058
         BlackboardGroupReferences: []
-        m_VersionTimestamp: 638725761624582916
-    - rid: 58274480969220666
+        m_VersionTimestamp: 638726547425653833
+    - rid: 4718215873885897057
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 11833354615309694421
           m_Value1: 8063459855997815286
         Graph:
-          rid: 58274480969220665
+          rid: 4718215873885897056
         m_Parent:
           rid: -2
         m_Child:
-          rid: 58274480969220668
+          rid: 4718215873885897059
         Repeat: 1
-    - rid: 58274480969220667
+    - rid: 4718215873885897058
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Blackboard:
-          rid: 58274480969220669
+          rid: 4718215873885897060
         m_Source: {fileID: -5739385034140103397}
-    - rid: 58274480969220668
+    - rid: 4718215873885897059
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
-          m_Value0: 6712969180911629330
-          m_Value1: 17874278356614733960
+          m_Value0: 4136741823995477785
+          m_Value1: 3833878232849089213
         Graph:
-          rid: 58274480969220665
+          rid: 4718215873885897056
         m_Parent:
-          rid: 58274480969220666
+          rid: 4718215873885897057
         m_Children:
-        - rid: 58274480969220670
-        - rid: 58274480969220671
-    - rid: 58274480969220669
+        - rid: 4718215873885897061
+        - rid: 4718215873885897062
+    - rid: 4718215873885897060
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 58274480969220672
-        - rid: 58274480969220673
-        - rid: 58274480969220674
-        - rid: 58274480969220675
-        - rid: 58274480969220676
-        - rid: 58274480969220677
-    - rid: 58274480969220670
-      type: {class: CookelsBycicleAttackAction, ns: , asm: Assembly-CSharp}
+        - rid: 4718215873885897063
+        - rid: 4718215873885897064
+        - rid: 4718215873885897065
+        - rid: 4718215873885897066
+    - rid: 4718215873885897061
+      type: {class: CookelsBalloonAttackAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
-          m_Value0: 5689309265170315857
-          m_Value1: 7596830328100338429
+          m_Value0: 3785483389442130566
+          m_Value1: 9419975045197447191
         Graph:
-          rid: 58274480969220665
+          rid: 4718215873885897056
         m_Parent:
-          rid: 58274480969220668
-        CookelsGameObject:
-          rid: 58274480969220674
-        CookelsAnimator:
-          rid: 58274480969220675
-        StageCenterTransform:
-          rid: 58274480969220676
-        Laps:
-          rid: 58274480969220678
-        MoveSpeed:
-          rid: 58274480969220679
-        StageRadius:
-          rid: 58274480969220677
-        Clockwise:
-          rid: 58274480969220680
-        SpriteFacesMovementDirection:
-          rid: 58274480969220681
-    - rid: 58274480969220671
+          rid: 4718215873885897059
+    - rid: 4718215873885897062
       type: {class: WaitAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
-          m_Value0: 15827232331132921643
-          m_Value1: 1972798680754157711
+          m_Value0: 8232010186721336242
+          m_Value1: 2165422732487935472
         Graph:
-          rid: 58274480969220665
+          rid: 4718215873885897056
         m_Parent:
-          rid: 58274480969220668
+          rid: 4718215873885897059
         SecondsToWait:
-          rid: 58274480969220682
-    - rid: 58274480969220672
+          rid: 4718215873885897067
+    - rid: 4718215873885897063
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -288,7 +230,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 0}
-    - rid: 58274480969220673
+    - rid: 4718215873885897064
       type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -296,23 +238,7 @@ MonoBehaviour:
           m_Value1: 1835795478430369400
         Name: CurentStage
         m_Value: 1
-    - rid: 58274480969220674
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 8683917853782114163
-          m_Value1: 10357484034728742904
-        Name: Cookels
-        m_Value: {fileID: 0}
-    - rid: 58274480969220675
-      type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 16192586195918805073
-          m_Value1: 13636521646394232925
-        Name: CookelsAnimator
-        m_Value: {fileID: 0}
-    - rid: 58274480969220676
+    - rid: 4718215873885897065
       type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -320,7 +246,7 @@ MonoBehaviour:
           m_Value1: 5527485182408230043
         Name: StageCenter
         m_Value: {fileID: 0}
-    - rid: 58274480969220677
+    - rid: 4718215873885897066
       type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -328,39 +254,7 @@ MonoBehaviour:
           m_Value1: 8444723860679818642
         Name: StageRadius
         m_Value: 0
-    - rid: 58274480969220678
-      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 3
-    - rid: 58274480969220679
-      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 1.5
-    - rid: 58274480969220680
-      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 0
-    - rid: 58274480969220681
-      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 0
-    - rid: 58274480969220682
+    - rid: 4718215873885897067
       type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -390,7 +284,10 @@ MonoBehaviour:
   - rid: 58274480969220374
   - rid: 58274480969220657
   - rid: 58274480969220662
-  m_VersionTimestamp: 638725761624582916
+  - rid: 4718215873885897045
+  - rid: 4718215873885897048
+  - rid: 4718215873885897053
+  m_VersionTimestamp: 638726547425653833
   m_DebugInfo: {fileID: 9163065464073032980}
   m_RuntimeGraph: {fileID: -2473041137645361985}
   AssetID:
@@ -438,26 +335,11 @@ MonoBehaviour:
       Tooltip: 
     NamedChildren: []
   - Name: CookelsBycicleAttack
-    Story: 'Execute bycicle Attack for [Laps] laps with speed: [MoveSpeed]'
+    Story: Bicycle Attack
     RuntimeTypeID:
       m_Value0: 12352523223229818082
       m_Value1: 17422843649229622734
     Variables:
-    - Name: CookelsGameObject
-      Type:
-        m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      Tooltip: 
-    - Name: CookelsAnimator
-      Type:
-        m_SerializableType: UnityEngine.Animator, UnityEngine.AnimationModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      Tooltip: 
-    - Name: StageCenterTransform
-      Type:
-        m_SerializableType: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      Tooltip: 
     - Name: Laps
       Type:
         m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
@@ -467,6 +349,16 @@ MonoBehaviour:
       Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    - Name: CookelsGameObject
+      Type:
+        m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    - Name: StageCenterTransform
+      Type:
+        m_SerializableType: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
       Tooltip: 
     - Name: StageRadius
       Type:
@@ -482,6 +374,25 @@ MonoBehaviour:
       Type:
         m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    NamedChildren: []
+  - Name: CookelsBalloonAttack
+    Story: Balloon Attack
+    RuntimeTypeID:
+      m_Value0: 7338660131525475161
+      m_Value1: 16789255188960276020
+    Variables: []
+    NamedChildren: []
+  - Name: SOmeAction
+    Story: '[CurrentStage]'
+    RuntimeTypeID:
+      m_Value0: 12258228226443163833
+      m_Value1: 6764449317130865092
+    Variables:
+    - Name: CurrentStage
+      Type:
+        m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
       Tooltip: 
     NamedChildren: []
   - Name: Conditional Guard
@@ -750,17 +661,7 @@ MonoBehaviour:
         m_NodeModel:
           rid: 58274408644476994
         m_Connections:
-        - rid: 58274480969220663
-    - rid: 58274480969220183
-      type: {class: 'TypedVariableModel`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 16192586195918805073
-          m_Value1: 13636521646394232925
-        Name: CookelsAnimator
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
+        - rid: 4718215873885897054
     - rid: 58274480969220248
       type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -809,7 +710,7 @@ MonoBehaviour:
         LocalValue:
           rid: 58274480969220252
         LinkedVariable:
-          rid: 58274480969220183
+          rid: -2
     - rid: 58274480969220252
       type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -929,7 +830,7 @@ MonoBehaviour:
     - rid: 58274480969220374
       type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
-        Position: {x: -907.4528, y: -14.41061}
+        Position: {x: -907.4528, y: -13.77062}
         ID:
           m_Value0: 5689309265170315857
           m_Value1: 7596830328100338429
@@ -945,14 +846,13 @@ MonoBehaviour:
           m_Value0: 12352523223229818082
           m_Value1: 17422843649229622734
         m_FieldValues:
-        - rid: 58274480969220402
-        - rid: 58274480969220378
-        - rid: 58274480969220398
-        - rid: 58274480969220462
-        - rid: 58274480969220540
-        - rid: 58274480969220541
-        - rid: 58274480969220542
-        - rid: 58274480969220543
+        - rid: 4718215873885896894
+        - rid: 4718215873885896860
+        - rid: 4718215873885896868
+        - rid: 4718215873885896870
+        - rid: 4718215873885896871
+        - rid: 4718215873885896872
+        - rid: 4718215873885896873
     - rid: 58274480969220375
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -971,198 +871,6 @@ MonoBehaviour:
         m_NodeModel:
           rid: 58274480969220374
         m_Connections: []
-    - rid: 58274480969220378
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: CookelsAnimator
-        Type:
-          m_SerializableType: UnityEngine.Animator, UnityEngine.AnimationModule,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        LocalValue:
-          rid: 58274480969220381
-        LinkedVariable:
-          rid: 58274480969220405
-    - rid: 58274480969220381
-      type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: {fileID: 0}
-    - rid: 58274480969220398
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: StageCenterTransform
-        Type:
-          m_SerializableType: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-        LocalValue:
-          rid: 58274480969220399
-        LinkedVariable:
-          rid: 58274480969220439
-    - rid: 58274480969220399
-      type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: {fileID: 0}
-    - rid: 58274480969220402
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: CookelsGameObject
-        Type:
-          m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-        LocalValue:
-          rid: 58274480969220403
-        LinkedVariable:
-          rid: 58274480969220404
-    - rid: 58274480969220403
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: {fileID: 0}
-    - rid: 58274480969220404
-      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 8683917853782114163
-          m_Value1: 10357484034728742904
-        Name: Cookels
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
-    - rid: 58274480969220405
-      type: {class: 'TypedVariableModel`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 16192586195918805073
-          m_Value1: 13636521646394232925
-        Name: CookelsAnimator
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
-    - rid: 58274480969220439
-      type: {class: 'TypedVariableModel`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 15344317263759044731
-          m_Value1: 5527485182408230043
-        Name: StageCenter
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
-    - rid: 58274480969220462
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: Laps
-        Type:
-          m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        LocalValue:
-          rid: 58274480969220463
-        LinkedVariable:
-          rid: -2
-    - rid: 58274480969220463
-      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 3
-    - rid: 58274480969220540
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: MoveSpeed
-        Type:
-          m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        LocalValue:
-          rid: 58274480969220544
-        LinkedVariable:
-          rid: -2
-    - rid: 58274480969220541
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: StageRadius
-        Type:
-          m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        LocalValue:
-          rid: 58274480969220545
-        LinkedVariable:
-          rid: 58274480969220606
-    - rid: 58274480969220542
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: Clockwise
-        Type:
-          m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        LocalValue:
-          rid: 58274480969220546
-        LinkedVariable:
-          rid: -2
-    - rid: 58274480969220543
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: SpriteFacesMovementDirection
-        Type:
-          m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        LocalValue:
-          rid: 58274480969220547
-        LinkedVariable:
-          rid: -2
-    - rid: 58274480969220544
-      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 1.5
-    - rid: 58274480969220545
-      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 0
-    - rid: 58274480969220546
-      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 0
-    - rid: 58274480969220547
-      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 0
-    - rid: 58274480969220606
-      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 12071743967401665128
-          m_Value1: 8444723860679818642
-        Name: StageRadius
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: 0
     - rid: 58274480969220657
       type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -1242,8 +950,7 @@ MonoBehaviour:
         m_IsFloating: 0
         m_NodeModel:
           rid: 58274480969220662
-        m_Connections:
-        - rid: 58274408644476995
+        m_Connections: []
     - rid: 58274480969220664
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -1252,6 +959,296 @@ MonoBehaviour:
         m_IsFloating: 0
         m_NodeModel:
           rid: 58274480969220662
+        m_Connections: []
+    - rid: 4718215873885896860
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: MoveSpeed
+        Type:
+          m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 4718215873885896862
+        LinkedVariable:
+          rid: -2
+    - rid: 4718215873885896862
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 6
+    - rid: 4718215873885896868
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: CookelsGameObject
+        Type:
+          m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 4718215873885896874
+        LinkedVariable:
+          rid: 4718215873885896924
+    - rid: 4718215873885896870
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: StageCenterTransform
+        Type:
+          m_SerializableType: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 4718215873885896876
+        LinkedVariable:
+          rid: 4718215873885896949
+    - rid: 4718215873885896871
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: StageRadius
+        Type:
+          m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 4718215873885896877
+        LinkedVariable:
+          rid: 4718215873885896971
+    - rid: 4718215873885896872
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Clockwise
+        Type:
+          m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 4718215873885896878
+        LinkedVariable:
+          rid: -2
+    - rid: 4718215873885896873
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: SpriteFacesMovementDirection
+        Type:
+          m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 4718215873885896879
+        LinkedVariable:
+          rid: -2
+    - rid: 4718215873885896874
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 4718215873885896876
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 4718215873885896877
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 10
+    - rid: 4718215873885896878
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 1
+    - rid: 4718215873885896879
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 4718215873885896894
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Laps
+        Type:
+          m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 4718215873885896895
+        LinkedVariable:
+          rid: -2
+    - rid: 4718215873885896895
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 3
+    - rid: 4718215873885896924
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 4718215873885896949
+      type: {class: 'TypedVariableModel`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 15344317263759044731
+          m_Value1: 5527485182408230043
+        Name: StageCenter
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 4718215873885896971
+      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 12071743967401665128
+          m_Value1: 8444723860679818642
+        Name: StageRadius
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 4718215873885897045
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -624.72174, y: 11.789701}
+        ID:
+          m_Value0: 3785483389442130566
+          m_Value1: 9419975045197447191
+        Parents:
+        - rid: 4718215873885897053
+        PortModels:
+        - rid: 4718215873885897046
+        - rid: 4718215873885897047
+        NodeType:
+          m_SerializableType: CookelsBalloonAttackAction, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 7338660131525475161
+          m_Value1: 16789255188960276020
+        m_FieldValues: []
+    - rid: 4718215873885897046
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 4718215873885897045
+        m_Connections: []
+    - rid: 4718215873885897047
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 4718215873885897045
+        m_Connections: []
+    - rid: 4718215873885897048
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -649.4996, y: 8.929697}
+        ID:
+          m_Value0: 8232010186721336242
+          m_Value1: 2165422732487935472
+        Parents:
+        - rid: 4718215873885897053
+        PortModels:
+        - rid: 4718215873885897049
+        - rid: 4718215873885897050
+        NodeType:
+          m_SerializableType: Unity.Behavior.WaitAction, Unity.Behavior, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 7729581452106168333
+          m_Value1: 8820302366443624372
+        m_FieldValues:
+        - rid: 4718215873885897051
+    - rid: 4718215873885897049
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 4718215873885897048
+        m_Connections: []
+    - rid: 4718215873885897050
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 4718215873885897048
+        m_Connections: []
+    - rid: 4718215873885897051
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: SecondsToWait
+        Type:
+          m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 4718215873885897052
+        LinkedVariable:
+          rid: -2
+    - rid: 4718215873885897052
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 3
+    - rid: 4718215873885897053
+      type: {class: SequenceNodeModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: -631.12177, y: -18.290302}
+        ID:
+          m_Value0: 4136741823995477785
+          m_Value1: 3833878232849089213
+        Parents: []
+        PortModels:
+        - rid: 4718215873885897054
+        - rid: 4718215873885897055
+        Nodes:
+        - rid: 4718215873885897045
+        - rid: 4718215873885897048
+    - rid: 4718215873885897054
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 4718215873885897053
+        m_Connections:
+        - rid: 58274408644476995
+    - rid: 4718215873885897055
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 4718215873885897053
         m_Connections: []
 --- !u!114 &9163065464073032980
 MonoBehaviour:

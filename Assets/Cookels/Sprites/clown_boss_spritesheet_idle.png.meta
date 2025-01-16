@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 35
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,20 +100,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 25
         y: 0
-        width: 93
-        height: 108
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93371176348e60946bf2a219048722a0
-      internalID: -338640328
+      spriteID: 087d11cd2746e674f800d6d40a6317c7
+      internalID: -449908959
       vertices: []
       indices: 
       edges: []
@@ -122,20 +122,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_1
       rect:
         serializedVersion: 2
-        x: 174
+        x: 173
         y: 0
-        width: 94
-        height: 108
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 96
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 180cfee6061194b4fbd43de444cb0bfe
-      internalID: 1769430394
+      spriteID: 30bf49b8bf926fb4b85ab687b5b72598
+      internalID: 1887598112
       vertices: []
       indices: 
       edges: []
@@ -146,18 +146,18 @@ TextureImporter:
         serializedVersion: 2
         x: 323
         y: 0
-        width: 95
-        height: 107
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 96
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a3d5ef47deb5f94888062b0ea6764fe
-      internalID: -1223936886
+      spriteID: 403bf505001e6d443af7fbf617c5dcc0
+      internalID: 354962858
       vertices: []
       indices: 
       edges: []
@@ -166,20 +166,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_3
       rect:
         serializedVersion: 2
-        x: 472
+        x: 471
         y: 0
-        width: 95
+        width: 97
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 376337301a686474fa7cd6a7b811997d
-      internalID: -1705426538
+      spriteID: d96f9dcdd23d3ee4e84d11963f24663f
+      internalID: -1492991055
       vertices: []
       indices: 
       edges: []
@@ -188,20 +188,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_4
       rect:
         serializedVersion: 2
-        x: 622
+        x: 620
         y: 0
-        width: 95
-        height: 104
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 98
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cbbfda2bd483b14b90b8b3b581f0d55
-      internalID: 204491844
+      spriteID: f8cca8aa230c7cf40b556702f1bc9f18
+      internalID: 196336694
       vertices: []
       indices: 
       edges: []
@@ -210,20 +210,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_5
       rect:
         serializedVersion: 2
-        x: 771
+        x: 770
         y: 0
-        width: 96
-        height: 103
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 98
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64b3a2d3b9f84b04596c2f873f5e5ab6
-      internalID: -1391151673
+      spriteID: 53a45b5995b70014cb05e6717b2b702c
+      internalID: 603671763
       vertices: []
       indices: 
       edges: []
@@ -234,18 +234,18 @@ TextureImporter:
         serializedVersion: 2
         x: 920
         y: 0
-        width: 96
-        height: 102
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 97
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7426e2216677dc47af3baca98d4026a
-      internalID: -1131618716
+      spriteID: edc0e2a11b4cd7e45a7ae898c3d4ab3d
+      internalID: 17299690
       vertices: []
       indices: 
       edges: []
@@ -254,20 +254,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_7
       rect:
         serializedVersion: 2
-        x: 1068
+        x: 1067
         y: 0
-        width: 97
-        height: 102
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 99
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47b14c4ba4b2b16499833dc82666b1ec
-      internalID: 2018237153
+      spriteID: 1456056034b5df84cab5ba2e9d0728ca
+      internalID: -537238773
       vertices: []
       indices: 
       edges: []
@@ -276,20 +276,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_8
       rect:
         serializedVersion: 2
-        x: 1217
+        x: 1216
         y: 0
-        width: 97
-        height: 101
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 99
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1694bac5638d2f4393483088e528f09
-      internalID: -118460191
+      spriteID: b84caf37211dce04faec13c2b644f1a1
+      internalID: -202269003
       vertices: []
       indices: 
       edges: []
@@ -298,20 +298,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_9
       rect:
         serializedVersion: 2
-        x: 1364
+        x: 1363
         y: 0
-        width: 97
-        height: 102
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 99
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d9a806d2e494a24eaa04b8b345b73af
-      internalID: -2027889882
+      spriteID: 655c501b28e66f040b26f91bec4b63c4
+      internalID: 745459746
       vertices: []
       indices: 
       edges: []
@@ -322,18 +322,18 @@ TextureImporter:
         serializedVersion: 2
         x: 1512
         y: 0
-        width: 96
-        height: 102
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 97
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b7cdd7ca8a1fae44ba8870ceebd2286
-      internalID: -1643477429
+      spriteID: 5ed2b750e9f97794fa64afa7305c94bf
+      internalID: -506342417
       vertices: []
       indices: 
       edges: []
@@ -342,20 +342,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_11
       rect:
         serializedVersion: 2
-        x: 1659
+        x: 1658
         y: 0
-        width: 96
-        height: 103
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 98
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff74366e069747d4e9f74b3263b4c10c
-      internalID: 1374054243
+      spriteID: ad8624115ad9c994582c5d123973fc8f
+      internalID: -742904987
       vertices: []
       indices: 
       edges: []
@@ -364,20 +364,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_12
       rect:
         serializedVersion: 2
-        x: 1806
+        x: 1805
         y: 0
-        width: 96
-        height: 104
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 98
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc66c57bb65420b4da6b96661cb72ca2
-      internalID: -2100817526
+      spriteID: d5d88cf6df8fdb54c97b53f39eb4913c
+      internalID: -345031775
       vertices: []
       indices: 
       edges: []
@@ -386,20 +386,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_13
       rect:
         serializedVersion: 2
-        x: 1952
+        x: 1951
         y: 0
-        width: 95
-        height: 105
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 96
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2de4cb6692da065419bc6f52cee95bf5
-      internalID: -547566894
+      spriteID: 39e1f112baed35a418c42bfa8ad5e915
+      internalID: 1584499553
       vertices: []
       indices: 
       edges: []
@@ -408,20 +408,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_14
       rect:
         serializedVersion: 2
-        x: 2100
+        x: 2099
         y: 0
-        width: 94
+        width: 95
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cf24197f73f407429b48e3de644f840
-      internalID: -1493469639
+      spriteID: a6c44c8a7d8dc4a40a24f29cc2211b23
+      internalID: 1460459121
       vertices: []
       indices: 
       edges: []
@@ -430,20 +430,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_15
       rect:
         serializedVersion: 2
-        x: 2247
+        x: 2246
         y: 0
-        width: 94
-        height: 107
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 95
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0261a30fb40d136448062550af92b71c
-      internalID: -972892523
+      spriteID: 61085940c4a4ea940a2a0e7e818b932c
+      internalID: -1294643430
       vertices: []
       indices: 
       edges: []
@@ -452,20 +452,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_16
       rect:
         serializedVersion: 2
-        x: 2394
+        x: 2393
         y: 0
-        width: 94
-        height: 108
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ca31c2890a06204fbaf7f5eca865acc
-      internalID: 1583687492
+      spriteID: 7100e8a775dc2d344a540758573a2b3f
+      internalID: 519931197
       vertices: []
       indices: 
       edges: []
@@ -474,20 +474,20 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_17
       rect:
         serializedVersion: 2
-        x: 2542
+        x: 2540
         y: 0
-        width: 93
-        height: 108
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa88467f75937d9428d5e310215c4587
-      internalID: 377037637
+      spriteID: 1908686a211125145babec17cbb79128
+      internalID: 1449883010
       vertices: []
       indices: 
       edges: []
@@ -496,7 +496,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cd14817816a31e34595be79c69ebd0f1
+    spriteID: 1ae0d11d6e156334bba5525cc9b77ece
     internalID: 0
     vertices: []
     indices: 
@@ -506,24 +506,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      clown_boss_spritesheet_idle_0: -338640328
-      clown_boss_spritesheet_idle_1: 1769430394
-      clown_boss_spritesheet_idle_10: -1643477429
-      clown_boss_spritesheet_idle_11: 1374054243
-      clown_boss_spritesheet_idle_12: -2100817526
-      clown_boss_spritesheet_idle_13: -547566894
-      clown_boss_spritesheet_idle_14: -1493469639
-      clown_boss_spritesheet_idle_15: -972892523
-      clown_boss_spritesheet_idle_16: 1583687492
-      clown_boss_spritesheet_idle_17: 377037637
-      clown_boss_spritesheet_idle_2: -1223936886
-      clown_boss_spritesheet_idle_3: -1705426538
-      clown_boss_spritesheet_idle_4: 204491844
-      clown_boss_spritesheet_idle_5: -1391151673
-      clown_boss_spritesheet_idle_6: -1131618716
-      clown_boss_spritesheet_idle_7: 2018237153
-      clown_boss_spritesheet_idle_8: -118460191
-      clown_boss_spritesheet_idle_9: -2027889882
+      clown_boss_spritesheet_idle_0: -449908959
+      clown_boss_spritesheet_idle_1: 1887598112
+      clown_boss_spritesheet_idle_10: -506342417
+      clown_boss_spritesheet_idle_11: -742904987
+      clown_boss_spritesheet_idle_12: -345031775
+      clown_boss_spritesheet_idle_13: 1584499553
+      clown_boss_spritesheet_idle_14: 1460459121
+      clown_boss_spritesheet_idle_15: -1294643430
+      clown_boss_spritesheet_idle_16: 519931197
+      clown_boss_spritesheet_idle_17: 1449883010
+      clown_boss_spritesheet_idle_2: 354962858
+      clown_boss_spritesheet_idle_3: -1492991055
+      clown_boss_spritesheet_idle_4: 196336694
+      clown_boss_spritesheet_idle_5: 603671763
+      clown_boss_spritesheet_idle_6: 17299690
+      clown_boss_spritesheet_idle_7: -537238773
+      clown_boss_spritesheet_idle_8: -202269003
+      clown_boss_spritesheet_idle_9: 745459746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
