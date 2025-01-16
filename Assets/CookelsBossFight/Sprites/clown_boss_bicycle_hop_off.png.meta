@@ -1,0 +1,833 @@
+fileFormatVersion: 2
+guid: cdc1e8d0006a408498e988b926d4687f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 35
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 0
+        width: 86
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e500d1cda1a60c94ab51069f1c2234f6
+      internalID: 873781087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_1
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 87
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d910ba659152c48b9548229174e75d
+      internalID: -1779540217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 87
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7455776c6e1f284fa0b379a42d0d2ba
+      internalID: 377924593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_3
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 0
+        width: 87
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e0439bc604e6c40aa03eacb54bc293
+      internalID: 742308572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_4
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 0
+        width: 87
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31f9f6c2bb74c843ba0c42bd44888fd
+      internalID: 1130726879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_5
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 0
+        width: 85
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1c3761e87a31444bac0f53f268cdc3
+      internalID: -1150190707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_6
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 11
+        width: 94
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d218291e823e6f44db1c40bf3f5d9d8e
+      internalID: 303391203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_7
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 2
+        width: 79
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b04d002357b0df48afc4bda4f273c25
+      internalID: 1327091288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_8
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 0
+        width: 64
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6352613e70927bf468809224b3e4d2b2
+      internalID: -1040358724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_9
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 0
+        width: 64
+        height: 152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f766c763e65bd44b231cee8f266276
+      internalID: 1938834840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_10
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 0
+        width: 72
+        height: 147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3dddfaa66ca1741b4ef66b70e3bfdf
+      internalID: 1528027200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_11
+      rect:
+        serializedVersion: 2
+        x: 2913
+        y: 0
+        width: 79
+        height: 141
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc77af502c85c546a528a39d56dfc42
+      internalID: -291591125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_12
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 0
+        width: 89
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bb7423cfa53144a93be1e7d5208c61
+      internalID: 1965372490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_13
+      rect:
+        serializedVersion: 2
+        x: 3423
+        y: 0
+        width: 93
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c81913ae19d03f49b8bf80ffbd3fb17
+      internalID: -939366879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_14
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 0
+        width: 82
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97378661a77053447888746b0d534bfc
+      internalID: -1533261420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_15
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 0
+        width: 72
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6121c1c4e3f671448245d6bd079f8e5
+      internalID: -1285232348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_16
+      rect:
+        serializedVersion: 2
+        x: 4199
+        y: 0
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c04873e1071d7c478087ffc821f80ec
+      internalID: -77824496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_17
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 0
+        width: 60
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52934ecfc402554aacbfce94cb7015e
+      internalID: 1252975767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_18
+      rect:
+        serializedVersion: 2
+        x: 4701
+        y: 0
+        width: 66
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fa71b19703014499fafa733150ac77
+      internalID: -701307703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_19
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 0
+        width: 70
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9cb89930b9153647aa71713a4dc6988
+      internalID: -1563769787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_20
+      rect:
+        serializedVersion: 2
+        x: 5214
+        y: 0
+        width: 70
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4cbd7e4e808704bb29a2e41c9d3a89
+      internalID: -520821799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_21
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 0
+        width: 70
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0074982120b944fb8754b627d2f3d8
+      internalID: -1052812718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_22
+      rect:
+        serializedVersion: 2
+        x: 5729
+        y: 0
+        width: 69
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afebad4cc8ed8a84a87fc6d22182f6b6
+      internalID: -1252204882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_23
+      rect:
+        serializedVersion: 2
+        x: 5986
+        y: 0
+        width: 64
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9337b4b6ce06d546a058e4674b01a1b
+      internalID: 1189775446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_24
+      rect:
+        serializedVersion: 2
+        x: 6245
+        y: 0
+        width: 55
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38619a638c3a003439f29ad99ae01d39
+      internalID: 2023303129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_25
+      rect:
+        serializedVersion: 2
+        x: 6504
+        y: 0
+        width: 42
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3534f3db4ea1774184c608f164fc4d4
+      internalID: 1112627968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_26
+      rect:
+        serializedVersion: 2
+        x: 6759
+        y: 0
+        width: 69
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63527e7812eb4d54b9bb255b98545dfd
+      internalID: -2114111775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_28
+      rect:
+        serializedVersion: 2
+        x: 7009
+        y: 0
+        width: 79
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc52f041fa3633944a70fa6ccf0f735c
+      internalID: -1945311096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_30
+      rect:
+        serializedVersion: 2
+        x: 7258
+        y: 0
+        width: 88
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8351d78bb1b4d045a90f016adeb6de2
+      internalID: 1646440899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_32
+      rect:
+        serializedVersion: 2
+        x: 7509
+        y: 0
+        width: 93
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48563907c6ccce41b9948ca28cb21b0
+      internalID: 626405255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_boss_bicycle_hop_off_33
+      rect:
+        serializedVersion: 2
+        x: 7761
+        y: 0
+        width: 96
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da1fe5fef58ada42afca33b98fca659
+      internalID: -1397246163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 33c3b4e26eac5214ca8f38b511794351
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      clown_boss_bicycle_hop_off_0: 873781087
+      clown_boss_bicycle_hop_off_1: -1779540217
+      clown_boss_bicycle_hop_off_10: 1528027200
+      clown_boss_bicycle_hop_off_11: -291591125
+      clown_boss_bicycle_hop_off_12: 1965372490
+      clown_boss_bicycle_hop_off_13: -939366879
+      clown_boss_bicycle_hop_off_14: -1533261420
+      clown_boss_bicycle_hop_off_15: -1285232348
+      clown_boss_bicycle_hop_off_16: -77824496
+      clown_boss_bicycle_hop_off_17: 1252975767
+      clown_boss_bicycle_hop_off_18: -701307703
+      clown_boss_bicycle_hop_off_19: -1563769787
+      clown_boss_bicycle_hop_off_2: 377924593
+      clown_boss_bicycle_hop_off_20: -520821799
+      clown_boss_bicycle_hop_off_21: -1052812718
+      clown_boss_bicycle_hop_off_22: -1252204882
+      clown_boss_bicycle_hop_off_23: 1189775446
+      clown_boss_bicycle_hop_off_24: 2023303129
+      clown_boss_bicycle_hop_off_25: 1112627968
+      clown_boss_bicycle_hop_off_26: -2114111775
+      clown_boss_bicycle_hop_off_27: 1203242161
+      clown_boss_bicycle_hop_off_28: -1945311096
+      clown_boss_bicycle_hop_off_29: 492300380
+      clown_boss_bicycle_hop_off_3: 742308572
+      clown_boss_bicycle_hop_off_30: 1646440899
+      clown_boss_bicycle_hop_off_31: 2102503219
+      clown_boss_bicycle_hop_off_32: 626405255
+      clown_boss_bicycle_hop_off_33: -1397246163
+      clown_boss_bicycle_hop_off_4: 1130726879
+      clown_boss_bicycle_hop_off_5: -1150190707
+      clown_boss_bicycle_hop_off_6: 303391203
+      clown_boss_bicycle_hop_off_7: 1327091288
+      clown_boss_bicycle_hop_off_8: -1040358724
+      clown_boss_bicycle_hop_off_9: 1938834840
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

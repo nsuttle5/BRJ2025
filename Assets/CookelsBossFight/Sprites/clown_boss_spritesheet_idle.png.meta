@@ -100,12 +100,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 26
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 93
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -122,12 +122,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_1
       rect:
         serializedVersion: 2
-        x: 148
+        x: 174
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 94
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -144,12 +144,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_2
       rect:
         serializedVersion: 2
-        x: 296
+        x: 323
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 95
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,12 +166,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_3
       rect:
         serializedVersion: 2
-        x: 444
+        x: 472
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 95
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,12 +188,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_4
       rect:
         serializedVersion: 2
-        x: 592
+        x: 622
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 95
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_5
       rect:
         serializedVersion: 2
-        x: 740
+        x: 771
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 96
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,12 +232,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_6
       rect:
         serializedVersion: 2
-        x: 888
+        x: 920
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 96
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_7
       rect:
         serializedVersion: 2
-        x: 1036
+        x: 1068
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 97
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -276,12 +276,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_8
       rect:
         serializedVersion: 2
-        x: 1184
+        x: 1217
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 97
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -298,12 +298,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_9
       rect:
         serializedVersion: 2
-        x: 1332
+        x: 1364
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 97
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -320,12 +320,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_10
       rect:
         serializedVersion: 2
-        x: 1480
+        x: 1512
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 96
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -342,12 +342,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_11
       rect:
         serializedVersion: 2
-        x: 1628
+        x: 1659
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 96
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -364,12 +364,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_12
       rect:
         serializedVersion: 2
-        x: 1776
+        x: 1806
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 96
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -386,12 +386,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_13
       rect:
         serializedVersion: 2
-        x: 1924
+        x: 1952
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 95
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -408,12 +408,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_14
       rect:
         serializedVersion: 2
-        x: 2072
+        x: 2100
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 94
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -430,12 +430,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_15
       rect:
         serializedVersion: 2
-        x: 2220
+        x: 2247
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 94
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -452,12 +452,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_16
       rect:
         serializedVersion: 2
-        x: 2368
+        x: 2394
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 94
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -474,12 +474,12 @@ TextureImporter:
       name: clown_boss_spritesheet_idle_17
       rect:
         serializedVersion: 2
-        x: 2516
+        x: 2542
         y: 0
-        width: 148
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 93
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
