@@ -43,11 +43,12 @@ public partial class CookelsBycicleAttackAction : Action
     
     protected override Status OnStart() {
 
+        if (!ValidateReferences())
+            return Status.Failure;
+
         cookelsAnimator = CookelsGameObject.Value.GetComponent<Animator>();
         animationStateHandler = CookelsGameObject.Value.GetComponent<AnimationStateHandler>();
 
-        if (!ValidateReferences())
-            return Status.Failure;
         // Initialize state
         currentPhase = AttackPhase.Anticipation;
         elapsedTime = 0f;
