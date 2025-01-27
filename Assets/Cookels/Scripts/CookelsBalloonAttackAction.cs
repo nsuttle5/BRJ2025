@@ -4,7 +4,6 @@ using UnityEngine;
 using Action = Unity.Behavior.Action;
 using Unity.Properties;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 
 [Serializable, GeneratePropertyBag]
 [NodeDescription(name: "CookelsBalloonAttack", story: "Balloon Attack", category: "Action", id: "59bbe5fa8128d865346e5c1da46affe8")]
@@ -13,22 +12,20 @@ public partial class CookelsBalloonAttackAction : Action
     [SerializeReference] public BlackboardVariable<GameObject> CookelsGameObject;
 
     [SerializeReference] public BlackboardVariable<List<GameObject>> BalloonPrefabList;
+    [SerializeReference] public BlackboardVariable<Transform> BalloonSpawnPoint;
 
     private Animator cookelsAnimator;
     private AnimationStateHandler animationStateHandler;
 
     private const string BALLOON_PULL_OUT_ANIMATION = "";
     private const string BALLOON_INFLATE_ANIMATION = "";
-    private const string BALLOON_RELEASE_ANIMATION = "";
-    private const string WAIT_ANIMATION = "";
-    private const string END_ANIMATION = "";
 
     private AttackPhase currentAttackPhase;
+    private int numberOfBalloonInflated;
+
     private enum AttackPhase {
         BalloonPullOut,
         BalloonInflate,
-        BalloonRelease,
-        Wait,
         Complete
     }
 
@@ -41,6 +38,7 @@ public partial class CookelsBalloonAttackAction : Action
         animationStateHandler = CookelsGameObject.Value.GetComponent<AnimationStateHandler>();
 
         currentAttackPhase = AttackPhase.BalloonPullOut;
+        numberOfBalloonInflated = 0;
 
         return Status.Running;
     }
@@ -56,10 +54,21 @@ public partial class CookelsBalloonAttackAction : Action
                 }
                 break;
             case AttackPhase.BalloonInflate:
-                break;
-            case AttackPhase.BalloonRelease:
-                break;
-            case AttackPhase.Wait:
+                cookelsAnimator.Play(BALLOON_INFLATE_ANIMATION);
+                animationStateHandler.OnStartNewAnimation();
+                if (animationStateHandler.hasCurrentAnimationEnded) {
+                    //Spawn Balloon and Place it to the desired Place
+                    GameObject.Instantiate(BalloonPrefabList.Value[numberOfBalloonInflated], BalloonSpawnPoint.Value, false);
+                    numberOfBalloonInflated++;
+                    //If all Balloons inflated => go to next state
+                    //Else => go back to previous state
+                    if (numberOfBalloonInflated < BalloonPrefabList.Value.Count) {
+                        currentAttackPhase = AttackPhase.BalloonPullOut;
+                    }
+                    else {
+                        currentAttackPhase = AttackPhase.Complete;
+                    }
+                }
                 break;
             case AttackPhase.Complete:
                 return Status.Success;
@@ -68,13 +77,9 @@ public partial class CookelsBalloonAttackAction : Action
         return Status.Running;
     }
 
-    protected override void OnEnd()
-    {
-    }
-
     private bool ValidateReferences() {
         if (CookelsGameObject.Value == null) {
-            Debug.LogError("CookelsBycicleAttackAction: Missing or invalid references");
+            Debug.LogError("CookelsBalloonAttackAction: Missing or invalid references");
             return false;
         }
         return true;
