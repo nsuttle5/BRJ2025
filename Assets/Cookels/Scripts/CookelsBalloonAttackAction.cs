@@ -19,6 +19,7 @@ public partial class CookelsBalloonAttackAction : Action
 
     private const string BALLOON_PULL_OUT_ANIMATION = "";
     private const string BALLOON_INFLATE_ANIMATION = "";
+    private const string IDLE_STATE_ANIMAITON = "";
 
     private AttackPhase currentAttackPhase;
     private int numberOfBalloonInflated;
@@ -58,7 +59,7 @@ public partial class CookelsBalloonAttackAction : Action
                 animationStateHandler.OnStartNewAnimation();
                 if (animationStateHandler.hasCurrentAnimationEnded) {
                     //Spawn Balloon and Place it to the desired Place
-                    GameObject.Instantiate(BalloonPrefabList.Value[numberOfBalloonInflated], BalloonSpawnPoint.Value, false);
+                    GameObject.Instantiate(BalloonPrefabList.Value[numberOfBalloonInflated], BalloonSpawnPoint.Value.position, Quaternion.identity);
                     numberOfBalloonInflated++;
                     //If all Balloons inflated => go to next state
                     //Else => go back to previous state
@@ -67,6 +68,7 @@ public partial class CookelsBalloonAttackAction : Action
                     }
                     else {
                         currentAttackPhase = AttackPhase.Complete;
+                        cookelsAnimator.Play(IDLE_STATE_ANIMAITON);
                     }
                 }
                 break;
